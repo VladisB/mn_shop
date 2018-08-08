@@ -1,0 +1,498 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	// .search-wrap
+	// padding: 15px 0 15px 6px
+	// input[type="text"]
+	// 	width: 202px
+	// 	font-size: 18px
+	// .auth-block
+	// 	padding: 0
+	// .cart-wrap
+	// 	padding: 10px 15px 7px
+	// 	height: 100%
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	#xs_logo
+		display: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.r_wrap
+		text-align: right
+		.ddb_wrap
+			margin-right: 5px
+			margin-left: 0
+	.top_menu
+		.r_info
+			text-align: left
+	.large_logo
+		width: 100%
+	.street
+		text-transform: uppercase
+		font-size: 10px
+	// .r_wrap
+	// 	position: relative
+	// 	.drop_down_button
+	// 		position: absolute
+	// 		top: 8px
+	// 		left: 25px
+	#xs_logo
+		display: none !important
+	.s_product
+		.xs_header1
+			margin-left: 18px
+			line-height: normal
+			letter-spacing: normal
+			margin-bottom: 28px
+	.preview_wrap
+		margin-top: 10px
+		.main_img
+			height: 249px
+			display: none
+	.list_img
+		padding-left: 30px
+		padding-right: 30px		
+		.smol_img,  .video_p
+			height: 249px
+			// width: 249px
+		.video_p
+			// padding-top: 57px
+			img
+				width: 40%
+				margin-top: 78px
+	.ml_center
+		text-align: center
+	.simp_price
+		margin-top: 13px
+	.s_product
+		.limit
+			margin-bottom: 4px
+	.s_product
+		.retail_price
+			.price
+				font-size: 18px
+				margin-bottom: 5px
+	.legend
+		width: 198px
+		display: inline-block
+		text-align: left
+	.input_number_wrap
+		margin-top: 5px
+		.input-number
+			width: 102px
+	.input-number-decrement,
+	.input-number-increment
+		width: 48px
+	.s_product
+		.btn_buy
+			margin-top: 45px
+			width: 100%
+	.articul-wrap
+		margin-top: 41px
+	/*footer*/
+	footer
+		padding-bottom: 0
+		.header_slide_inside
+			padding: 7px 15px 7px
+		.detail
+			border-top: 1px solid rgba(36,41,54, .2)
+		.f_bottom
+			padding-top: 0
+			.price_list
+				padding-bottom: 10px
+			.f_menu_list
+				margin-top: 0
+		.f_subscribe
+			// padding-top: 17px
+			// padding-bottom: 25px
+			padding: 0
+			border: none
+			.input-wrapper
+				text-align: center
+				.call_to_action
+					margin-bottom: 29px
+					float: left
+					margin-right: 0
+				input
+					// margin-bottom: 22px
+					margin-right: 0
+					display: block
+					margin: 22px auto
+				button
+					text-transform: uppercase
+					width: 232px
+					margin-bottom: 30px
+	.header_slide, .header_slide_inside
+		width: 100%
+		position: relative
+		&::after
+			display: inline-block
+	/*Slide-down-more-less*/
+	.detail
+  	max-height: 1200px
+  	opacity: 1
+  	overflow: hidden
+  	transition: all 400ms ease-out
+  	width: 100%
+  	&.closed
+  	  max-height: 0
+  	  opacity: 0
+  	  transition: all 400ms ease-out
+	.item_wrap
+		.btn_buy_wrap
+			padding-left: 15px
+			margin-top: 15px
+			// float: right
+		.btn_buy
+			width: 100%
+	.item_wrap
+		.input-number
+			max-width: 114px
+			margin-bottom: 15px
+			width: 100%
+		.counter_wrap
+			// display: inline-block
+			// min-width: 123px
+			padding-left: 10px
+			padding-right: 15px
+			border: 1px #ccc solid
+			text-align: center
+			.cw_inner
+				display: inline-block
+				.input-number-decrement, 
+				.input-number,
+				.input-number-increment
+					border: none
+				.input-number
+					margin-bottom: 0
+	/*menu*/
+	.search-wrap
+		padding: 9px 0 13px 5px
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -26px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+			margin-right: 10px
+		.searchButton
+			background: transparent
+			border: none
+			font-size: 21px
+			padding: 0
+	.auth-block
+		padding: 16px 0 14px 19px
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -23px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+			margin-right: 10px
+	.cart-wrap
+		// background-color: rgba(255, 240, 53, .2)
+		background-color: transparent
+		padding: 12px 29px 16px 33px
+		height: 100%
+		font-size: 16px
+		position: relative
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -18px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+	.sidebarIconToggle
+		left: 25px
+		top: 20px
+	/**/
+	.pr-nr
+		padding-right: 0 !important
+	.pl-nl
+		padding-left: 0 !important
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	// .r_wrap
+	// 	position: relative
+	// 	.drop_down_button
+	// 		position: absolute
+	// 		top: 8px
+	// 		left: -50px
+	.r_wrap
+		text-align: right
+		.ddb_wrap
+			margin-right: 5px
+			margin-left: 0
+			// margin-right: 10px
+			// margin-left: 0
+	.pr-nr
+		padding-right: 0 !important
+	.pl-nl
+		padding-left: 0 !important
+	.large_logo
+		display: none
+	.street
+		text-transform: uppercase
+		font-size: 10px
+	.top_menu
+		.r_info
+			text-align: left
+	#xs_logo
+		display: block !important
+		width: 68px
+	.search-wrap
+		padding: 9px 0 13px 0px
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -24px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+			margin-right: 10px
+	.searchButton
+		background: transparent
+		border: none
+		font-size: 21px
+		padding: 0
+	.cart-wrap
+		// background-color: rgba(255, 240, 53, .2)
+		background-color: transparent
+		padding: 12px 29px 16px 11px
+		height: 100%
+		font-size: 16px
+		position: relative
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -20px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+		.icon-wrap
+			img
+				margin-right: 0
+		.icon-wrap
+			display: inline-block
+			position: relative
+			margin-right: 13px
+	.auth-block
+		padding: 16px 0 14px 13px
+		&::before
+			content: ''
+			width: 1px
+			height: 60px
+			position: absolute
+			top: 1px
+			left: -19px
+			background-color: rgba(255, 255, 255, .5)
+			display: inline-block
+			margin-right: 10px
+		i
+			font-size: 22px
+			margin-right: 20px
+	.spinner
+  	height: 3px
+  	width: 100%
+  	background-color: #fff
+	.horizontal
+  	float: left
+  	margin-top: 3px
+	.diagonal
+	  &.part-1
+	    float: left
+	  &.part-2
+	    margin-top: 3px
+	.sidebarIconToggle
+		left: 6px
+		top: 20px
+	.pl-none
+		padding-left: 0
+	.bred_crambs_list
+		padding-left: 0
+	/*s_product*/
+
+	.s_product
+		.ml_center
+			text-align: left
+		.xs_header1
+			margin-left: 18px
+			line-height: normal
+			letter-spacing: normal
+			margin-bottom: 28px
+			margin-top: 10px
+	.preview_wrap
+		margin-top: 10px
+		.main_img
+			height: 249px
+			display: none
+	.simp_price
+		margin-bottom: -8px
+	.legend
+		margin-top: 34px
+	.input_number_wrap
+		margin-top: 9px
+		display: block
+		float: left
+		.input-number
+			width: 102px
+	.s_product
+		.btn_buy
+			margin-top: 46px
+			width: 100%
+	.list_img
+		padding-left: 15px
+		padding-right: 15px		
+		.smol_img,  .video_p
+			height: 249px
+			// width: 249px
+		.video_p
+			// padding-top: 57px
+			img
+				width: 40%
+				margin-top: 78px
+			
+	.s_product
+		.limit
+			font-size: 14px
+			margin-bottom: 35px
+			.amount_lim
+				font-size: 20px
+	.s_properties
+		padding-bottom: 15px
+	.bage
+		padding: 1px 10px
+	.item_wrap
+		h4
+			margin-bottom: 5px
+		.input-number
+			width: 63px
+			margin-bottom: 15px
+		.price
+			margin-bottom: -5px
+		.old_price
+			margin-bottom: 15px
+
+	//--input--number
+		.item_wrap
+		.input-number
+			max-width: 114px
+			margin-bottom: 15px
+			width: 80%
+		.counter_wrap
+			// display: inline-block
+			// min-width: 123px
+			padding-left: 10px
+			padding-right: 15px
+			border: 1px #ccc solid
+			text-align: center
+			.cw_inner
+				display: inline-block
+				.input-number-decrement, 
+				.input-number,
+				.input-number-increment
+					border: none
+				.input-number
+					margin-bottom: 0
+	// /*Slide-down-more-less*/
+	// .detail
+  // 	max-height: 1200px
+  // 	opacity: 1
+  // 	overflow: hidden
+  // 	transition: all 400ms ease-out
+  // 	width: 100%
+  // 	&.closed
+  // 	  max-height: 0
+  // 	  opacity: 0
+  // 	  transition: all 400ms ease-out
+	/*footer*/
+// 	footer
+// 		padding-bottom: 0
+// 		.detail
+// 			border-top: 1px solid rgba(36,41,54, .2)
+// 		.f_bottom
+// 			padding-top: 0
+// 			.price_list
+// 				padding-bottom: 10px
+// 			.f_menu_list
+// 				margin-top: 0
+// 		.f_subscribe
+// 			// padding-top: 17px
+// 			// padding-bottom: 25px
+// 			padding: 0
+// 			border: none
+// 			.input-wrapper
+// 				text-align: center
+// 				.call_to_action
+// 					margin-bottom: 29px
+// 					float: left
+// 					margin-right: 0
+// 				input
+// 					margin-bottom: 22px
+// 					margin-right: 0
+// 				button
+// 					text-transform: uppercase
+// 					width: 232px
+// 					margin-bottom: 30px
+// .header_slide, .header_slide_inside
+// 	width: 100%
+// 	position: relative
+// 	&::after
+// 		display: inline-block
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.r_wrap
+		.ddb_wrap
+			display: none
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
