@@ -4,6 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.s_product
+		h1
+			margin-bottom: 0.67em
 	.prn-md
 		padding-right: 0 !important
 	.pln-md
@@ -52,16 +55,34 @@
 		.f_subscribe
 			.input-wrapper
 				input
-					width: 189px
+					// width: 189px
+					width: 18%
+					margin-right: 2%
 				.call_to_action
-					
+					width: 19%  
+					margin-right: 2% //3.5
+				.button_form
+					width: 15.5%
+		.f_bottom
+			.f_info:last-child
+				margin-bottom: 0
+
 
 		
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	footer
+		.f_subscribe
+			.input-wrapper
+				.call_to_action
+					display: block
+					width: 100%
+				input
+					width: 23%
+				.button_form
+					width: 20%
 
 
 /* Small Devices, Tablets */
