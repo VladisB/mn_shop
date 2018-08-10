@@ -4,6 +4,18 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.item_wrap
+		padding-bottom: 15px
+		padding-top: 15px
+	// .pl-none
+		// padding-left: 0
+	.item_wrap
+		.input-number-decrement, .input-number-increment
+    	width: 25%
+		.input-number
+			width: 40%
+		.btn_buy
+			padding: 6px 26px
 	.s_product
 		h1
 			margin-bottom: 0.67em
@@ -73,6 +85,59 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.green_menu
+		.sidebarIconToggle
+			top: 25px
+		.catalog
+			padding: 19px 6px 18px //Временно
+		.search-wrap
+			input[type="text"]
+				width: 228px
+			&::before
+				content: ''
+				width: 1px
+				height: 60px
+				top: 1px
+				left: 6px
+		.auth-block
+			padding: 19px 0 18px 0px
+			// background-color: rgba(255,255,255, .5)
+			i
+				margin-right: 15px
+			.reg_l
+				margin-left: 3px
+		.cart-wrap
+			padding: 19px 0px 18px 15px
+			&::before
+				content: ''
+				width: 1px
+				height: 60px
+				position: absolute
+				top: 1px
+				left: 0
+	/*------------*/
+	.item_wrap 
+		.btn_buy_wrap
+			padding-left: 15px
+			.btn_buy
+				padding: 6px 26px
+				margin-top: 15px
+				width: 100%
+	.item_wrap
+		padding-bottom: 15px
+		padding-top: 15px
+	// .pl-none
+		// padding-left: 0
+	.item_wrap
+		.input-number-decrement, .input-number-increment
+    	width: 25%
+		.input-number
+			width: 40%
+		.btn_buy
+			padding: 6px 26px
+	.advantages
+		.img_wrap
+			height: 70px
 	footer
 		.f_subscribe
 			.input-wrapper
@@ -87,8 +152,77 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	footer
+		padding-bottom: 0
+		.header_slide_inside
+			padding: 7px 15px 7px
+		.detail
+			border-top: 1px solid rgba(36,41,54, .2)
+		.f_bottom
+			padding-top: 0
+			.price_list
+				padding-bottom: 10px
+			.f_menu_list
+				margin-top: 0
+		.f_subscribe
+			// padding-top: 17px
+			// padding-bottom: 25px
+			padding: 0
+			border: none
+			.input-wrapper
+				text-align: center
+				.call_to_action
+					margin-bottom: 29px
+					float: left
+					margin-right: 0
+				input
+					// margin-bottom: 22px
+					margin-right: 0
+					display: block
+					margin: 22px auto
+				button
+					text-transform: uppercase
+					width: 232px
+					margin-bottom: 30px
+	.header_slide, .header_slide_inside
+		width: 100%
+		position: relative
+		&::after
+			display: inline-block
+	/**/
+	.detail
+  	max-height: 1200px
+  	opacity: 1
+  	overflow: hidden
+  	transition: all 400ms ease-out
+  	width: 100%
+  	&.closed
+  	  max-height: 0
+  	  opacity: 0
+  	  transition: all 400ms ease-out
 	#xs_logo
 		display: none !important
+	.s_recommend
+		.item_wrap 
+			.prn-md
+				padding-right: 15px !important
+	.item_wrap
+		.price
+			margin-bottom: -5px
+		.old_price
+			margin-bottom: 10px
+		.counter_wrap
+			padding: 0
+		.input-number-decrement, .input-number-increment
+    	width: 25%
+		.input-number
+			width: 50% !important
+		// .btn_buy_wrap
+		// 	padding-left: 15px
+		// .btn_buy
+		// 	padding: 6px 26px
+		// 	margin-top: 15px
+		// 	width: 100%
 
 
 /* Extra Small Devices, Phones */
@@ -154,11 +288,11 @@
 		text-align: left
 	.input_number_wrap
 		margin-top: 5px
-		.input-number
-			width: 102px
-	.input-number-decrement,
-	.input-number-increment
-		width: 48px
+	// 	.input-number
+	// 		width: 102px
+	// .input-number-decrement,
+	// .input-number-increment
+	// 	width: 48px
 	.s_product
 		.btn_buy
 			margin-top: 45px
@@ -204,16 +338,16 @@
 		&::after
 			display: inline-block
 	/*Slide-down-more-less*/
-	.detail
-  	max-height: 1200px
-  	opacity: 1
-  	overflow: hidden
-  	transition: all 400ms ease-out
-  	width: 100%
-  	&.closed
-  	  max-height: 0
-  	  opacity: 0
-  	  transition: all 400ms ease-out
+	// .detail
+  // 	max-height: 1200px
+  // 	opacity: 1
+  // 	overflow: hidden
+  // 	transition: all 400ms ease-out
+  // 	width: 100%
+  // 	&.closed
+  // 	  max-height: 0
+  // 	  opacity: 0
+  // 	  transition: all 400ms ease-out
 	.item_wrap
 		.btn_buy_wrap
 			padding-left: 15px
@@ -223,14 +357,14 @@
 			width: 100%
 	.item_wrap
 		.input-number
-			max-width: 114px
-			margin-bottom: 15px
-			width: 100%
+			// max-width: 114px
+			// margin-bottom: 15px
+			// width: 100%
 		.counter_wrap
 			// display: inline-block
 			// min-width: 123px
-			padding-left: 10px
-			padding-right: 15px
+			// padding-left: 10px
+			// padding-right: 15px
 			border: 1px #ccc solid
 			text-align: center
 			.cw_inner
@@ -536,7 +670,8 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+	// .header_slide_inside, .header_slide
+	// 	display: block
 
 
 /* Extra Small Devices, Phones */
@@ -546,14 +681,19 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+	footer
+		.header_slide, .header_slide_inside
+			display: none
+			&::after
+				// display: inline-block
+				display: none
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	.header_slide_inside
-		&::before, &::after
-			display: none
+	// .header_slide_inside
+	// 	&::before, &::after
+	// 		display: none
 
 
 /* Large Devices, Wide Screens */
@@ -561,4 +701,12 @@
 	.r_wrap
 		.ddb_wrap
 			display: none
+	.item_wrap
+		.input-number-decrement, .input-number-increment
+    	width: 25%
+		.input-number
+			width: 40%
+		.btn_buy
+			padding: 6px 26px
+			width: 100%
 
