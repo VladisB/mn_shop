@@ -88,7 +88,9 @@ h3
 		text-align: right
 		line-height: normal
 		font-family: 'Open Sans', sans-serif
+/*Green-menu*/
 .green_menu
+	// max-height: 56px
 	background-color: $green
 	color: #ffffff
 	font-size: 16px
@@ -97,14 +99,15 @@ h3
 		text-transform: uppercase
 		font-weight: 700
 		letter-spacing: 0.6px
-		padding: 17px 26px
-		margin-left: 25px
+		// padding: 17px 26px
+		// margin-left: 25px
 
 //--Humburger--
 #sidebarMenu
 	height: 100%
 	position: fixed
 	left: 0
+	top: 50px
 	width: 250px
 	margin-top: 60px
 	transform: translateX(-250px)
@@ -143,13 +146,13 @@ input
   transition: all 0.3s
   box-sizing: border-box
   cursor: pointer
-  position: absolute
+  // position: absolute
   z-index: 99
   height: 100%
   width: 100%
-  top: 22px
-  left: 15px
-  height: 22px
+  // top: 22px
+  // left: 15px
+  // height: 22px
   width: 22px
 
 .spinner
@@ -196,28 +199,30 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
       box-sizing: border-box
       transform: rotate(-135deg)
       margin-top: -9px
+/*End of menu button*/
 //-------------
+.green_menu
+	// min-height: 56px
+	text-align: center
 .search-wrap
-	padding: 15px 0 15px 6px
+	// padding: 15px 0 15px 6px
 	&::before
 		content: ''
-		width: 2px
+		width: 1px
 		height: 60px
 		position: absolute
 		top: 1px
-		left: 10px
+		left: 0px
 		background-color: rgba(255, 255, 255, .5)
 		display: inline-block
 		margin-right: 10px
 	input[type="text"]
-		// color: #ffffff
-		// background-color: transparent
-		// border: none
-		// height: 35px
 		font-family: 'Source Sans Pro'
 		font-weight: 400
 		letter-spacing: normal
-		width: 300px
+		// width: 300px
+		width: 87%
+		margin-right: 5px
 		font-size: 18px
 		padding: 0
 		border: 1px solid #cecece
@@ -226,17 +231,17 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 		border-bottom: 2px solid rgba(255, 255, 255, .5)
 		&::placeholder
 			color: rgba(255, 255, 255, .5)
-.searchButton
-	background: transparent
-	border: none
-	font-size: 18px
+	.searchButton
+		background: transparent
+		border: none
+		font-size: 18px
 .auth-block
 	font-family: 'Open Sans', sans-serif
 	font-weight: 700
 	text-transform: uppercase
 	font-size: 16px
 	letter-spacing: 0.6px
-	padding: 18px 0 18px 22px
+	// padding: 18px 0 18px 22px
 	&::before
 		content: ''
 		width: 1px
@@ -253,17 +258,15 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 		cursor: pointer
 	i
 		font-size: 20px
-		margin-right: 20px
-
+		// margin-right: 20px
 .cart-wrap
 	background-color: rgba(255, 240, 53, .2)
-	padding: 19px 15px 17px
+	// padding: 19px 15px 17px
 	height: 100%
 	text-transform: uppercase
 	font-family: 'Open Sans', sans-serif
 	font-weight: 700
 	font-size: 16px
-	position: relative
 	a
 		color: #ffffff
 		text-decoration: none
@@ -281,21 +284,48 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 		display: inline-block
 		position: relative
 		margin-right: 13px
-	// img
-	// 	// margin-right: 21px
-	// 	// position: relative
-.counter
-	background-color: #ff9801
-	position: absolute
-	top: -8px
-	right: -12px
-	display: inline-block
-	font-size: 14px
-	border-radius: 50%
-	width: 23px
-	height: 23px
-	text-align: center
-
+	.counter
+		background-color: #ff9801
+		position: absolute
+		top: -8px
+		right: -12px
+		display: inline-block
+		font-size: 14px
+		border-radius: 50%
+		width: 23px
+		height: 23px
+		text-align: center
+/*Flex Power*/
+.auth-block
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		i
+			// margin-right: 13px
+.flx-wrap
+	// background-color: rgba(255,255,255, .5)
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 56px
+	.mnu_button_wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		label
+			margin-bottom: 0
+		.catalog
+			margin-left: 23px
+	.search-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+.pln
+	padding-left: 0
+.rrn
+	padding-right: 0
+/*Green-menu End*/
 //grey line 
 .bred_crambs
 	background-color: rgba(233, 234, 239, 0.44)
@@ -481,6 +511,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 			font-weight: 400
 			text-transform: uppercase
 			letter-spacing: 0.5px
+			margin-bottom: 5px
 		.s_descr
 			font-size: 14px
 			line-height: normal
@@ -628,6 +659,7 @@ section
 			font-weight: 400
 			text-transform: uppercase
 			letter-spacing: 0.5px
+			margin-bottom: 5px
 		.s_descr
 			font-size: 14px
 			line-height: normal
