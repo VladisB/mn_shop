@@ -67,16 +67,16 @@ $(function() {
 				}
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 768,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 3,
 					slidesToScroll: 2,
 					// dots: true,
-					arrows: false
+					arrows: true
 				}
 			},
 			{
-				breakpoint: 481,
+				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
