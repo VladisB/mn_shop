@@ -41,7 +41,7 @@ $(function() {
 	/* input counter end */
 
 		//for replaceing path for big img
-		$(".smol_img").click(function() {
+		$(".small_img").click(function() {
 			var src = $(this).find('img').attr('src');
 			console.log(src);
 			$(".main_img").find('img').attr('src', src);
