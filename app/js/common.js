@@ -119,9 +119,59 @@ $(function() {
 		$(this).closest(".clump").find(".header_slide").removeClass("hide_link");
 		$(this).closest(".clump").find(".header_slide_inside").addClass("hide_link");
 	});
-	// $('#nav-icon4').click(function(){
-	// 	$(this).toggleClass('open');
-	// 	$('.mobile-mnu').toggleClass('active');
+
+	$('#openSidebarMenu').on('click', function () {
+		$('.overlay').toggleClass('show');
+	});
+
+	$('.sidebarMenuInner .main-item').on('click', function () {
+		$('#sidebarMenu').toggleClass('slide-mm');
+		// $('#openSidebarMenu').toggleClass('slide-mm');
+		console.log('click main');
+	});
+
+
+	$('#back_btn_mnu').on('click', function () {
+		// if ( $("#sidebarMenu").hasClass("slide-mm") ) {
+
+		// 	alert("У элемента задан класс slide-mm!");
+			
+		// }
+		// $('#sidebarMenu').toggleClass('slide-mm');
+		// console.log('click back');
+	});
+
+	// $('.primary_btn').on('click', function () {
+	// 	$('.primary_btn.tg').toggleClass('go');
+	// 	console.log('click');
+	// 	// $('#openSidebarMenu').toggleClass('slide-mm');
+	// 	// console.log('click main');
+	// });
+
+	// $("#openSidebarMenu").click(function() {
+  
+	// 	$(".focus_wrap").is(":visible")?$(".focus_wrap").fadeOut(300):$(".focus_wrap").fadeIn(300);
+	// 		});
+	// $("#openSidebarMenu").click(function() {
+	// 	// $(this).toggleClass("on");
+	// 	// $(".focus_wrap").css("opacity", '1');
+	// 	$(".focus_wrap").toggleClass("on-focus");
+	// 	// $(this).parent().next().next().find(".main-mnu").slideToggle();
+	// 	// return false;
+	// });
+	// $('#openSidebarMenu').click(function(){
+	// 	console.log('click');
+		
+		// $("#focus_wrap").css("display", "block");
+		// if(	$("#focus_wrap").css("display", "block")){
+		// 	$("#focus_wrap").css("display", "none");
+		// }
+	// });
+
+	// $("#sidebarMenu .sidebarMenuInner li").click(function(){
+	// 	// $("ul").slideToggle();
+	// 	// console.log("click");
+	// 	// $("ul ul").css("display", "none");
 	// });
 	
 });

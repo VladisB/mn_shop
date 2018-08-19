@@ -4,6 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.sidebarMenuInner
+		.flex-container
+			width: 636px
 	.item_wrap
 		padding-bottom: 15px
 		padding-top: 15px
@@ -102,6 +105,22 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	#sidebarMenu
+		margin-top: 36px
+	.sidebarMenuInner
+		.flex-container
+			width: 406px
+			flex-direction: column
+			flex-direction: row
+			flex-wrap: wrap
+			img
+				display: inline-block
+				width: 26px
+			span
+				display: inline-block
+			.flex-element
+				padding: 10px 5px 10px
+				// min-width: 406px
 	.r_wrap
 		text-align: right
 	.simp_price
@@ -349,6 +368,53 @@
 	// 		position: absolute
 	// 		top: 8px
 	// 		left: -50px
+	.sidebarMenuInner
+		.back_btn_mnu
+			display: block
+			width: 320px
+			color: $green
+		.flex-container
+			width: 320px
+			.flex-element
+				text-align-last: left
+				padding-left: 13px
+				img
+					margin-bottom: 0
+					margin-right: 15px
+	#sidebarMenu
+		left: -29px
+		// margin-top: 36px
+	// #back_btn_mnu
+	// 	a
+	// 		&::after
+	// 			font-family: "Font Awesome 5 Free"
+	// 			font-weight: 600
+	// 			content: '\f105'
+	// 			font-size: 20px
+	// 			color: #5acf3c
+	// 			position: absolute
+	// 			right: 0px
+	// 			top: 0px
+	#sidebarMenu
+		&.slide-mm
+			left: -349px
+	.sidebarMenuInner
+		width: 320px
+		li
+			&.sub-item, #back_btn_mnu
+				border-bottom: 1px solid #f6f6f8
+				&.back_btn_mnu
+					a
+						color: $green
+			a
+				&:active
+				//  #sidebarMenu
+				// 	 left: 0
+			p
+				width: calc(100% - 43px)
+			padding-left: 19px
+			.icon_mnu_wrap
+				display: none
 	.r_wrap
 		text-align: right
 		.ddb_wrap

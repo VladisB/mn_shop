@@ -64,6 +64,45 @@ h3
 	background-color: $accent
 	color: #fff
 
+.top_menu
+	z-index: 999
+	position: relative
+	background-color: #fff
+.green_menu
+	z-index: 999
+	position: relative
+
+.focus_wrap
+	position: absolute
+	background-color: rgba(0, 0, 0, .5)
+	width: 100%
+	height: 100%
+	// width: 100vw
+  // height: 100vh
+	top: 0
+	left: 0
+	z-index: 1
+	display: none
+	// transition: .3s ease
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: rgba(0, 0, 0, .5)
+	opacity: 0
+	width: 100%
+	height: 100%
+	transition: all 300ms ease
+	z-index: 1
+	&.show
+		opacity: 1
+		z-index: 10
+		transition: all 300ms ease
+
+
+
 p
 	font-family: 'Source Sans Pro'
 	font-weight: 400
@@ -188,43 +227,158 @@ body
 
 //--Humburger--
 #sidebarMenu
-	height: 100%
-	position: fixed
-	left: 0
-	top: 50px
-	width: 250px
-	margin-top: 60px
-	transform: translateX(-250px)
-	transition: transform 250ms ease-in-out
+	// height: 100%
+	position: absolute
+	left: -15px
+	top: 0px
+	margin-top: 41px
+	transform: translateX(-550px)
+	transition: transform 800ms ease-in-out
 	background-color: #fff
-	z-index: 3
+	// outline: 1px solid $green
+	z-index: 2
+	opacity: 0
+	transition: .4s ease
+	.bottom_link
+		text-align: center
+		font-weight: 600
+		background-color: #fff
+		padding-top: 20px
+		padding-bottom: 20px
+		a
+			color: #7bd53b
+			text-decoration: none
+			cursor: pointer
+			img
+				margin-right: 10px
 
 
 .sidebarMenuInner
-  margin: 0
-  padding: 0
-  border-top: 1px solid rgba(255, 255, 255, 0.1)
-  li
-    list-style: none
-    color: #000
-    text-transform: uppercase
-    font-weight: bold
-    padding: 20px
-    cursor: pointer
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+	margin: 0
+	padding: 0
+	width: 359px
+	background-color: #fff
+	margin-bottom: 30px
+	// display: inline-block
+	li
+		&:hover
+			// #focus_wrap
+			// 	opacity: 1
+			.flex-container
+				display: flex
+				opacity: 1
+				.flex-element
+					opacity: 1
+		text-align: left
+		color: #515151
+		list-style-type: none
+		transition: .3s ease
+		&:hover
+			background-color: rgba(206, 209, 219, 1)
+		&.main-item, #back_btn_mnu
+			a
+				&::after
+					font-family: "Font Awesome 5 Free"
+					font-weight: 600
+					content: '\f105'
+					font-size: 20px
+					color: $green
+					position: absolute
+					right: -26px
+					top: -4px
+		#back_btn_mnu
+			a
+				&::after
+					content: '\f104'
+					left: 0px
+					top: -7px
+				span
+					padding-left: 19px
+		&.sub-item
+			a
+				&:after
+					display: none
+		a
+			color: #515151
+			position: relative
+			// &::after
+			// 	font-family: "Font Awesome 5 Free"
+			// 	font-weight: 600
+			// 	content: '\f105'
+			// 	font-size: 20px
+			// 	color: $green
+			// 	position: absolute
+			// 	right: -26px
+			// 	top: -4px
+			i
+				font-size: 20px
+				color: $green
+				display: none
+		.icon_mnu_wrap
+			height: 100%
+			width: 56px
+			display: inline-block
+			// border-bottom: 1px solid transparent
+			text-align: center
+			img
+				height: 100%
+				width: auto
+		p
+			width: calc(100% - 96px)
+			padding: 14.5px 0
+			display: inline-block
+			margin: 0
+			border-bottom: 1px solid #e0e0e0
+			font-family: 'Open Sans', sans-serif
+			font-size: 14px
+			font-weight: 600
+.flex-container
+	position: absolute
+	left: 100%
+	top: 0
+	opacity: 0
+	padding: 0px
+	background-color: #fff
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: start
+	width: 840px
+	// outline: 1px solid #ccc
+	transition: ease .3s
+	// height: 200px
+	display: none
+	.flex-element
+		opacity: 0
+		transition: all 0.9s
+		// display: none
+		text-align: center
+		color: #424242
+		// outline: 1px solid #ccc
+		font-size: 14px
+		font-family: 'Open Sans', sans-serif
+		font-weight: 600
+		// background-color: #fff
+		padding: 20px 25px 20px
+		margin: 0px
+		// width: 400px
+		flex-grow: 1
+		flex-shrink: 1
+		img
+			margin-bottom: 5px
 		span
-      display: block
-      font-size: 14px
-      color: rgba(255, 255, 255, 1)
+			display: block
+
     
 
 input
-  &[type="checkbox"]:checked ~ #sidebarMenu
-    transform: translateX(0)
-  &[type=checkbox]
-    transition: all 0.3s
-    box-sizing: border-box
-    display: none
+	&[type="checkbox"]:checked ~ #sidebarMenu
+		transform: translateX(0)
+		opacity: 1
+	&[type=checkbox]
+		transition: all 0.3s
+		box-sizing: border-box
+		display: none
 
 .sidebarIconToggle
   transition: all 0.3s
@@ -293,7 +447,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	&::before
 		content: ''
 		width: 1px
-		height: 60px
+		height: 54px
 		position: absolute
 		top: 1px
 		left: 0px
@@ -329,7 +483,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	&::before
 		content: ''
 		width: 1px
-		height: 60px
+		height: 54px
 		position: absolute
 		top: 1px
 		left: 0
@@ -357,7 +511,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	&::before
 		content: ''
 		width: 1px
-		height: 60px
+		height: 54px
 		position: absolute
 		top: 1px
 		left: 0
@@ -397,6 +551,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 		display: flex
 		justify-content: center
 		align-items: center
+		position: relative
 		label
 			margin-bottom: 0
 		.catalog
@@ -417,6 +572,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	text-align: center
 	line-height: 50px
 	color: #424242
+	position: relative
 	ul
 		margin: 0
 		display: flex
@@ -478,7 +634,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 			padding: 3px 7px 3px 9px
 		.arrow
 			position: absolute
-			z-index: 2
+			z-index: 0
 			background-color: rgba(93, 116, 118, .5)
 			color: #ffffff
 			top: 20%
@@ -488,7 +644,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 				background-color: rgba(93, 116, 118, 1)
 		.left_arrow
 			left: 16px
-			z-index: 2
 			padding: 3px 9px 3px 7px
 
 		
