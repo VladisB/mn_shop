@@ -229,9 +229,10 @@ body
 #sidebarMenu
 	// height: 100%
 	position: absolute
+	// position: fixed
 	left: -15px
 	top: 0px
-	margin-top: 41px
+	margin-top: 56px
 	transform: translateX(-550px)
 	transition: transform 800ms ease-in-out
 	background-color: #fff
@@ -264,10 +265,11 @@ body
 		&:hover
 			// #focus_wrap
 			// 	opacity: 1
-			.flex-container
-				display: flex
+			.inner-list
+				// display: flex
+				display: inline-block
 				opacity: 1
-				.flex-element
+				.sub-item
 					opacity: 1
 		text-align: left
 		color: #515151
@@ -275,7 +277,7 @@ body
 		transition: .3s ease
 		&:hover
 			background-color: rgba(206, 209, 219, 1)
-		&.main-item, #back_btn_mnu
+		&.main-item
 			a
 				&::after
 					font-family: "Font Awesome 5 Free"
@@ -286,15 +288,27 @@ body
 					position: absolute
 					right: -26px
 					top: -4px
-		#back_btn_mnu
+		&.back_btn_mnu
 			a
-				&::after
+				&::before
 					content: '\f104'
-					left: 0px
-					top: -7px
-				span
-					padding-left: 19px
+					left: 20px
+					top: -5px
+					font-family: "Font Awesome 5 Free"
+					font-weight: 600
+					// content: '\f105'
+					font-size: 20px
+					color: $green
+					position: absolute
+				p
+					padding-left: 30px
 		&.sub-item
+			height: 130px
+			// outline: 1px solid #000
+			.img_wrap
+				img
+					width: 88px
+					height: 72px
 			a
 				&:after
 					display: none
@@ -325,49 +339,64 @@ body
 				width: auto
 		p
 			width: calc(100% - 96px)
-			padding: 14.5px 0
+			padding: 12.675px 0
 			display: inline-block
 			margin: 0
 			border-bottom: 1px solid #e0e0e0
 			font-family: 'Open Sans', sans-serif
 			font-size: 14px
 			font-weight: 600
-.flex-container
+.inner-list
 	position: absolute
 	left: 100%
 	top: 0
 	opacity: 0
 	padding: 0px
 	background-color: #fff
-	display: flex
-	flex-direction: row
-	flex-wrap: wrap
-	justify-content: start
-	width: 840px
+	display: none
+	// width: 840px
+	width: 630px
+	font-size: 0
 	// outline: 1px solid #ccc
 	transition: ease .3s
 	// height: 200px
-	display: none
-	.flex-element
+	// display: none
+	.sub-item
+		a
+			text-decoration: none
+			// p
+			// 	padding: 13.48px 0
 		opacity: 0
 		transition: all 0.9s
-		// display: none
+		display: inline-block
 		text-align: center
 		color: #424242
+		// outline: 1px solid #000
 		// outline: 1px solid #ccc
 		font-size: 14px
 		font-family: 'Open Sans', sans-serif
 		font-weight: 600
 		// background-color: #fff
-		padding: 20px 25px 20px
-		margin: 0px
-		// width: 400px
-		flex-grow: 1
-		flex-shrink: 1
-		img
+		// padding: 20px 25px 20px
+		padding-top: 20px
+		padding-bottom: 10px
+		margin: 0
+		width: 210px
+		// height: 130px
+		.img_wrap
 			margin-bottom: 5px
-		span
+			text-align: center
+			img
+				width: 26px
+				height: 22px
+		p
 			display: block
+			width: 100%
+			border: none
+			padding: 0 10px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
 
     
 
@@ -551,7 +580,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 		display: flex
 		justify-content: center
 		align-items: center
-		position: relative
+		// position: relative
 		label
 			margin-bottom: 0
 		.catalog
@@ -1232,6 +1261,16 @@ footer
 			// opacity: 1
 			border: 3px solid $green
 
+.test-list
+	outline: 1px solid #000
+	margin: 0
+	padding: 0
+	li.test-li
+		outline: 1px solid #000000
+		list-style-type: none
+		width: 20%
+		display: inline-block
+		margin: 0
 
 
 	

@@ -4,9 +4,11 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	#sidebarMenu
+		// left: -46px
 	.sidebarMenuInner
-		.flex-container
-			width: 636px
+		.inner-list
+			width: 630px
 	.item_wrap
 		padding-bottom: 15px
 		padding-top: 15px
@@ -56,6 +58,49 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.sidebarMenuInner
+		li
+			&.sub-item, #back_btn_mnu
+				border-bottom: 1px solid #f6f6f8
+	.sidebarMenuInner
+		.main-item
+			position: relative
+		.inner-list
+			width: 406px
+			font-size: 0
+			.sub-item
+				width: 100%
+				text-align: left
+				// padding: 13.48px 0 13.48px 15px
+				padding: 0
+				// outline: 1px solid #000
+				height: 48px
+				display: flex
+				align-items: center
+				a
+					display: flex
+					align-items: center
+				p
+					border: none
+					// padding: 13px 0 14.96px
+					display: inline-block
+					width: 90%
+					padding-left: 0
+				// span
+				// 	padding: 0px 0 0px 15px
+				.img_wrap
+					display: inline-block
+					margin-bottom: 0
+					width: 10%
+					margin-left: 13px
+					margin-right: 15px
+					// padding-bottom: 12px
+					// display: none
+					img
+						display: inline-block
+						width: 26px
+						height: 22px
+						margin-bottom: 3px
 	.hide_mnu_item
 		display: none !important
 	.btn_buy
@@ -105,22 +150,33 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	#sidebarMenu
-		margin-top: 36px
 	.sidebarMenuInner
-		.flex-container
-			width: 406px
-			flex-direction: column
-			flex-direction: row
-			flex-wrap: wrap
-			img
-				display: inline-block
-				width: 26px
-			span
-				display: inline-block
-			.flex-element
-				padding: 10px 5px 10px
-				// min-width: 406px
+		width: 100vw
+		li
+			&.sub-item, #back_btn_mnu
+				// border-bottom: 1px solid #f6f6f8
+				&.back_btn_mnu
+					a
+						color: $green
+	.sidebarMenuInner
+		// width: 100vw
+		.main-item
+			position: static
+	#sidebarMenu
+		// left: -15px !important
+		&.slide-mm
+			// left: -349px
+			left: -100vw
+	.sidebarMenuInner
+		.inner-list
+			width: 100vw
+	.inner-list
+		li.sub-item
+			border: 1px solid #f0f0f0
+			// outline-offset: 1px
+		.back_btn_mnu
+			a
+				width: 100%
 	.r_wrap
 		text-align: right
 	.simp_price
@@ -205,6 +261,39 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.sidebarMenuInner
+		width: 320px
+		li
+			&.sub-item, #back_btn_mnu
+				border-bottom: 1px solid #f6f6f8
+				&.back_btn_mnu
+					a
+						color: $green
+			a
+				&:active
+				//  #sidebarMenu
+				// 	 left: 0
+			p
+				width: calc(100% - 43px)
+			padding-left: 19px
+			.icon_mnu_wrap
+				display: none
+	#sidebarMenu
+		&.slide-mm
+			// left: -349px
+			left: -100vw
+	.inner-list
+		.back_btn_mnu
+			a
+				width: 100%
+	.sidebarMenuInner
+		width: 100vw
+		.inner-list
+			.sub-item:first-child
+				p
+					padding-left: 50px
+		.main-item
+			position: static
 	.cpn-xs
 		padding: 0
 	.col-plrn-xs
@@ -362,27 +451,24 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	// .r_wrap
-	// 	position: relative
-	// 	.drop_down_button
-	// 		position: absolute
-	// 		top: 8px
-	// 		left: -50px
+	#sidebarMenu
+		// margin-top: 36px
+		left: 0
 	.sidebarMenuInner
 		.back_btn_mnu
-			display: block
-			width: 320px
+			// display: block
+			// width: 320px
 			color: $green
-		.flex-container
+		.inner-list
 			width: 320px
-			.flex-element
-				text-align-last: left
-				padding-left: 13px
+			.sub-item
+				text-align: left
+				// padding-left: 13px
 				img
 					margin-bottom: 0
 					margin-right: 15px
-	#sidebarMenu
-		left: -29px
+	// #sidebarMenu
+	// 	left: -29px
 		// margin-top: 36px
 	// #back_btn_mnu
 	// 	a
@@ -577,17 +663,25 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	// .header_slide_inside, .header_slide
-	// 	display: block
+	#sidebarMenu
+		left: 0
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-	/**/
+	#sidebarMenu
+		left: -15px
+	.sidebarMenuInner
+		.inner-list
+			.sub-item
+				&.back_btn_mnu
+					display: none
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	#sidebarMenu
+		left: -24px
 	.s_product
 		.input_number_wrap
 			.input-number-decrement, .input-number-increment
@@ -604,6 +698,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
+	// #sidebarMenu
+	// 	left: -30px
 	.auth-block
 		a
 			i
@@ -612,6 +708,8 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	#sidebarMenu
+		left: 10px
 	.r_wrap
 		.ddb_wrap
 			display: none
