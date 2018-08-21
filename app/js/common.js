@@ -125,9 +125,13 @@ $(function() {
 	});
 
 	$('.sidebarMenuInner .main-item').on('click', function () {
-		$('#sidebarMenu').toggleClass('slide-mm');
+		if($(window).width() < 768){
+			$('#sidebarMenu').toggleClass('slide-mm');
+			console.log('click main');
+		}
+		// $('#sidebarMenu').toggleClass('slide-mm');
 		// $('#openSidebarMenu').toggleClass('slide-mm');
-		console.log('click main');
+		// console.log('click main');
 	});
 
 

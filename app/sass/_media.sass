@@ -150,8 +150,17 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	#sidebarMenu
+		&.slide-mm
+			left: calc(-100vw - 15px)
 	.sidebarMenuInner
 		width: 100vw
+		.inner-list
+			.sub-item:first-child
+				p
+					padding-left: 50px
+	.sidebarMenuInner
+		// width: 100vw
 		li
 			&.sub-item, #back_btn_mnu
 				// border-bottom: 1px solid #f6f6f8
@@ -166,7 +175,7 @@
 		// left: -15px !important
 		&.slide-mm
 			// left: -349px
-			left: -100vw
+			// left: -100vw
 	.sidebarMenuInner
 		.inner-list
 			width: 100vw
@@ -261,8 +270,11 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	#sidebarMenu
+		&.slide-mm
+			left: calc(-100vw)
 	.sidebarMenuInner
-		width: 320px
+		// width: 320px
 		li
 			&.sub-item, #back_btn_mnu
 				border-bottom: 1px solid #f6f6f8
@@ -281,7 +293,7 @@
 	#sidebarMenu
 		&.slide-mm
 			// left: -349px
-			left: -100vw
+			// left: -100vw
 	.inner-list
 		.back_btn_mnu
 			a
@@ -451,6 +463,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
+	// #sidebarMenu
+	// 	&.slide-mm
+	// 		left: calc(-100vw)
 	#sidebarMenu
 		// margin-top: 36px
 		left: 0
@@ -483,7 +498,7 @@
 	// 			top: 0px
 	#sidebarMenu
 		&.slide-mm
-			left: -349px
+			// left: -349px
 	.sidebarMenuInner
 		width: 320px
 		li
@@ -665,23 +680,36 @@
 @media only screen and (min-width : 320px)
 	#sidebarMenu
 		left: 0
+	// #sidebarMenu
+	// 	&.slide-mm
+	// 		left: calc(-100vw - 15px)
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	#sidebarMenu
 		left: -15px
+		&.slide-mm
+			left: calc(-100vw - 15px)
+	// .sidebarMenuInner
+	// 	.inner-list
+	// 		.sub-item
+	// 			&.back_btn_mnu
+	// 				display: none
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	// #sidebarMenu
+	// 		&.slide-mm
+	// 			left: -24px
 	.sidebarMenuInner
 		.inner-list
 			.sub-item
 				&.back_btn_mnu
 					display: none
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
 	#sidebarMenu
-		left: -24px
+		left: -25px
 	.s_product
 		.input_number_wrap
 			.input-number-decrement, .input-number-increment
