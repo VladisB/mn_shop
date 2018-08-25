@@ -90,6 +90,16 @@ $(function() {
 		]
 	});
 
+	$(".brand_list").slick({
+		// dots: true,
+		infinite: true,
+		slidesToShow: 6,
+		arrows: true,
+		nextArrow: '<div class="right_arrow arrow"><i class="fas fa-chevron-right"></i></div>',
+		prevArrow: '<div class="left_arrow arrow"><i class="fas fa-chevron-left"></i></div>',
+		slidesToScroll: 6
+	});
+
 	/*Slide down*/
 	// $(".slider-show").click(function (){
 	// 	$(this).closest(".clump").find(".detail").removeClass("closed");
@@ -129,9 +139,6 @@ $(function() {
 			$('#sidebarMenu').toggleClass('slide-mm');
 			console.log('click main');
 		}
-		// $('#sidebarMenu').toggleClass('slide-mm');
-		// $('#openSidebarMenu').toggleClass('slide-mm');
-		// console.log('click main');
 	});
 
 
