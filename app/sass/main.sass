@@ -870,6 +870,8 @@ section
 	.itm_img_wrap
 		text-align: center
 		margin-bottom: 29px
+		img
+			max-width: 112px
 	.itm_artic_wrap
 		float: right
 		font-size: 14px
@@ -1341,13 +1343,12 @@ section
 		font-size: 14px
 		color: #ffffff
 		position: absolute
-		padding: 20px
+		padding: 10px
 		border-radius: 10px
 		bottom: 70px
 		right: 0
 		transition: .3s ease
-		opacity: 1
-		// display: none
+		opacity: 0
 	&::before
 		content: ''
 		position: absolute
@@ -1359,9 +1360,325 @@ section
 		z-index: -1
 		transform: rotate(45deg)
 		transition: .3s ease
-		opacity: 1
-	
-  
+		opacity: 0
+
+#sidebarMenu2
+	.inner-list
+		z-index: 5
+
+/*Page Category*/
+.type_select
+	background-color: rgba(206, 209, 219, .12)
+	padding-bottom: 30px
+	h3
+		font-size: 20px
+		text-transform: uppercase
+		color: #424242
+		font-family: 'Open Sans', sans-serif
+		font-weight: 600
+		letter-spacing: 0.5px
+		margin-bottom: 20px
+	.type-item
+		background-color: #fff
+		text-align: center
+
+/* Reset Select */
+select
+	appearance: none
+	outline: 0
+	box-shadow: none
+	// border: 0 !important
+	background: #fff
+	background-image: none
+	text-transform: uppercase
+	border: 1px solid #f0f0f0
+/* Custom Select */
+.select
+	position: relative
+	display: block
+	width: 20em
+	height: 3em
+	line-height: 3
+	background: #fff
+	overflow: hidden
+	// border-radius: .25em
+select
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0 0 0 .5em
+	color: #424242
+	cursor: pointer
+select::-ms-expand
+	display: none
+/* Arrow */
+.select::after
+	content: '\f078'
+	font-family: "Font Awesome 5 Free"
+	font-weight: 600
+	color: #d8d8da
+	font-size: 20px
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	padding: 0 0.5em
+	line-height: 2
+	background: #fff
+	pointer-events: none
+	border: 1px solid #f0f0f0
+	border-left: none
+/* Transition */
+.select:hover::after
+	color: $green
+.select::after
+	transition: .25s all ease
+/*----------*/
+.top_cat_list
+	margin: 0
+	padding: 0
+	display: inline-block
+	margin-top: 6px
+	li
+		list-style-type: none
+		display: inline-block
+		// height: 130px
+		padding: 20px 0 10px
+		// outline: 1px solid #000
+		background-color: #fff
+		width: 210px
+		margin: 1px
+		cursor: pointer
+		a
+			text-decoration: none
+			color: #424242
+			font-size: 14px
+			font-weight: 600
+		p
+			display: block
+  		width: 100%
+  		border: none
+  		padding: 0 10px
+  		white-space: nowrap
+  		overflow: hidden
+  		-o-text-overflow: ellipsis
+  		text-overflow: ellipsis
+		.img_wrap
+			img
+				width: 88px
+				height: 72px
+/*---------*/	
+.s_catalog
+	h1.cat_name
+		font-size: 18px
+		font-family: 'Open Sans', sans-serif
+		font-weight: normal
+		letter-spacing: 0.5px
+		margin-bottom: 5px
+	.sb_block_name
+		position: relative
+		&:hover
+			&::after
+				transform: rotate(180deg)
+		&::after
+			position: absolute
+			top: 0
+			right: 0
+			content: '\f078'
+			font-family: "Font Awesome 5 Free"
+			font-weight: 600
+			color: #d8d8da
+			font-size: 20px
+			transition: .3s ease
+
+	.cat_info
+		font-size: 12px
+		.all
+			color: #c0c0c0
+			margin-right: 15px
+		.all, .page
+			display: inline-block
+	.sort_wrap
+		padding: 15px 0
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		font-family: 'Open Sans', sans-serif
+		font-weight: normal
+		.select, .s_action
+			// display: inline-block
+		.s_action
+			text-transform: uppercase
+			font-size: 14px
+			margin-right: 15px
+	.grid_type_select
+		padding: 25.5px 0
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		svg
+			margin-left: 20px
+			cursor: pointer
+			path
+				transition: .3s ease
+			&:hover
+				path
+					fill: $green
+/*Sidebar*/
+.sb_block
+	border: 1px solid #d8d8da
+	padding: 0px 20px
+	input[type="text"]
+		font-size: 20px
+		padding: 5px 10px
+	input[name="price_from"]
+		// margin-right: 10px
+	input[name="price_to"]
+		float: right			
+	.input_price
+		display: inline-block
+		width: 113px
+	.sb_block_name
+		text-transform: uppercase
+		font-family: 'Source Sans Pro'
+		font-weight: normal
+		font-size: 20px
+		color: #424242
+		line-height: 2.48
+/*range*/
+input[type="range"]
+	margin-top: 20px
+	margin-bottom: 15px
+	-webkit-appearance: none
+	width: 100%
+	height: 4px
+	background: #dddddf
+	background-position: center
+	background-repeat: no-repeat
+input[type="range"]::-webkit-slider-thumb
+	-webkit-appearance: none
+	width: 20px
+	height: 20px
+	border-radius: 100%
+	background: #fff
+	position: relative
+	border: 3px solid $green
+	z-index: 3
+	cursor: pointer
+
+/*Custom checkbox*/
+.styled-checkbox
+	position: absolute // take it out of document flow
+	opacity: 0 // hide it
+	transition: .3s ease
+	& + label
+		position: relative
+		cursor: pointer
+		padding: 0
+	// Box.
+	& + label:before
+		content: ''
+		margin-right: 10px
+		display: inline-block
+		vertical-align: text-top
+		width: 20px
+		height: 20px
+		background: white
+		border: 2px solid #d8d8da
+		border-radius: 3px
+		transition: .3s ease
+	// Box hover
+	&:hover + label:before
+		background: $accent
+		border-color: $accent
+	// Box focus
+	&:focus + label:before
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12)
+	// Box checked
+	&:checked + label:before
+		background: $accent
+		border-color: $accent
+	// Disabled state label.
+	&:disabled + label
+		color: #b8b8b8
+		cursor: auto
+	// Disabled box.
+	&:disabled + label:before
+		box-shadow: none
+		background: #ddd
+	// Checkmark. Could be replaced with an image
+	&:checked + label:after
+		content: ''
+		position: absolute
+		left: 5px
+		top: 11px
+		background: white
+		width: 2px
+		height: 2px
+		box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white
+		transform: rotate(45deg)
+
+// Demo-only styles
+// --------------
+.unstyled
+	margin: 0
+	padding: 0
+	list-style-type: none
+.cat_list_sb
+	font-family: 'Source Sans Pro'
+	font-weight: 400
+	font-size: 18px
+	.amount
+		display: inline-block
+		float: right
+	li
+		margin: 5px 0
+		label
+			margin: 0
+			font-weight: 400
+
+.title
+	text-align: center
+	color: rgb(69, 113, 236)
+
+.pagination_wrap
+	margin-top: 30px
+	button.secondary_btn
+		text-transform: uppercase
+		padding: 4px 55px
+		font-size: 24px
+		font-family: 'Source Sans Pro'
+		font-weight: 400
+	.с_pagination
+		margin-top: 30px
+		margin-bottom: 5px
+		display: block
+		ul
+			display: inline-block
+			margin: 0
+			padding: 0
+			font-size: 0
+			li
+				list-style-type: none
+				display: inline-block
+				font-size: 24px
+				min-width: 48px
+				padding: 3px 0.5em
+				border: 1px solid #f0f0f0
+				transition: .3s ease
+				&:hover
+					background-color: $accent
+					color: #fff
+				&.dots
+					border: none
+					&:hover
+						background-color: #fff
+						color: #424242
+				&.active
+					background-color: $accent
+					color: #fff
+
+
 
 
 @import "media" // Всегда в конце

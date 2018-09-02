@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Moline</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="fonts/font-awesome/css/all.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+
+</head>
+
+<body>
+
+	<header>
+		<div class="top_menu">
+			<div class="container">
+				<div class="col-lg-2 col-md-2 col-xs-5 col-sm-3 pl-nl pr-nr">
+						<div class="logo">
+							<a href="#">
+								<img src="img/logo.svg" class="visible-xs" id="xs_logo">
+								<img src="img/LogoMoline.png" alt="" class="large_logo">
+							</a>
+						</div>
+				</div>
+				
+				<div class="col-lg-8 col-sm-6 col-md-7 hidden-xs pn-sm-l pn-sm-r">
+						<nav>
+								<ul>
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Новинки</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="#" class="visible-md visible-lg">Оплата</a></li>
+									<li><a href="#" class="visible-md visible-lg">О нас</a></li>
+									<li><a href="#" class="visible-md visible-lg">Вопрос</a></li>
+									<li class="visible-lg"><a href="#">Сотрудничество</a></li>
+									<li class="visible-lg"><a href="#">Контакты</a></li>
+								</ul>
+							</nav>
+				</div>
+				<div class="col-lg-2 col-md-3 col-xs-7 col-sm-3 pl-nl pr-nr pn-sm-l pn-sm-r">
+					<div class="r_wrap">
+							<div class="ddb_wrap ">
+									<div class="drop_down_button">
+											<div class="dot"></div>
+											<div class="dot"></div>
+											<div class="dot"></div>
+									</div>
+							</div>
+							<div class="r_info">
+									0-800-150-3232
+									<br>
+									<span class="street">ул.Маяковского 132</span>
+							</div>
+						</div>
+					</div>			
+			</div>
+		</div>
+		
+		<div class="green_menu">
+			<div class="container cpn-xs">
+				<div class="col-md-3 col-sm-4 col-xs-3 col-plrn-xs flx-wrap pln prn">
+					<div class="mnu_button_wrap">
+							<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" >	
+							<label for="openSidebarMenu" class="sidebarIconToggle">
+									<div class="spinner diagonal part-1"></div>
+									<div class="spinner horizontal"></div>
+									<div class="spinner diagonal part-2"></div>
+								</label>
+								<div id="sidebarMenu">
+										<ul class="sidebarMenuInner">
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/1.svg" alt=""></div><p>Источники питания</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/2.svg" alt=""></div><p>Хозтовары</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/3.svg" alt=""></div><p>Малярно-штукатурный инструмент</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/4.svg" alt=""></div><p>Веревочные изделия</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/5.svg" alt=""></div><p>Клеящие средства и герметики</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/6.svg" alt=""></div><p>Клейкие ленты</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/7.svg" alt=""></div><p>Источники света</p><i class="fas fa-angle-right"></i></a></li>
+											<li class ="main-item"><a href="#"><div class="icon_mnu_wrap"><img src="img/cat_icon/8.svg" alt=""></div><p>Освещение</p><i class="fas fa-angle-right"></i></a>
+												<ul class="inner-list">
+														
+														<li class="sub-item back_btn_mnu" ><a href="#" class="back_b"><p>Назад</p></a></li>
+														<li class="sub-item"><a href="/guide.html"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>Тестовая ссылка</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+														<li class="sub-item"><a href="#"><div class="img_wrap"><img src="http://via.placeholder.com/88x72" alt=""></div><p>название категории</p></a></li>	
+												</ul>
+											</li>
+										</ul>
+										<div class="bottom_link">
+											<a href="#" ><img src="img/cat_icon/file.svg" alt="">Скачать прайс-лист</a>
+										</div>
+								</div>
+						<div class="catalog hide_mnu_item_sm">Каталог товаров</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-4 col-xs-3 col-plrn-xs ">
+						<div class="search-wrap flx-wrap">
+								<!-- <div class="search"> -->
+									 <input type="text" class="searchTerm hidden-xs" placeholder="Поиск товара">
+									 <button type="submit" class="searchButton">
+										 <i class="fas fa-search"></i>
+									</button>
+								<!-- </div> -->
+						 </div>
+				</div>
+				<div class="col-md-3 col-sm-2 col-xs-3 col-plrn-xs ">
+					<div class="auth-block flx-wrap">
+						<a href="#"><i class="fas fa-user-alt"></i><span class="hide_mnu_item">Вход</span></a><span class="hide_mnu_item">,</span><a href="#" class="hide_mnu_item">Регистрация</a>	
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-3 col-plrn-xs pln prn">
+					<div class="cart-wrap flx-wrap">
+						<a href="#">
+						<div class="icon-wrap">
+							<img src="img/cart.svg" alt="" width="28px">
+							<div class="counter">3</div>
+						</div>
+						<span class="hide_mnu_item">Корзина</span>
+					</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="bred_crambs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						
+								<ul class="bred_crambs_list">
+										<li><a href="#">Главная</a><img src="img/arrow.svg" alt=""></li>
+										<li><a href="#">Каталог</a><img src="img/arrow.svg" alt=""></li>
+										<li><a href="#">Товар</a><img src="img/arrow.svg" alt=""></li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- <div class="focus_wrap"></div> -->
+	<div class="overlay"></div>
+	<section class="s_product">
+		<div class="container">
+			<div class="row">
+					<h1 class="visible-xs visible-sm xs_header1">Момент Универсальный Особопрочный… и запас под очень длинный заголовок</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="preview_wrap">
+						<div class="main_img">
+							<img src="http://via.placeholder.com/258x408" alt="" class="img-responsive">
+						</div>
+						<div class="list_img">
+							<!-- <div class="right_arrow arrow">
+								<i class="fas fa-chevron-right"></i>
+							</div> -->
+							<!-- <div class="left_arrow arrow">
+								<i class="fas fa-chevron-left"></i>
+							</div> -->
+							<div class="row">
+								<div class="inner_list_img_wrap">
+									<div class="col-md-3">
+										<div class=" video_p">
+											
+													<img src="img/video_prew.svg" alt="">
+													<div class="call_to">
+														Смотреть обзор
+													</div>
+											
+										</div>
+									</div>
+									<div class="col-md-3">
+											<div class="small_img">
+												<img src="http://via.placeholder.com/33x52" alt="">
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="small_img">
+												<img src="http://via.placeholder.com/35x52" alt="">
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="small_img">
+												<img src="http://via.placeholder.com/32x62" alt="">
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="small_img">
+												<img src="http://via.placeholder.com/32x50" alt="">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h1 class="hidden-xs hidden-sm">Момент Универсальный Особопрочный… и запас под очень длинный заголовок</h1>
+					<div class="ml_center">
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="row">
+									<div class="simp_price"><strong>12000,99 <span class="currency">грн</span></strong></div></div>
+									<div class="limit">от <span class="amount_lim">5 ед.</span>минимальный заказ</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+									<div class="retail_price">Рекомендуемая розничная цена<div class="price">12000,99 <span class="currency">грн</span></div></div>
+								</div>
+					</div>			
+					<div class="row">
+							<div class="col-md-6">
+								<div class="legend">Выберите количество товара </div>
+							</div>
+						</div>
+					<div class="row">
+						<div class="col-md-5 col-sm-4">
+							<div class="input_number_wrap">
+								<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+							</div>
+						</div>
+						
+						<div class="col-md-7 col-sm-8">
+							<!-- <a href="#" class="btn_buy">Купить</a> -->
+							<button class="primary_btn btn_buy main_btn_buy">Купить
+								<div class="massage">Вы купили 1 штуку, спасибо, смотри корзину</div>
+							</button>
+						</div>
+						<!-- <div class="col-md-7 col-sm-8"><a href="#" class="btn_buy">Купить</a></div> -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<div class="articul-wrap">
+								Артикул: 334156
+							</div>
+						</div>
+					</div>
+				</div>
+						<div class="row">
+								<div class="servise_wrap">
+										<div class="col-md-2 col-xs-3">
+											<div class="img_wrap">
+												<img src="img/car.svg" alt="">
+											</div>
+										</div>
+										<div class="col-md-10 col-xs-9">
+											<h3>Доставка</h3>
+											<p class="s_descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+										</div>
+									</div>
+						</div>
+						<div class="row">
+								<div class="servise_wrap">
+										<div class="col-md-2 col-xs-3">
+											<div class="img_wrap">
+												<img src="img/card.svg" alt="">
+											</div>
+										</div>
+										<div class="col-md-10 col-xs-9">
+											<h3>Оплата</h3>
+											<p class="s_descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+										</div>
+									</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s_properties">
+		<div class="container">
+			<div class="row">
+				<div class="s_header_wrap">
+						<h2>Характеристики</h2>
+				</div>
+			</div>
+			<div class="row">
+					<div class="clump">
+							<div class="card">
+								<div class="section">
+									<!-- open -->
+									<div class="col-md-6 col-sm-6">
+											<ul class="list_prop">
+												<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+												<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+												<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+												<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+												<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+											</ul>
+										</div>
+									<div class="detail closed">
+										<!-- closed_info -->
+											<div class="col-md-6 col-sm-6">
+													<ul>
+															<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+															<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+															<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+															<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+															<li><span class="s_left">Производитель</span><span class="s_right">Apple</span></li>
+														</ul>
+											</div>
+										<!-- closed_info end-->
+									</div>
+								</div>
+								<div class="footer visible-xs">
+									<div class="slider_link more">Подробнее</div>
+									<div class="slider_link less hide_link">Скрыть</div>
+								</div>
+							</div>
+						</div>					
+				</div>
+			<div class="row">
+				<div class="col-md-6 hidden-xs">
+					<div class="full_descr">
+							<h3>Подробное описание:</h3>
+					<p>Предназначен для склеивания резины, кожи, металлов, полистирола, оргстекла и других пластиков, пробки, стекла, керамики, бетона. Не подходит для склеивания посуды, контактирующей с пищей, стиропора, полиэтилена и полипропилена.
+							Разделы в подвале сайта «Возврат товара без проблем», вносим: отгрузка в день заказа, наличие собственного склада, только оригинальная продукция. Под каждое данное преимущество необходима своя иконка в стиле компании.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="s_recommend">
+		<div class="container">
+			<div class="row">
+					<div class="s_header_wrap">
+						<h2>Рекомендуем</h2>
+					</div>
+			</div>	
+			<div class="row">
+					<div class="item_wrap col-md-3 col-xs-6 col-sm-3">
+							<div class="row top_info">
+								<div class="col-md-6 col-xs-5">
+									<div class="bage_blue bage">Хит</div>
+								</div>
+								<div class="col-md-6 col-xs-7">
+									<div class="itm_artic_wrap">
+										Арт.3334156
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 itm_img_wrap">
+									<img src="http://via.placeholder.com/112x113" alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<div class="price">12000 <span class="currency">грн</span></div>
+										<div class="old_price visible-xs">12000грн</div>
+									</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12  col-sm-12 prn-md">
+									<div class="counter_wrap">
+										<div class="cw_inner">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
+									</div>
+									</div>
+								<div class="col-md-6 col-sm-12 btn_buy_wrap "><a href="#" class="btn_buy primary_btn">Купить</a></div>
+								<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
+							</div>
+						</div>
+					<div class="item_wrap col-md-3 col-xs-6 col-sm-3">
+							<div class="row top_info">
+								<div class="col-md-6 col-xs-5">
+									<div class="bage_blue bage">Хит</div>
+								</div>
+								<div class="col-md-6 col-xs-7">
+									<div class="itm_artic_wrap">
+										Арт.3334156
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 itm_img_wrap">
+									<img src="http://via.placeholder.com/112x113" alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<div class="price">12000 <span class="currency">грн</span></div>
+										<div class="old_price visible-xs">12000грн</div>
+									</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12  col-sm-12 prn-md">
+									<div class="counter_wrap">
+										<div class="cw_inner">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
+									</div>
+									</div>
+								<div class="col-md-6 col-sm-12 btn_buy_wrap "><a href="#" class="btn_buy primary_btn">Купить</a></div>
+								<!-- <div class="col-md-6"><a href="#" class="btn_buy">Купить</a></div> -->
+							</div>
+						</div>
+					<div class="item_wrap col-md-3 col-xs-6 col-sm-3">
+							<div class="row top_info">
+								<div class="col-md-6 col-xs-5">
+									<div class="bage_blue bage">Хит</div>
+								</div>
+								<div class="col-md-6 col-xs-7">
+									<div class="itm_artic_wrap">
+										Арт.3334156
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 itm_img_wrap">
+									<img src="http://via.placeholder.com/112x113" alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<div class="price">12000 <span class="currency">грн</span></div>
+										<div class="old_price visible-xs">12000грн</div>
+									</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12  col-sm-12 prn-md">
+									<div class="counter_wrap">
+										<div class="cw_inner">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
+									</div>
+									</div>
+								<div class="col-md-6 col-sm-12 btn_buy_wrap "><a href="#" class="btn_buy primary_btn">Купить</a></div>
+								<!-- <div class="col-md-6"><a href="#" class="btn_buy">Купить</a></div> -->
+							</div>
+						</div>
+					<div class="item_wrap col-md-3 col-xs-6 col-sm-3">
+							<div class="row top_info">
+								<div class="col-md-6 col-xs-5">
+									<div class="bage_blue bage">Хит</div>
+								</div>
+								<div class="col-md-6 col-xs-7">
+									<div class="itm_artic_wrap">
+										Арт.3334156
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 itm_img_wrap">
+									<img src="http://via.placeholder.com/112x113" alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<div class="price">12000 <span class="currency">грн</span></div>
+										<div class="old_price visible-xs">12000грн</div>
+									</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12  col-sm-12 prn-md">
+									<div class="counter_wrap">
+										<div class="cw_inner">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
+									</div>
+									</div>
+								<div class="col-md-6 col-sm-12 btn_buy_wrap "><a href="#" class="btn_buy primary_btn">Купить</a></div>
+								<!-- <div class="col-md-6"><a href="#" class="btn_buy">Купить</a></div> -->
+							</div>
+						</div>
+					<!-- <div class="item_wrap col-md-3 col-xs-6">
+								<div class="row top_info">
+									<div class="col-md-6 col-xs-5">
+											<div class="bage">---</div>
+									</div>
+									<div class="col-md-6 col-xs-7">
+										<div class="itm_artic_wrap">
+											Арт.3334156
+									</div></div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 itm_img_wrap">
+										<img src="http://via.placeholder.com/112x113" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+								</div>
+								<div class="row">
+										<div class="col-md-12">
+											<div class="price">12000 <span class="currency">грн</span></div>
+											<div class="old_price visible-xs">12000грн</div>
+										</div>	
+								</div>
+								<div class="row">
+									<div class="col-md-6 counter_wrap">
+										<div class="counter_wrap">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										</div>
+									<div class="col-md-6 btn_buy_wrap"><a href="#" class="btn_buy">Купить</a></div>
+								</div>
+						</div>
+					<div class="item_wrap col-md-3 col-xs-6 hidden-xs">
+								<div class="row top_info">
+									<div class="col-md-6 col-xs-5">
+											<div class="bage_green bage">-20%</div>
+									</div>
+									<div class="col-md-6 col-xs-7">
+										<div class="itm_artic_wrap">
+											Арт.3334156
+									</div></div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 itm_img_wrap">
+										<img src="http://via.placeholder.com/112x113" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+								</div>
+								<div class="row">
+										<div class="col-md-12">
+											<div class="price">12000 <span class="currency">грн</span></div>
+											<div class="old_price visible-xs">12000грн</div>
+										</div>	
+								</div>
+								<div class="row">
+									<div class="col-md-6 counter_wrap">
+										<div class="counter_wrap">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+										</div>
+									<div class="col-md-6 btn_buy_wrap"><a href="#" class="btn_buy">Купить</a></div>
+								</div>
+					</div>
+					<div class="item_wrap col-md-3 col-xs-6 hidden-xs">
+							<div class="row top_info">
+								<div class="col-md-6 col-xs-5">
+										<div class="bage_blue bage">NEW</div>
+								</div>
+								<div class="col-md-6 col-xs-7">
+									<div class="itm_artic_wrap">
+										Арт.3334156
+								</div></div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 itm_img_wrap">
+									<img src="http://via.placeholder.com/112x113" alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12"><h4>Батарейка VARTA CR-2016</h4></div>	
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<div class="price">12000 <span class="currency">грн</span></div>
+										<div class="old_price visible-xs">12000грн</div>
+									</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-6 counter_wrap">
+									<div class="counter_wrap">
+										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+									</div>
+									</div>
+								<div class="col-md-6 btn_buy_wrap"><a href="#" class="btn_buy">Купить</a></div>
+							</div>
+					</div> -->
+				</div>
+
+				<div class="row hidden-xs">
+						<div class="advantages">
+				
+								<div class="col-md-4 col-sm-4">
+										<div class="bottom_servise_wrap">
+												<div class="col-md-2">
+													<div class="img_wrap">
+														<img src="img/package.svg" alt="">
+													</div>
+												</div>
+												<div class="col-md-10">
+														<div class="text-wrap">
+																<h3>Отгрузка в день заказа</h3>
+																<p class="s_descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+														</div>
+												</div>
+											</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+										<div class="bottom_servise_wrap">
+												<div class="col-md-2">
+													<div class="img_wrap">
+														<img src="img/sklad.svg" alt="">
+													</div>
+												</div>
+												<div class="col-md-10">
+													<div class="text-wrap">
+															<h3>Наличие собственного склада</h3>
+															<p class="s_descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+													</div>
+												</div>
+											</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+										<div class="bottom_servise_wrap">
+												<div class="col-md-2">
+													<div class="img_wrap">
+														<img src="img/steaker.svg" alt="">
+													</div>
+												</div>
+												<div class="col-md-10">
+														<div class="text-wrap">
+																<h3>Только оригинальная продукция</h3>
+																<p class="s_descr">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+														</div>
+												</div>
+											</div>
+								</div>
+					
+						</div>
+				</div>
+		</div>
+	</section>
+	<footer>
+		<div class="f_subscribe">
+			<div class="container">
+				<div class="row">
+						<div class="clump">
+								<div class="card">
+									<div class="section">
+										<!-- open -->
+								
+										<div class="detail closed">
+											<!-- closed_info -->
+											<form>
+												<div class="input-wrapper ">
+													<!-- <div class="header_slide_inside visible-xs">Подпишитесь на скидки:</div> -->
+													<div class="header_slide_inside call_to_action text-left">Подпишитесь на скидки:</div>
+													<!-- <div class="header_slide_inside visible-xs text-left">Moline:</div> -->
+														<!-- <div class="inwp_right"> -->
+															<input type="text" name="name" placeholder="Email"><input type="text" name="name" placeholder="Имя"><input type="text" name="phone" placeholder="Город">
+														<button class="reverse_button button_form primary_btn" type="submit">Подписаться</button>
+														<!-- </div> -->
+												</div>
+											</form>
+											<!-- closed_info end-->
+										</div>
+									</div>
+									<div class="footer visible-xs">
+										<div class="header_slide visible-xs">Подпишитесь на скидки:</div>
+										<div class="slider_link less hide_link">Скрыть</div>
+									</div>
+								</div>
+							</div>
+						<!-- <form>
+								<div class="input-wrapper ">
+										<div class="call_to_action">Подпишитесь на скидки:</div>
+										<input type="text" name="name" placeholder="Email"><input type="text" name="name" placeholder="Имя"><input type="text" name="phone" placeholder="Город">
+									<button class="reverse_button button_form" type="submit">Подписаться</button>
+								</div>
+							</form> -->
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="f_bottom">
+					<div class="row">
+							<div class="clump">
+									<div class="card">
+										<div class="section">
+											<!-- open -->
+									
+											<div class="detail closed">
+												<!-- closed_info -->
+												<div class="header_slide_inside ">Контакты:</div>
+												<div class="col-md-3 col-sm-3">
+														<div class="logo_wrap">
+															<img src="img/footer_logo.svg" alt="logo">
+														</div>
+														
+														<ul class="phone_list">
+															<li>099 100 20 20</li>
+															<li>099 100 20 20</li>
+															<li>099 100 20 20</li>
+															<li>099 100 20 20</li>
+														</ul>
+						
+														<div class="mail">moline@inbox.com</div>
+														<div class="f_info">
+															Мы работаем:<br>с 9:00 до 19:00
+														</div>
+														<div class="f_info">
+																г.Киев, Украина <br>ул. Маяковского 132
+														</div>
+													</div>
+												<!-- closed_info end-->
+											</div>
+										</div>
+										<div class="footer ">
+											<div class="header_slide ">Контакты:</div>
+											<div class="slider_link less hide_link">Скрыть</div>
+										</div>
+									</div>
+								</div>
+							<div class="clump">
+									<div class="card">
+										<div class="section">
+											<!-- open -->
+									
+											<div class="detail closed">
+												<!-- closed_info -->
+												<div class="header_slide_inside ">Moline:</div>
+												<div class="col-md-3 col-sm-3">
+														<ul class="f_menu_list">
+															<li><a href="#">О нас</a></li>
+															<li><a href="#">Статьи</a></li>
+															<li><a href="#">Контакты</a></li>
+															<li class="visible-lg"><a href="#">Отзывы</a></li>
+															<li class="visible-lg"><a href="#">Сотрудничество</a></li>
+														</ul>
+						
+														<div class="price_list"><a href="#"><img src="img/file.svg" alt="">Скачать прайс-лист</a></div>
+													</div>
+												<!-- closed_info end-->
+											</div>
+										</div>
+										<div class="footer ">
+											<div class="header_slide ">Moline:</div>
+											<div class="slider_link less hide_link">Скрыть</div>
+										</div>
+									</div>
+								</div>
+							<div class="clump">
+										<div class="card">
+											<div class="section">
+												<!-- open -->
+										
+												<div class="detail closed">
+													<!-- closed_info -->
+													<div class="header_slide_inside ">Услуги:</div>
+													<div class="col-md-3 col-sm-3">
+															<ul class="f_menu_list">
+																	<li><a href="#">Лидеры продаж</a></li>
+																	<li><a href="#">Акции</a></li>
+																	<li><a href="#">Новинки</a></li>
+															</ul>
+													</div>
+													<!-- closed_info end-->
+												</div>
+											</div>
+											<div class="footer ">
+												<div class="header_slide ">Услуги:</div>
+												<div class="slider_link less hide_link">Скрыть</div>
+											</div>
+										</div>
+								</div>
+							<div class="clump">
+											<div class="card">
+												<div class="section">
+													<!-- open -->
+											
+													<div class="detail closed">
+														<!-- closed_info -->
+													<div class="header_slide_inside ">Помощь:</div>
+														<div class="col-md-3 col-sm-3">
+																<ul class="f_menu_list">
+																		<li><a href="#">Вопросы</a></li>
+																		<li><a href="#">Доставка</a></li>
+																		<li><a href="#">Оплата</a></li>
+																</ul>
+														</div>
+														<!-- closed_info end-->
+													</div>
+												</div>
+												<div class="footer ">
+													<div class="header_slide ">Помощь:</div>
+													<div class="slider_link less hide_link">Скрыть</div>
+												</div>
+											</div>
+								</div>
+					
+						<!-- <div class="header_slide visible-xs">Moline:</div>
+						<div class="header_slide visible-xs">Услуги:</div>
+						<div class="header_slide visible-xs">Помощь:</div> -->
+							<!-- <div class="col-md-3">
+								<div class="logo_wrap">
+									<img src="img/footer_logo.svg" alt="logo">
+								</div>
+								
+								<ul class="phone_list">
+									<li>099 100 20 20</li>
+									<li>099 100 20 20</li>
+									<li>099 100 20 20</li>
+									<li>099 100 20 20</li>
+								</ul>
+
+								<div class="mail">moline@inbox.com</div>
+								<div class="f_info">
+									Мы работаем:<br>с 9:00 до 19:00
+								</div>
+								<div class="f_info">
+										г.Киев, Украина <br>ул. Маяковского 132
+								</div>
+							</div> -->
+							<!-- <div class="col-md-3">
+								<ul class="f_menu_list">
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li class="visible-lg"><a href="#">Отзывы</a></li>
+									<li class="visible-lg"><a href="#">Сотрудничество</a></li>
+								</ul>
+
+								<div class="price_list"><a href="#"><img src="img/file.svg" alt="">Скачать прайс-лист</a></div>
+							</div> -->
+							<!-- <div class="col-md-3">
+									<ul class="f_menu_list">
+											<li><a href="#">Лидеры продаж</a></li>
+											<li><a href="#">Акции</a></li>
+											<li><a href="#">Новинки</a></li>
+									</ul>
+							</div> -->
+							<!-- <div class="col-md-3">
+									<ul class="f_menu_list">
+											<li><a href="#">Вопросы</a></li>
+											<li><a href="#">Доставка</a></li>
+											<li><a href="#">Оплата</a></li>
+									</ul>
+							</div> -->
+						</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
