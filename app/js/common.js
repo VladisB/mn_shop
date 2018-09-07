@@ -130,6 +130,17 @@ $(function() {
 		$(this).closest(".clump").find(".header_slide_inside").addClass("hide_link");
 	});
 
+	$(".sb_header_slide").click(function (){
+		$(this).closest(".clump").find(".sb_detail").removeClass("closed");
+		$(this).closest(".clump").find(".sb_header_slide").addClass("hide_link");
+		$(this).closest(".clump").find(".sb_header_slide_inside").removeClass("hide_link");
+	});
+	$(".sb_header_slide_inside").click(function (){
+		$(this).closest(".clump").find(".sb_detail").addClass("closed");
+		$(this).closest(".clump").find(".sb_header_slide").removeClass("hide_link");
+		$(this).closest(".clump").find(".sb_header_slide_inside").addClass("hide_link");
+	});
+
 	$('#openSidebarMenu').on('click', function () {
 		$('.overlay').toggleClass('show');
 	});

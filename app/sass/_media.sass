@@ -4,6 +4,15 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.pln-md
+		padding-left: 0
+	.prn-md
+		padding-right: 0
+	.top_cat_list, .type_select h3
+		padding: 0 65px
+	.top_cat_list
+		li
+			width: 24%
 	.pn-md
 		padding: 0
 	#sidebarMenu
@@ -60,6 +69,40 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	// .filter_btn_wrap
+	// 	display: flex
+	// 	justify-content: flex-start
+	// 	align-items: center
+	// 	padding: 12.2px 0
+	.s_catalog
+		h1.cat_name
+			padding-left: 15px
+			margin-top: 20px
+	.pln-before992
+		padding-left: 0
+	.s_catalog
+		h1.cat_name
+			display: inline-block
+		.cat_info
+				margin-left: 10px
+				display: inline-block
+	.filter_btn_wrap
+		// padding: 15px 0 21px
+		padding: 13px 0 23px
+		
+		// margin-bottom: 0
+	.s_catalog
+		.grid_type_select
+			// padding: 47px 0 25px не
+			padding: 32px 0 30px
+	.select
+		height: 53px
+		&::after
+			line-height: 2.5
+	.s_action
+		margin-bottom: 10px
+	// .sidebar
+	// 	display: none
 	.sidebarMenuInner
 		li
 			&.sub-item, #back_btn_mnu
@@ -152,6 +195,75 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.type_select h3
+		padding: 0
+	.top_cat_list
+		li
+			width: 100%
+			border: 1px solid #f0f0f0
+			padding: 0
+			.type-item
+				display: flex
+				align-items: center
+				p
+					margin-bottom: 0
+				.img_wrap
+					width: 26px
+					height: 22px
+					margin: 13px
+					img
+						width: 100%
+						height: 100%
+	.block_products
+		margin-top: 10px
+	.filter_btn
+		width: 100%
+	// .s_catalog
+	// 	h1.cat_name
+	// 		padding-left: 15px
+	// 		margin-top: 20px
+	// .s_catalog
+	// 	.sort_wrap
+	// 		padding: 15px
+	.filter_btn_wrap
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		padding: 12.2px 0
+		// margin-bottom: 10px
+	.pnl-sm
+		padding-left: 0
+	.pnr-sm
+		padding-right: 0
+	section.s_seo
+		p
+			line-height: 1.36
+	.seo_img_wrap
+		img
+			// width: 100%
+			// height: 100%
+	.filter_btn
+		display: block
+	// .s_catalog
+	// 	.grid_type_select
+	// 		// padding: 38.8px 0 17.8px
+	// 		padding: 44px 0 24px
+	// .sidebar
+		// display: none
+	.sort_wrap
+		display: inline-block
+	.cat_name
+		display: inline-block
+		// margin-right: 15px
+	.cat_info
+		display: inline-block
+	.type_select
+		h3
+			margin-left: 15px
+	.top_cat_list
+		padding: 0 15px
+		// li
+		// 	width: 33%
 	#sidebarMenu
 		&.slide-mm
 			left: calc(-100vw - 15px)
@@ -269,10 +381,53 @@
 	.s_product
 		.input_number_wrap
 			margin-bottom: 41px
+	
+	// .s_catalog
+	// 	.grid_type_select
+	// 		padding: 48px 0 24px
+			// padding: 42px 0 30px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	// .top_cat_list
+	// 	li
+	// 		width: 100%
+	// 		outline: 1px solid #ccc
+	// 		padding: 0
+	// 		.type-item
+	// 			display: flex
+	// 			align-items: center
+	// 			p
+	// 				margin-bottom: 0
+	// 			.img_wrap
+	// 				width: 26px
+	// 				height: 22px
+	// 				margin: 13px
+	// 				img
+	// 					width: 100%
+	// 					height: 100%
+	.s_catalog
+		.cat_info
+			padding-left: 15px
+	.s_catalog 
+		.grid_type_select
+			// padding: 44px 0 24px
+			svg
+				width: 26px
+				height: 21px
+		.sort_wrap
+			// padding-left: 15px
+			.s_action
+				font-size: 12px
+				display: block
+				margin-bottom: 10px
+			.select
+				width: 212px
+	// .filter_btn
+	// 	width: 100%
+	.prn-xs
+		padding-right: 0
 	#sidebarMenu
 		&.slide-mm
 			left: calc(-100vw)
@@ -469,6 +624,9 @@
 	// #sidebarMenu
 	// 	&.slide-mm
 	// 		left: calc(-100vw)
+	// .s_catalog
+	// 	.cat_info
+	// 		padding-left: 15px
 	#sidebarMenu
 		// margin-top: 36px
 		left: 0
@@ -681,6 +839,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
+	.s_catalog
+		.grid_type_select
+			padding: 48px 0 24px
 	#sidebarMenu
 		left: 0
 	// #sidebarMenu
@@ -706,6 +867,17 @@
 	// #sidebarMenu
 	// 		&.slide-mm
 	// 			left: -24px
+	.s_catalog
+		.grid_type_select
+			padding: 32px 0 30px
+	.filter_btn_wrap
+		// padding: 15px 0 21px
+		margin-bottom: 0
+	.sort_wrap
+		padding: 15px 0
+		display: flex
+		justify-content: flex-start
+		align-items: center
 	.sidebarMenuInner
 		.inner-list
 			.sub-item

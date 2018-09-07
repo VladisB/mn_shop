@@ -1283,6 +1283,8 @@ footer
 		margin: 0
 //Main page
 section
+	.seo_text_wrap
+		padding-right: 30px
 	&.s_gray, &.s_white
 		padding-bottom: 25px
 		h2
@@ -1446,8 +1448,10 @@ select::-ms-expand
 		padding: 20px 0 10px
 		// outline: 1px solid #000
 		background-color: #fff
-		width: 210px
-		margin: 1px
+		// width: 210px
+		width: 190px
+		// margin: 1px
+		margin-top: 1px
 		cursor: pointer
 		a
 			text-decoration: none
@@ -1477,6 +1481,7 @@ select::-ms-expand
 		margin-bottom: 5px
 	.sb_block_name
 		position: relative
+		transition: .3s ease
 		&:hover
 			&::after
 				transform: rotate(180deg)
@@ -1490,7 +1495,15 @@ select::-ms-expand
 			color: #d8d8da
 			font-size: 20px
 			transition: .3s ease
-
+	.filter_btn
+		text-transform: uppercase
+		background-image: linear-gradient(to right, #ffc902, #ff9801)
+		color: #fff
+		font-size: 18px
+		padding: 9px 20px
+		// margin-right: 15px
+		img
+			margin-right: 20px
 	.cat_info
 		font-size: 12px
 		.all
@@ -1499,10 +1512,10 @@ select::-ms-expand
 		.all, .page
 			display: inline-block
 	.sort_wrap
-		padding: 15px 0
-		display: flex
-		justify-content: flex-start
-		align-items: center
+		// padding: 15px 0
+		// display: flex
+		// justify-content: flex-start
+		// align-items: center
 		font-family: 'Open Sans', sans-serif
 		font-weight: normal
 		.select, .s_action
@@ -1531,6 +1544,7 @@ select::-ms-expand
 	input[type="text"]
 		font-size: 20px
 		padding: 5px 10px
+		width: 46%
 	input[name="price_from"]
 		// margin-right: 10px
 	input[name="price_to"]
@@ -1633,6 +1647,48 @@ input[type="range"]::-webkit-slider-thumb
 		float: right
 	li
 		margin: 5px 0
+		position: relative
+		.show_cat
+			background-color: #ff9801
+			position: absolute
+			right: -222px
+			top: -9px
+			color: #ffffff
+			text-transform: uppercase
+			padding: 7.4px 40px 11px 10px
+			z-index: 1
+			display: none
+			svg
+				position: absolute
+				top: 14px
+				right: 12px
+			&::before
+				content: ''
+				position: absolute
+				left: -49px
+				top: 0
+				border: 24.5px solid transparent
+				border-right: 24.5px solid #ff9801
+				width: 0
+				height: 0
+			// &::after
+			// 	content: '+'
+			// 	transform: rotate(135deg)
+			// 	line-height: 9px
+			// 	font-size: 25px
+			// 	position: absolute
+			// 	top: 10px
+			// 	right: 15px
+			// 	color: #ff9801
+			// 	background-color: #fff
+			// 	padding: 3px 7px
+			// 	-webkit-border-radius: 50%
+			// 	border-radius: 50%
+
+			p
+				border-bottom: 1px dashed #fff
+				margin: 0
+				letter-spacing: .5px
 		label
 			margin: 0
 			font-weight: 400
@@ -1677,8 +1733,26 @@ input[type="range"]::-webkit-slider-thumb
 				&.active
 					background-color: $accent
 					color: #fff
-
-
+.sb_header_slide_inside
+	transition: .3s ease
+	&::after
+		transform: rotate(180deg)
+.sb_header_slide
+	text-align: left
+.sb_detail
+	max-height: 1200px
+	opacity: 1
+	overflow: hidden
+	transition: all 400ms ease-out
+	width: 100%
+	&.closed
+	  max-height: 0
+	  opacity: 0
+	  transition: all 400ms ease-out
+.range_wrap
+	margin-top: 10px
+.filter_btn
+	cursor: pointer
 
 
 @import "media" // Всегда в конце
