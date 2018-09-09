@@ -145,6 +145,22 @@ $(function() {
 		$('.overlay').toggleClass('show');
 	});
 
+	$('.filter_btn').on('click', function () {
+		// $('.s_cont').toggleClass('slide_mobile_filters');
+		$('.slide_mobile_filters').toggleClass('f_active_pos');
+		$('.overlay').toggleClass('show');
+		// $('.s_cont').toggleClass('visible-md');
+		// $('.s_cont').toggleClass('visible-lg');
+	});
+	$('.exit_filter_btn').on('click', function () {
+		$('.slide_mobile_filters').toggleClass('f_active_pos');
+		$('.overlay').toggleClass('show');
+	});
+	$('.overlay').on('click', function () {
+		$('.slide_mobile_filters').toggleClass('f_active_pos');
+		$('.overlay').toggleClass('show');
+	});
+
 	$('.sidebarMenuInner .main-item').on('click', function () {
 		if($(window).width() < 768){
 			$('#sidebarMenu').toggleClass('slide-mm');

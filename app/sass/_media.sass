@@ -3,7 +3,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+// @media only screen and (max-width : 1200px)
 	.pln-md
 		padding-left: 0
 	.prn-md
@@ -62,6 +62,34 @@
 		.f_bottom
 			.f_info:last-child
 				margin-bottom: 0
+	// .s_catalog
+	// 	.item_wrap
+	// 		padding-top: 14px
+	// 		h4
+	// 			margin-bottom: 10px
+	// 			font-size: 14px
+	// 			height: 40px
+	// 			line-height: 1.2
+	// 		.price
+	// 			margin-bottom: 10px
+	// 		&.absent
+	// 			padding-bottom: 17px
+	// 			h4
+	// 				color: #c6c6c6
+	// 				margin-bottom: 10px
+	// 				font-size: 14px
+	// 				height: 40px
+	// 				line-height: 1.2
+	// 			.price
+	// 				color: #b1b1b1
+	// 				margin-bottom: 0px
+	// 			.message_wrap
+	// 				padding-left: 20px
+	// 				.message
+	// 					line-height: 1
+	// 				img
+	// 					width: 159px
+	// 					height: 34px
 
 
 		
@@ -74,6 +102,36 @@
 	// 	justify-content: flex-start
 	// 	align-items: center
 	// 	padding: 12.2px 0
+	.sb_price
+		.sb_block_name
+			&::after
+				display: none
+	.slide_mobile_filters
+		position: fixed
+		left: 0
+		top: 0
+		background-color: #ffffff
+		z-index: 9999
+		transition: .3s ease
+		opacity: 0
+		transform: translateX(-320px)
+		// &.f_position
+		// 	transform: translateX(-320px)
+		// 	transition: .3s ease
+		&.f_active_pos
+			transform: translateX(0px) !important
+			transition: .3s ease
+			opacity: 1
+		.sidebar
+			// padding-top: 74px
+			position: relative
+			.sb_price
+				padding: 50px 20px 0
+			svg
+				position: absolute
+				top: 30px
+				right: 30px
+				cursor: pointer
 	.s_catalog
 		h1.cat_name
 			padding-left: 15px
@@ -191,10 +249,62 @@
 					width: 23%
 				.button_form
 					width: 20%
+	// .s_catalog
+	// 	.item_wrap
+	// 		padding-top: 14px
+	// 		.btn_buy_wrap
+	// 			margin-top: 0
+	// 			// padding-left: 0
+	// 			.btn_buy
+	// 				// margin-top: 0
+	// 		h4
+	// 			margin-bottom: 10px
+	// 			font-size: 14px
+	// 			height: 70px
+	// 			line-height: 1.2
+	// 			margin-top: 10px
+	// 		.price
+	// 			margin-bottom: 0px
+	// 		&.absent
+	// 			padding-bottom: 17px
+	// 			h4
+	// 				color: #c6c6c6
+	// 				font-size: 14px
+	// 				height: 70px
+	// 				line-height: 1.2
+	// 			.price
+	// 				color: #b1b1b1
+	// 				margin-bottom: 10px
+	// 			.message_wrap
+	// 				padding-left: 20px
+	// 				text-align: center
+	// 				.message
+	// 					line-height: 1
+	// 					display: inline
+	// 				img
+	// 					width: 159px
+	// 					height: 24px
+	// 					margin-bottom: 15.2px
+	// 					display: block
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	// .slide_mobile_filters
+	// 	position: absolute
+	// 	left: 0
+	// 	top: 0
+	// 	background-color: #ffffff
+	// 	z-index: 9999
+		// .sidebar
+		// 	padding-top: 74px
+		// 	position: relative
+		// 	svg
+		// 		position: absolute
+		// 		top: 30px
+		// 		right: 30px
+			.sb_price
+				border-top: none
 	.type_select h3
 		padding: 0
 	.top_cat_list
@@ -381,11 +491,44 @@
 	.s_product
 		.input_number_wrap
 			margin-bottom: 41px
-	
+
 	// .s_catalog
-	// 	.grid_type_select
-	// 		padding: 48px 0 24px
-			// padding: 42px 0 30px
+	// 	.item_wrap
+	// 		// padding-top: 15px
+	// 		// padding-bottom: 15px
+	// 		.price
+	// 			margin-bottom: -5px
+	// 		.old_price
+	// 			// margin-bottom: 9px
+	// 		.btn_buy_wrap
+	// 			.btn_buy
+	// 				// margin-top: 11px
+	// 		.itm_img_wrap
+	// 			// margin-top: 10px 
+	// 			// margin-top: 0px 
+	// 		h4
+	// 			// line-height: 1.43
+	// 			// line-height: normal
+	// 			height: 60px
+	// 		&.absent
+	// 			// padding-top: 15px
+	// 			padding-bottom: 22px
+	// 			h4
+	// 				// line-height: 1.43
+	// 				// height: 100px
+	// 				// margin-top: 11px
+	// 			.price
+	// 				margin-top: 10px
+	// 				margin-bottom: 15px
+	// 				// margin-bottom: 12.1px
+	// // 				margin-bottom: 17.1px
+	// // 			.message_wrap
+	// // 				// padding-left: 15px
+	// // 				img
+	// // 					width: 125px
+	// // 					height: 19px
+	// // 					// margin-bottom: 11px
+	// // 					margin-bottom: 15.11px
 
 
 /* Extra Small Devices, Phones */
@@ -407,6 +550,8 @@
 	// 				img
 	// 					width: 100%
 	// 					height: 100%
+	.top_cat_list
+		padding: 0
 	.s_catalog
 		.cat_info
 			padding-left: 15px
@@ -617,6 +762,29 @@
 		padding-right: 0 !important
 	.pl-nl
 		padding-left: 0 !important
+	// .s_catalog
+	// 	.item_wrap
+	// 		h4
+	// 			height: 80px
+	// 		.price
+	// 			// margin-top: 10px
+	// 			margin-bottom: -7px
+	// 		.old_price
+	// 			margin-bottom: 17px
+	// 		&.absent
+	// 			padding-bottom: 30px
+	// 			h4
+	// 				height: 80px
+	// 			.price
+	// 				margin-top: 10px
+	// 				margin-bottom: 16px
+	// 			.message_wrap
+	// 				margin-top: 10px
+	// 				padding-left: 15px
+	// 				height: 82px
+	// 				img
+	// 					width: 139px
+	// 					height: 24px
 
 
 /* Custom, iPhone Retina */
@@ -627,6 +795,8 @@
 	// .s_catalog
 	// 	.cat_info
 	// 		padding-left: 15px
+	.sidebar 
+		// width: calc(100% - 13px)
 	#sidebarMenu
 		// margin-top: 36px
 		left: 0
@@ -788,52 +958,43 @@
 					border: none
 				.input-number
 					margin-bottom: 0
-	// /*Slide-down-more-less*/
-	// .detail
-  // 	max-height: 1200px
-  // 	opacity: 1
-  // 	overflow: hidden
-  // 	transition: all 400ms ease-out
-  // 	width: 100%
-  // 	&.closed
-  // 	  max-height: 0
-  // 	  opacity: 0
-  // 	  transition: all 400ms ease-out
-	/*footer*/
-// 	footer
-// 		padding-bottom: 0
-// 		.detail
-// 			border-top: 1px solid rgba(36,41,54, .2)
-// 		.f_bottom
-// 			padding-top: 0
-// 			.price_list
-// 				padding-bottom: 10px
-// 			.f_menu_list
-// 				margin-top: 0
-// 		.f_subscribe
-// 			// padding-top: 17px
-// 			// padding-bottom: 25px
-// 			padding: 0
-// 			border: none
-// 			.input-wrapper
-// 				text-align: center
-// 				.call_to_action
-// 					margin-bottom: 29px
-// 					float: left
-// 					margin-right: 0
-// 				input
-// 					margin-bottom: 22px
-// 					margin-right: 0
-// 				button
-// 					text-transform: uppercase
-// 					width: 232px
-// 					margin-bottom: 30px
-// .header_slide, .header_slide_inside
-// 	width: 100%
-// 	position: relative
-// 	&::after
-// 		display: inline-block
-
+	.s_catalog
+		.item_wrap
+			padding-top: 21px
+			padding-bottom: 19px
+			.price
+				margin-top: 0
+				margin-bottom: -5px
+			.old_price
+				margin-bottom: 9px
+			.btn_buy_wrap
+				.btn_buy
+					margin-top: 11px
+			.itm_img_wrap
+				// margin-top: 10px 
+				margin-top: 0px 
+			h4
+				// line-height: 1.43
+				line-height: normal
+				height: 92px
+			&.absent
+				padding-top: 21px
+				padding-bottom: 25px
+				h4
+					line-height: 1.43
+					height: 100px
+					margin-top: 11px
+				.price
+					margin-top: 12px
+					// margin-bottom: 12.1px
+					margin-bottom: 14px
+				.message_wrap
+					margin-top: 0
+					img
+						width: 125px
+						height: 19px
+						// margin-bottom: 11px
+						margin-bottom: 15.11px
 
 /*==========  Mobile First  ==========*/
 
@@ -907,10 +1068,51 @@
 		a
 			i
 				margin-right: 13px
+	.sidebar
+		padding-top: 0
+		svg
+			display: none
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	.s_catalog
+		.item_wrap
+			padding-top: 30px
+			h4
+				margin-bottom: 10px
+				margin-top: 10px
+				font-size: 14px
+				height: 40px
+				line-height: 1.2
+			.price
+				margin-bottom: 14px
+			&.absent
+				padding-bottom: 17px
+				h4
+					color: #c6c6c6
+					margin-bottom: 10px
+					font-size: 14px
+					height: 40px
+					line-height: 1.2
+				.price
+					color: #b1b1b1
+					margin-bottom: 5px
+				.message_wrap
+					padding-left: 20px
+					.message
+						line-height: 1
+						display: inline-block
+					img
+						width: 159px
+						height: 34px
+						margin-bottom: 2.6px
+	// .s_catalog
+	// 	.item_wrap
+	// 		h4, .price, .counter_wrap
+	// 			padding-left: 15px
+	// 		.btn_buy_wrap
+	// 			padding-right: 30px
 	.pn-lg-left
 		padding-left: 0
 	.pr-lg-right

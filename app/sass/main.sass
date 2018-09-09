@@ -838,7 +838,6 @@ section
 	p
 		font-size: 18px
 		color: #424242
-
 .item_wrap
 	border: 1px solid #f1f1f1
 	// border: 1px solid #f00
@@ -858,7 +857,7 @@ section
 		font-weight: 400
 		margin-bottom: 30px
 	.top_info
-		margin-bottom: 6px
+		margin-bottom: 5px
 		min-height: 2px
 	.btn_buy_wrap
 		padding-left: 0
@@ -867,11 +866,38 @@ section
 		// padding-left: 10px
 		padding-right: 0
 		// float: right
+	&.absent
+		// padding-bottom: 25px
+		h4
+			color: #c6c6c6
+			margin-bottom: 6px
+			// height: 40px
+		.price
+			color: #b1b1b1
+			// margin-bottom: 3px
+		.buy_mode
+			display: none
+		.message_wrap
+			padding-left: 30px
+			.message
+				color: $green
+				font-size: 18px
+				border-bottom: 1px dashed $green
+				// display: inline-block
+				display: inline
+			img
+				width: 227px
+				height: 35px
+
+		.itm_img_wrap
+			img
+				filter: grayscale(1) opacity(40%)
 	.itm_img_wrap
 		text-align: center
 		margin-bottom: 29px
 		img
 			max-width: 112px
+			min-height: 113px
 	.itm_artic_wrap
 		float: right
 		font-size: 14px
@@ -1473,6 +1499,12 @@ select::-ms-expand
 				height: 72px
 /*---------*/	
 .s_catalog
+	.item_wrap
+		overflow: hidden
+		padding-top: 30px
+		.itm_img_wrap
+			margin-bottom: 0
+			max-height: 113px
 	h1.cat_name
 		font-size: 18px
 		font-family: 'Open Sans', sans-serif
