@@ -843,6 +843,10 @@ section
 	// border: 1px solid #f00
 	padding-top: 30px
 	padding-bottom: 30px
+	transition: .3s ease
+	&:hover
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+		z-index: 10
 	.price
 		font-family: 'Open Sans', sans-serif
 		font-weight: 600
@@ -866,6 +870,47 @@ section
 		// padding-left: 10px
 		padding-right: 0
 		// float: right
+	&.coming_soon, &.under_the_order
+		.price
+			display: none
+			// padding-bottom: 25px
+		h4
+			color: #c6c6c6
+			margin-bottom: 6px
+			// height: 40px
+		.buy_mode
+			display: none
+		.message_wrap
+			padding-left: 30px
+			.message
+				color: $green
+				font-size: 18px
+				border-bottom: 1px dashed $green
+				// display: inline-block
+				display: inline
+	&.coming_soon
+		.message_wrap	
+			img
+				width: 191px
+				height: 34px
+	&.under_the_order
+		&.p_order
+			padding-left: 40px
+			padding-right: 40px
+		.btn_order_wrap
+			text-align: center
+			// padding-left: 25px
+			// padding-right: 25px
+			.order_btn
+				width: 100%
+		.message_wrap	
+			text-align: center
+			.message
+				display: none
+			img
+				width: 166px
+				height: 40px
+				display: inline-block
 	&.absent
 		// padding-bottom: 25px
 		h4
@@ -888,7 +933,6 @@ section
 			img
 				width: 227px
 				height: 35px
-
 		.itm_img_wrap
 			img
 				filter: grayscale(1) opacity(40%)

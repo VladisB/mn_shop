@@ -3,7 +3,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-// @media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1200px)
 	.pln-md
 		padding-left: 0
 	.prn-md
@@ -62,34 +62,68 @@
 		.f_bottom
 			.f_info:last-child
 				margin-bottom: 0
-	// .s_catalog
-	// 	.item_wrap
-	// 		padding-top: 14px
-	// 		h4
-	// 			margin-bottom: 10px
-	// 			font-size: 14px
-	// 			height: 40px
-	// 			line-height: 1.2
-	// 		.price
-	// 			margin-bottom: 10px
-	// 		&.absent
-	// 			padding-bottom: 17px
-	// 			h4
-	// 				color: #c6c6c6
-	// 				margin-bottom: 10px
-	// 				font-size: 14px
-	// 				height: 40px
-	// 				line-height: 1.2
-	// 			.price
-	// 				color: #b1b1b1
-	// 				margin-bottom: 0px
-	// 			.message_wrap
-	// 				padding-left: 20px
-	// 				.message
-	// 					line-height: 1
-	// 				img
-	// 					width: 159px
-	// 					height: 34px
+	.s_catalog
+		.item_wrap
+			padding-top: 14px
+			h4
+				margin-bottom: 10px
+				font-size: 14px
+				height: 40px
+				line-height: 1.2
+			.price
+				margin-top: 7px
+				margin-bottom: 10px
+			&.absent, &.coming_soon, &.under_the_order
+				padding-bottom: 17px
+				h4
+					color: #c6c6c6
+					margin-bottom: 10px
+					font-size: 14px
+					height: 40px
+					line-height: 1.2
+				.price
+					color: #b1b1b1
+					margin-top: 0
+					margin-bottom: 0px
+			&.absent
+				.message_wrap
+					padding-left: 20px
+					.message
+						line-height: 1
+					img
+						width: 159px
+						height: 34px
+			&.coming_soon
+				.message_wrap
+					padding-left: 20px
+					.message
+						line-height: 1
+					img
+						width: 133px
+						height: 29px
+						margin-bottom: 20px
+						margin-top: 13px
+	.s_catalog
+		.item_wrap
+			// padding-top: 14px
+			h4
+				// margin-bottom: 10px
+				// font-size: 14px
+				// height: 40px
+				// line-height: 1.2
+			.price
+				// margin-top: 7px
+				// margin-bottom: 10px
+			&.under_the_order
+				.message_wrap
+					padding-left: 20px
+					.message
+						line-height: 1
+					img
+						width: 123px
+						height: 30px
+						margin-bottom: 11px
+						margin-top: 3px
 
 
 		
@@ -233,9 +267,14 @@
 		.input-number-decrement, .input-number-increment
     	width: 25%
 		.input-number
-			width: 40%
+			width: 50%
 		.btn_buy
 			padding: 6px 26px
+		.btn_buy_wrap
+			// padding-left: 0
+			// padding-right: 15px
+			.btn_buy
+				// margin-top: 0
 	.advantages
 		.img_wrap
 			height: 70px
@@ -249,43 +288,58 @@
 					width: 23%
 				.button_form
 					width: 20%
-	// .s_catalog
-	// 	.item_wrap
-	// 		padding-top: 14px
-	// 		.btn_buy_wrap
-	// 			margin-top: 0
-	// 			// padding-left: 0
-	// 			.btn_buy
-	// 				// margin-top: 0
-	// 		h4
-	// 			margin-bottom: 10px
-	// 			font-size: 14px
-	// 			height: 70px
-	// 			line-height: 1.2
-	// 			margin-top: 10px
-	// 		.price
-	// 			margin-bottom: 0px
-	// 		&.absent
-	// 			padding-bottom: 17px
-	// 			h4
-	// 				color: #c6c6c6
-	// 				font-size: 14px
-	// 				height: 70px
-	// 				line-height: 1.2
-	// 			.price
-	// 				color: #b1b1b1
-	// 				margin-bottom: 10px
-	// 			.message_wrap
-	// 				padding-left: 20px
-	// 				text-align: center
-	// 				.message
-	// 					line-height: 1
-	// 					display: inline
-	// 				img
-	// 					width: 159px
-	// 					height: 24px
-	// 					margin-bottom: 15.2px
-	// 					display: block
+	.s_catalog
+		.item_wrap
+			padding-top: 14px
+			.btn_buy_wrap
+				margin-top: 0
+				// padding-left: 0
+				.btn_buy
+					// margin-top: 0
+			h4
+				margin-bottom: 10px
+				font-size: 14px
+				height: 80px
+				line-height: 1.2
+				margin-top: 10px
+			.price
+				margin-bottom: 0px
+			&.absent, &.coming_soon, &.under_the_order
+				padding-bottom: 17px
+				h4
+					color: #c6c6c6
+					font-size: 14px
+					height: 80px
+					line-height: 1.2
+				.price
+					color: #b1b1b1
+					margin-bottom: 13px
+			&.absent	
+				.message_wrap
+					padding-left: 20px
+					text-align: center
+					.message
+						line-height: 1
+						display: inline
+					img
+						width: 159px
+						height: 24px
+						margin-bottom: 20px
+						display: block
+			&.coming_soon
+				.message_wrap
+					img
+						width: 133px
+						height: 29px
+						margin-bottom: 30px
+						margin-top: 26px
+			&.under_the_order
+				.message_wrap
+					img
+						width: 123px
+						height: 30px
+						margin-bottom: 32px
+						margin-top: 28px
 
 
 /* Small Devices, Tablets */
@@ -529,6 +583,70 @@
 	// // 					height: 19px
 	// // 					// margin-bottom: 11px
 	// // 					margin-bottom: 15.11px
+	.s_catalog
+		.item_wrap
+			padding-top: 14px
+			.btn_buy_wrap
+				margin-top: 0
+				// padding-left: 0
+				.btn_buy
+					// margin-top: 0
+			h4
+				margin-bottom: 10px
+				font-size: 14px
+				height: 60px
+				line-height: 1.2
+				margin-top: 10px
+			.price
+				margin-bottom: 0px
+				margin-top: 0
+			&.absent, &.coming_soon, &.under_the_order
+				padding-bottom: 17px
+				h4
+					color: #c6c6c6
+					font-size: 14px
+					height: 80px
+					line-height: 1.2
+				.price
+					color: #b1b1b1
+					margin-bottom: 19px
+				.message_wrap
+					padding-left: 20px
+					text-align: center
+					.message
+						line-height: 1
+						display: inline
+						height: 47px
+			&.absent
+				.message_wrap
+					height: 90px
+					img
+						width: 159px
+						height: 24px
+						margin-bottom: 20px
+						display: block
+			&.coming_soon
+				padding-bottom: 40px
+				.message_wrap
+					// height: 137px
+
+					img
+						width: 133px
+						height: 29px
+						margin-bottom: 52px
+						margin-top: 10px
+						display: block
+			&.under_the_order
+				padding-bottom: 15px
+				.message_wrap
+					// height: 137px
+
+					img
+						width: 145px
+						height: 36px
+						margin-bottom: 52px
+						margin-top: 10px
+						display: block
 
 
 /* Extra Small Devices, Phones */
@@ -762,29 +880,50 @@
 		padding-right: 0 !important
 	.pl-nl
 		padding-left: 0 !important
-	// .s_catalog
-	// 	.item_wrap
-	// 		h4
-	// 			height: 80px
-	// 		.price
-	// 			// margin-top: 10px
-	// 			margin-bottom: -7px
-	// 		.old_price
-	// 			margin-bottom: 17px
-	// 		&.absent
-	// 			padding-bottom: 30px
-	// 			h4
-	// 				height: 80px
-	// 			.price
-	// 				margin-top: 10px
-	// 				margin-bottom: 16px
-	// 			.message_wrap
-	// 				margin-top: 10px
-	// 				padding-left: 15px
-	// 				height: 82px
-	// 				img
-	// 					width: 139px
-	// 					height: 24px
+	.s_catalog
+		.item_wrap
+			h4
+				height: 80px
+			.price
+				// margin-top: 10px
+				margin-bottom: -7px
+			.old_price
+				margin-bottom: 17px
+			&.absent, &.coming_soon, &.under_the_order
+				padding-bottom: 30px
+				h4
+					height: 80px
+				.price
+					margin-top: 10px
+					margin-bottom: 16px
+			&.absent	
+				.message_wrap
+					margin-top: 10px
+					padding-left: 15px
+					height: 82px
+					img
+						width: 139px
+						height: 24px
+			&.coming_soon	
+				.message_wrap
+					margin-top: 9px
+					padding-left: 15px
+					height: 137px
+					img
+						margin-top: 10px
+						margin-bottom: 60px
+						width: 132px
+						// height: 29px
+			&.under_the_order
+				.message_wrap
+					margin-top: 9px
+					padding-left: 15px
+					height: auto
+					img
+						margin-top: 10px
+						margin-bottom: 50px
+						width: 145px
+						height: 36px
 
 
 /* Custom, iPhone Retina */
@@ -977,7 +1116,7 @@
 				// line-height: 1.43
 				line-height: normal
 				height: 92px
-			&.absent
+			&.absent, &.coming_soon, &.under_the_order
 				padding-top: 21px
 				padding-bottom: 25px
 				h4
@@ -988,6 +1127,7 @@
 					margin-top: 12px
 					// margin-bottom: 12.1px
 					margin-bottom: 14px
+			&.absent	
 				.message_wrap
 					margin-top: 0
 					img
@@ -995,6 +1135,22 @@
 						height: 19px
 						// margin-bottom: 11px
 						margin-bottom: 15.11px
+			&.coming_soon
+				.message_wrap
+					margin-top: 0
+					img
+						margin-top: 23.9px
+						width: 130px
+						// height: 19px
+						margin-bottom: 37.11px
+			&.under_the_order
+				.message_wrap
+					margin-top: 0
+					img
+						margin-top: 25.9px
+						width: 131px
+						height: 32px
+						margin-bottom: 37.11px
 
 /*==========  Mobile First  ==========*/
 
@@ -1087,7 +1243,7 @@
 				line-height: 1.2
 			.price
 				margin-bottom: 14px
-			&.absent
+			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
 					color: #c6c6c6
@@ -1098,6 +1254,7 @@
 				.price
 					color: #b1b1b1
 					margin-bottom: 5px
+			&.absent
 				.message_wrap
 					padding-left: 20px
 					.message
@@ -1106,7 +1263,22 @@
 					img
 						width: 159px
 						height: 34px
-						margin-bottom: 2.6px
+						margin-bottom: 7px
+			&.coming_soon
+				.message_wrap
+					img
+						width: 193px
+						height: 41px
+						margin-bottom: 19px
+						margin-top: 8px
+			&.under_the_order
+				.message_wrap
+					img
+						width: 164px
+						// height: 34px
+						margin-bottom: 15px
+						margin-top: 1px
+
 	// .s_catalog
 	// 	.item_wrap
 	// 		h4, .price, .counter_wrap
