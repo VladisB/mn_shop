@@ -65,6 +65,9 @@
 	.s_catalog
 		.item_wrap
 			padding-top: 14px
+			.btn_buy_wrap
+				.btn_buy
+					margin-top: 0
 			h4
 				margin-bottom: 10px
 				font-size: 14px
@@ -76,7 +79,7 @@
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
-					color: #c6c6c6
+					// color: #c6c6c6
 					margin-bottom: 10px
 					font-size: 14px
 					height: 40px
@@ -115,6 +118,7 @@
 				// margin-top: 7px
 				// margin-bottom: 10px
 			&.under_the_order
+				padding-right: 0
 				.message_wrap
 					padding-left: 20px
 					.message
@@ -124,6 +128,81 @@
 						height: 30px
 						margin-bottom: 11px
 						margin-top: 3px
+	// .s_catalog 
+	// .cat_row
+	// 	display: flex
+	// 	flex-direction: column
+	// 	.item_wrap
+	// 		padding: 19px 25px
+	// 		// min-height: 170px
+	// 		height: 235px
+	// 		line-height: normal
+	.s_catalog
+		.cat_row
+			// display: flex
+			// flex-direction: column
+			.item_wrap
+				padding-top: 14px
+				// height: 172px
+				line-height: normal
+				.itm_artic_wrap
+					margin-bottom: 9px
+				h4
+					margin-bottom: 10px
+					font-size: 14px
+					height: auto
+					line-height: 1.2
+				.price
+					margin-top: 7px
+					margin-bottom: 10px
+				&.absent, &.coming_soon, &.under_the_order
+					padding-bottom: 17px
+					h4
+						// color: #c6c6c6
+						margin-bottom: 10px
+						font-size: 14px
+						height: auto !important
+						line-height: 1.2
+					.price
+						color: #b1b1b1
+						margin-top: 0
+						margin-bottom: 0px
+				&.under_the_order
+					.message_wrap
+						padding-left: 0
+					.order_btn
+						width: 100%
+					.message_wrap
+						img
+							// width: 166px
+							width: 149.4px
+							// height: 40px
+							height: 36px
+							margin-bottom: 5px
+							h4
+								margin-bottom: 0
+				&.absent
+					.message_wrap
+						padding-left: 20px
+						.message
+							line-height: 1
+						img
+							width: 228px
+							height: 39px
+							margin-top: 30px
+							margin-bottom: 5px
+				&.coming_soon
+					.message_wrap
+						padding-left: 20px
+						.message
+							line-height: 1
+						img
+							width: 222px
+							height: 47px
+							margin-bottom: 20px
+							margin-top: 24px
+					.retail_price
+						// display: none
 
 
 		
@@ -246,7 +325,7 @@
 		margin-top: 40px
 	/*Проверить*/
 	.pn-sm-l
-		padding-left: 0
+		padding-left: 0 !important
 	.pn-sm-r
 		padding-right: 0
 
@@ -307,7 +386,7 @@
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
-					color: #c6c6c6
+					// color: #c6c6c6
 					font-size: 14px
 					height: 80px
 					line-height: 1.2
@@ -340,6 +419,62 @@
 						height: 30px
 						margin-bottom: 32px
 						margin-top: 28px
+	
+	.s_catalog
+		.cat_row
+			.item_wrap
+				padding-top: 14px
+				.btn_buy_wrap
+					margin-top: 0
+					// padding-left: 0
+					.btn_buy
+						// margin-top: 0
+				h4
+					margin-bottom: 10px
+					font-size: 14px
+					line-height: 1.2
+					margin-top: 10px
+				.price
+					margin-bottom: 0px
+				&.absent, &.coming_soon, &.under_the_order
+					padding-bottom: 17px
+					h4
+						// color: #c6c6c6
+						font-size: 14px
+						height: 80px
+						line-height: 1.2
+					.price
+						color: #b1b1b1
+						margin-bottom: 13px
+				&.absent	
+					.message_wrap
+						padding-left: 20px
+						text-align: left
+						.message
+							line-height: 1
+							display: inline
+						img
+							width: 228px
+							height: 39px
+							// margin-bottom: 20px
+							display: block
+				&.coming_soon
+					.message_wrap
+						img
+							width: 201.4px
+							height: 42.1px
+							margin-bottom: 5px
+							// margin-top: 26px
+				&.under_the_order
+					padding-right: 20px
+					.message_wrap
+						img
+							width: 166px
+							height: 40px
+							margin-top: 0
+							// margin-bottom: 32px
+							// margin-top: 28px
+
 
 
 /* Small Devices, Tablets */
@@ -359,6 +494,8 @@
 		// 		right: 30px
 			.sb_price
 				border-top: none
+	.prn__sm
+		padding-right: 0
 	.type_select h3
 		padding: 0
 	.top_cat_list
@@ -603,7 +740,7 @@
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
-					color: #c6c6c6
+					// color: #c6c6c6
 					font-size: 14px
 					height: 80px
 					line-height: 1.2
@@ -624,7 +761,7 @@
 						width: 159px
 						height: 24px
 						margin-bottom: 20px
-						display: block
+						// display: block
 			&.coming_soon
 				padding-bottom: 40px
 				.message_wrap
@@ -640,14 +777,101 @@
 				padding-bottom: 15px
 				.message_wrap
 					// height: 137px
-
+					.btn_buy_wrap
+						// padding-right: 0
 					img
 						width: 145px
 						height: 36px
 						margin-bottom: 52px
 						margin-top: 10px
 						display: block
-
+	.s_catalog 
+		.cat_row
+			display: flex
+			flex-direction: column
+			.item_wrap
+				padding: 19px 25px
+				// min-height: 170px
+				// height: 235px 
+				line-height: normal
+				.itm_artic_wrap
+					// margin-bottom: 19px
+					h4
+						margin-bottom: 20px
+						font-size: 18px
+						font-weight: 400
+				.inner_wrap
+						padding-top: 0
+						.limit
+							margin-bottom: 15px
+							.hidd_mobile
+								display: none
+				&.under_the_order
+					h4
+						margin-bottom: 20px
+						font-size: 18px
+						font-weight: 400
+					.btn_buy_wrap
+						// padding-left: 15px
+						.btn_buy
+							width: 70%
+					.price
+						display: none
+					.limit
+						display: none
+					.message_wrap
+						margin-bottom: 13px
+				.old_price
+					display: none !important
+				.retail_price
+					display: none //2
+				.inner_wrap
+					text-align: center
+					padding-top: 0
+				.ost
+					display: none
+				&.absent
+					h4
+						margin-bottom: 20px
+						font-size: 18px
+						font-weight: 400
+					.custom_hidden_sm
+						margin-top: 30px
+						text-align: center
+						height: auto
+						img
+							display: none
+					.message_wrap.mobile_mess
+						margin-top: 0
+						padding-left: 0
+						height: auto
+						img
+							margin-top: 0
+							// margin-left: 45%
+							width: 227px
+							height: 35px
+				&.coming_soon
+					h4
+						margin-bottom: 20px
+						font-size: 18px
+						font-weight: 400
+						color: #424242
+					.message_wrap.custom_hidden_sm
+						margin-top: 35px
+						text-align: center
+						height: auto
+						img
+							display: none
+					.message_wrap.mobile_mess
+						margin-top: 0
+						padding-left: 0
+						height: auto
+						img
+							margin-top: 25px
+							// margin-left: 45%
+							margin-left: 0
+							width: 220px
+							height: 39px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -924,6 +1148,102 @@
 						margin-bottom: 50px
 						width: 145px
 						height: 36px
+	.s_catalog 
+		.cat_row
+			.item_wrap
+				.itm_artic_wrap
+					margin-bottom: 0
+				.limit
+					text-align: left
+					padding-left: 46%
+				h4
+					margin-bottom: 5px
+					font-size: 18px
+					font-weight: 400
+					margin-top: 5px
+				.price
+					margin-top: 17px
+				.btn_buy_wrap 
+					padding-right: 0
+					.btn_buy
+						margin-top: 0
+				&.under_the_order, &.coming_soon, &.absent
+					h4
+						font-size: 18px
+				&.absent
+					.custom_hidden_sm
+						margin-top: 30px
+						text-align: center
+						height: auto
+						img
+							display: none
+					.message_wrap.mobile_mess
+						margin-top: 0
+						padding-left: 0
+						height: auto
+						img
+							margin-top: 0
+							// margin-left: 45%
+							// width: 205.2px
+							// height: 35.1px
+							width: 100%
+							height: auto
+				&.coming_soon
+					.message_wrap.custom_hidden_sm
+						margin-top: 35px
+						text-align: center
+						height: auto
+						img
+							display: none
+					.message_wrap.mobile_mess
+						margin-top: 0
+						padding-left: 0
+						height: auto
+						img
+							margin-top: 23px
+							// margin-left: 45%
+							margin-left: 0
+							// width: 147px
+							// height: 31px
+							width: 100%
+							height: auto
+				&.coming_soon
+					.message_wrap
+						margin-top: 0
+						height: auto
+						img
+							width: 147px
+							height: 31px
+							// margin-top: 0
+							margin-left: 45%
+				&.under_the_order
+					padding-top: 16px
+					h4
+						margin-bottom: 0
+					.price, .limit
+						display: none
+					.message_wrap
+						margin-bottom: 13px
+					.btn_buy
+						width: 70%
+				.inner_wrap
+					padding-top: 0
+					.limit
+						margin-bottom: 15px
+						.hidd_mobile
+							display: none
+				&.under_the_order
+					.message_wrap
+						margin-bottom: 33px
+						img
+							margin-top: 15px
+							width: 100%
+							height: auto
+							// width: 164px
+							// height: 34px
+						.ord_text
+							display: none
+	
 
 
 /* Custom, iPhone Retina */
@@ -1151,6 +1471,32 @@
 						width: 131px
 						height: 32px
 						margin-bottom: 37.11px
+	.s_catalog 
+		.cat_row
+			.item_wrap
+				.itm_artic_wrap
+					margin-bottom: 0
+				h4
+					margin-bottom: 5px
+					margin-top: 5px
+				.price
+					margin-top: 17px
+				.limit
+					text-align: left
+					padding-left: 46%
+				&.coming_soon
+					.mobile_mess 
+						img
+							margin-top: 0
+				&.under_the_order
+					.message_wrap
+						margin-bottom: 40px
+						img
+							margin-top: 23px
+							width: 131px
+							height: 30px
+						.ord_text
+							display: none
 
 /*==========  Mobile First  ==========*/
 
@@ -1164,6 +1510,14 @@
 	// #sidebarMenu
 	// 	&.slide-mm
 	// 		left: calc(-100vw - 15px)
+	.s_catalog 
+		.cat_row
+			display: flex
+			flex-direction: column
+			.item_wrap
+				padding: 19px 25px
+				// min-height: 170px
+				height: 235px 
 
 
 /* Extra Small Devices, Phones */
@@ -1172,6 +1526,8 @@
 		left: -15px
 		&.slide-mm
 			left: calc(-100vw - 15px)
+	// .mobile_mess
+	// 	display: none
 	// .sidebarMenuInner
 	// 	.inner-list
 	// 		.sub-item
@@ -1184,6 +1540,8 @@
 	// #sidebarMenu
 	// 		&.slide-mm
 	// 			left: -24px
+	.mobile_mess
+		display: none
 	.s_catalog
 		.grid_type_select
 			padding: 32px 0 30px
@@ -1214,6 +1572,24 @@
 			&::after, &::before
 				// display: inline-block
 				display: none
+	.s_catalog 
+		.cat_row
+			display: flex
+			flex-direction: column
+			.item_wrap
+				padding: 19px 25px
+				// min-height: 170px
+				height: 172px
+				line-height: normal
+				&.absent, &.coming_soon
+					h4
+						font-size: 14px
+				&.under_the_order
+					h4
+						font-size: 14px
+						margin-bottom: 10px
+					.price
+						display: none
 
 
 /* Medium Devices, Desktops */
@@ -1246,7 +1622,7 @@
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
-					color: #c6c6c6
+					// color: #c6c6c6
 					margin-bottom: 10px
 					font-size: 14px
 					height: 40px
@@ -1278,6 +1654,74 @@
 						// height: 34px
 						margin-bottom: 15px
 						margin-top: 1px
+	.s_catalog
+		.cat_row
+			.item_wrap
+				// padding-top: 30px
+				h4
+					margin-bottom: 5px
+					margin-top: 10px
+					font-size: 14px
+					height: auto
+					line-height: 1.2
+					color: #424242
+				.price
+					margin-bottom: 9px
+				&.coming_soon
+					h4
+						// color: #c6c6c6
+						margin-bottom: 10px
+						font-size: 14px
+						height: auto
+						line-height: 1.2
+					.price
+						color: #b1b1b1
+						margin-bottom: 5px
+				&.absent, &.coming_soon, &.under_the_order
+					padding-bottom: 17px
+					.price
+						color: #b1b1b1
+						margin-bottom: 5px
+				&.absent
+					padding-top: 20px
+					h4
+						margin-bottom: 5px
+					.price
+						margin-bottom: 10px
+					.message_wrap
+						padding-left: 20px
+						padding-top: 34px
+						.message
+							line-height: 1
+							display: inline-block
+						img
+							width: 228px
+							height: 39px
+							margin-bottom: 7px
+				&.coming_soon
+					.retail_price
+						// display: none  //1
+					.message_wrap
+						padding-top: 11px
+						img
+							width: 224px
+							height: 47px
+							margin-bottom: 19px
+							margin-top: 8px
+				&.under_the_order
+					padding-top: 20px
+					h4
+						margin-bottom: 9px
+					.itm_artic_wrap
+						margin-bottom: 9px
+					.message_wrap
+						text-align: left
+						padding-left: 0
+						img
+							width: 164px
+							// height: 34px
+							margin-bottom: 5px
+							margin-top: 1px
 
 	// .s_catalog
 	// 	.item_wrap

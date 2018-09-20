@@ -870,12 +870,15 @@ section
 		// padding-left: 10px
 		padding-right: 0
 		// float: right
-	&.coming_soon, &.under_the_order
-		.price
+	&.coming_soon
+		h4
+			color: #424242
+		.price, .retail_price
 			display: none
 			// padding-bottom: 25px
+	&.coming_soon, &.under_the_order
 		h4
-			color: #c6c6c6
+			// color: #c6c6c6
 			margin-bottom: 6px
 			// height: 40px
 		.buy_mode
@@ -1829,6 +1832,76 @@ input[type="range"]::-webkit-slider-thumb
 	margin-top: 10px
 .filter_btn
 	cursor: pointer
+
+/*Category row*/
+.s_catalog 
+	.cat_row
+		display: flex
+		flex-direction: column
+		.item_wrap
+			padding: 19px 25px
+			// min-height: 170px
+			height: 172px
+			line-height: normal
+			.message_wrap
+				img
+					display: block
+			.bage
+				line-height: 23.1px
+				position: absolute
+				top: 15px
+				left: 15px
+				z-index: 5
+			.btn_buy
+				line-height: 30px
+			&.absent, &.coming_soon
+				.inner_wrap
+					display: none
+			&.under_the_order
+				.retail_price
+					display: none
+				.counter_wrap
+					display: none
+				.message_wrap
+					color: #424242
+					line-height: normal
+					text-align: left
+					a
+						color: $green
+					img
+						display: block
+			h4
+				margin-bottom: 0
+				margin-top: 0
+				height: auto
+				font-family: 'Source Sans Pro'
+				// font-weight: 400
+				font-size: 14px
+			.itm_artic_wrap
+				float: none
+				margin-bottom: 15px
+			.itm_img_wrap
+				max-height: 111px
+				// display: flex
+				// justify-content: center
+				// align-items: center
+			.price
+				margin-bottom: 0px
+			.retail_price
+				color: #b1b1b1
+				font-size: 12px
+				.price
+					margin-top: -5px
+					margin-bottom: 0
+			.limit
+				color: #424242
+				.amount_lim
+					font-size: 20px
+					color: #000
+			.ost
+				margin-top: 7px
+			.inner_wrap
+				padding-top: 18px
 
 
 @import "media" // Всегда в конце
