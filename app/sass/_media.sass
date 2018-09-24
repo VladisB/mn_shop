@@ -27,7 +27,8 @@
 		.input-number-decrement, .input-number-increment
     	width: 25%
 		.input-number
-			width: 40%
+			// width: 40%
+			width: 50%
 		.btn_buy
 			padding: 6px 26px
 	.s_product
@@ -87,7 +88,8 @@
 				.price
 					color: #b1b1b1
 					margin-top: 0
-					margin-bottom: 0px
+					// margin-bottom: 0px
+					margin-bottom: 0.6px //22
 			&.absent
 				.message_wrap
 					padding-left: 20px
@@ -104,8 +106,9 @@
 					img
 						width: 133px
 						height: 29px
-						margin-bottom: 20px
+						// margin-bottom: 20px
 						margin-top: 13px
+						margin-bottom: 21.2px //22
 	.s_catalog
 		.item_wrap
 			// padding-top: 14px
@@ -118,7 +121,7 @@
 				// margin-top: 7px
 				// margin-bottom: 10px
 			&.under_the_order
-				padding-right: 0
+				// padding-right: 0 //22
 				.message_wrap
 					padding-left: 20px
 					.message
@@ -128,6 +131,10 @@
 						height: 30px
 						margin-bottom: 11px
 						margin-top: 3px
+			&.coming_soon
+				.message_wrap
+					text-align: center
+
 	// .s_catalog 
 	// .cat_row
 	// 	display: flex
@@ -368,6 +375,17 @@
 				.button_form
 					width: 20%
 	.s_catalog
+		.grid
+			.item_wrap
+				&.absent
+					.price
+						margin-bottom: 0
+						margin-top: 7px
+					.old_price
+						margin-bottom: 7.8px
+				// &.under_the_oder
+
+	.s_catalog
 		.item_wrap
 			padding-top: 14px
 			.btn_buy_wrap
@@ -410,16 +428,27 @@
 					img
 						width: 133px
 						height: 29px
-						margin-bottom: 30px
-						margin-top: 26px
+						// margin-bottom: 30px
+						margin-bottom: 44px
+						// margin-top: 26px
+						margin-top: 36.8px
 			&.under_the_order
 				.message_wrap
 					img
 						width: 123px
 						height: 30px
-						margin-bottom: 32px
-						margin-top: 28px
+						// margin-bottom: 32px
+						margin-bottom: 45px
+						// margin-top: 28px
+						margin-top: 38px
 	
+	.s_catalog
+		.grid
+			.item_wrap
+				.btn_buy_wrap
+					.btn_buy
+						margin-top: 15px
+
 	.s_catalog
 		.cat_row
 			.item_wrap
@@ -1629,7 +1658,7 @@
 					line-height: 1.2
 				.price
 					color: #b1b1b1
-					margin-bottom: 5px
+					margin-bottom: 5.6px
 			&.absent
 				.message_wrap
 					padding-left: 20px
@@ -1742,7 +1771,9 @@
 		.input-number-decrement, .input-number-increment
     	width: 25%
 		.input-number
-			width: 40%
+			// width: 40%
+			width: 42%
+			// width: 50%
 		.btn_buy
 			padding: 6px 26px
 			width: 100%

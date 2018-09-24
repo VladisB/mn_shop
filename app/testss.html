@@ -421,7 +421,7 @@
 					
 					<div class="grid_type_select">
 						
-						<svg width="29px" height="21px" viewBox="0 0 29 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<svg id="type_grid" width="29px" height="21px" viewBox="0 0 29 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<title>AD118840-605A-4994-99AB-7CE599791E00</title>
 							<defs></defs>
 							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -430,7 +430,7 @@
 									</g>
 							</g>
 						</svg>
-						<svg width="26px" height="21px" viewBox="0 0 26 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<svg id="type_list" width="26px" height="21px" viewBox="0 0 26 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<title>F32A416C-6471-4738-9CEC-FFB5CE06620C</title>
 							<defs></defs>
 							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -579,318 +579,52 @@
 				<div class="block_products grid col-md-9 pr-lg-right pn-lg-left prn-md pln-md">
 				
 					<div class="item_wrap col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
+						<!-- отключить класс top_info и вложенные классы бутстрапа перенести артику в блок заголовка  -->
+					<div class=" top_info">
+						<div class="col-md-6 col-xs-5">
+							<div class="bage_blue bage">Хит</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap">
-								<img src="img/cat_icon/lamp.png" alt="">
+						<div class="col-md-6 col-xs-7">
+							<div class="itm_artic_wrap">
+								Арт.3334156
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h4>Батарейка VARTA CR-2016</h4> -->
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price visible-sm">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-12  col-sm-12  pr-lg-right">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap "><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
 						</div>
 					</div>
-					<div class="item_wrap absent col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
+				
+					<div class="row">
+						<!-- изменить ширину блока с картинкой по сетке на col-xs-5 col-sm-3 -->
+						<div class="col-md-12 itm_img_wrap"> 
+							<img src="img/cat_icon/lamp.png" alt="">
+						</div>
+						<!-- удалить col-md-12 вокруг заголовка -->
+						<div class="col-md-12 h_wrap">
+							<h4>Батарейка VARTA CR-2016</h4>
+						</div>
+					
+						<!-- удалить col-md-12 вокруг блока -->
+						<div class="col-md-12 p_wrap">
+							<div class="price">12000 <span class="currency">грн</span></div>
+							<div class="old_price visible-sm">12000грн</div>
+						</div>
+						<!-- Добавить блок retail price -->
+					
+						<!-- заменить класы сетки на col-xs-12 col-sm-5 -->
+						<div class="col-md-6 col-sm-12  col-sm-12  pr-lg-right cw_wrp">
+							<!-- Обернуть в inner_wrap и добавить блок limit -->
+							<div class="counter_wrap">
+								<div class="cw_inner">
+									<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
+									 class="input-number-increment">+</span>
 								</div>
+					
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap ">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price visible-sm">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 message_wrap">
-								<img src="img/cat_icon/tovarZak.png" alt="">
-								<a href="#" class="message">Сообщить когда появится</a>
-							</div>
-							<div class="col-md-6 col-sm-12  col-sm-12 prn-md buy_mode">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap buy_mode"><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
+						<div class="col-md-6 col-sm-12 btn_buy_wrap  btn_buy_wrap_link "><button href="#" class="btn_buy primary_btn">Купить</button></div>
+						<!-- Добавить блок остаток на складе -->
 					</div>
-					<div class="item_wrap coming_soon col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap ">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price ">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 message_wrap">
-								<!-- <div class="col-xs-6 col-xs-offest-6"></div> -->
-								<img src="img/cat_icon/soon.png" alt="" >
-
-								<a href="#" class="message">Сообщить когда появится</a>
-							</div>
-							<div class="col-md-6 col-sm-12  col-sm-12 prn-md buy_mode">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap buy_mode"><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
-					</div>
-					<div class="item_wrap under_the_order  col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap ">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 message_wrap">
-								<img src="img/cat_icon/order.png" alt="">
-							</div>
-							<div class="col-md-6 col-sm-12  col-sm-12 prn-md buy_mode">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-xs-12">
-								<div class="btn_order_wrap">
-									<button class="btn_buy primary_btn order_btn">Заказать</button>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap buy_mode"><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
-					</div>
-					<div class="item_wrap col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h4>Батарейка VARTA CR-2016</h4> -->
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price visible-sm">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-12  col-sm-12  pr-lg-right">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap "><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
-					</div>
-					<div class="item_wrap col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h4>Батарейка VARTA CR-2016</h4> -->
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price visible-sm">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-12  col-sm-12  pr-lg-right">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap "><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
-					</div>
-					<div class="item_wrap col-md-4 col-xs-6 col-sm-3">
-						<div class="row top_info">
-							<div class="col-md-6 col-xs-5">
-								<div class="bage_blue bage">Хит</div>
-							</div>
-							<div class="col-md-6 col-xs-7">
-								<div class="itm_artic_wrap">
-									Арт.3334156
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 itm_img_wrap">
-								<img src="img/cat_icon/lamp.png" alt="">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h4>Батарейка VARTA CR-2016</h4> -->
-								<h4>Батарейка VARTA CR-2016… и запас под очень длинный заголовок</h4>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="price">12000 <span class="currency">грн</span></div>
-								<div class="old_price visible-sm">12000грн</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 col-sm-12  col-sm-12  pr-lg-right">
-								<div class="counter_wrap">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-									</div>
-									<!-- <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> -->
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-12 btn_buy_wrap "><button href="#" class="btn_buy primary_btn">Купить</button></div>
-							<!-- <div class="col-md-6"><button href="#" class="btn_buy">Купить</button></div> -->
-						</div>
-					</div>
+					
+				</div>
+				
 				</div>
 			</div>
 			
