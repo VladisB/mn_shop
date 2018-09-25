@@ -161,48 +161,156 @@ $(function() {
 		$('.overlay').toggleClass('show');
 	});
 	
+	var i_type_trig = 1;
+	var tree_modif = 0;
+	var tree_moove = 0;
+
 	$('#type_grid').on('click', function () {
-		$('.block_products').toggleClass('grid');
-		$('.block_products').removeClass('cat_row');
+	
+		console.log(i_type_trig);
+		if( i_type_trig == 0){
+			$('.block_products').toggleClass('grid');
+			$('.block_products').toggleClass('cat_row');
+
+			$('.item_wrap').toggleClass('col-md-4 col-xs-6 col-sm-3');
+			$('.item_wrap').toggleClass('col-xs-12');
+			$('.item_wrap> div:first-child').toggleClass('top_info');
+
+			$('.retail_price').toggleClass('ct_hide');
+
+			var artcl_tmp = $('.itm_artic_wrap');
+			// var retail_price = '<div class="retail_price">Рекомендуемая розничная цена<div class="price">12000,99 <span class="currency">грн</span></div>';
+
+
+			$('.item_wrap > div:nth-child(1)').toggleClass('ct_hide');
+			$('.itm_img_wrap').toggleClass('col-md-12');
+			$('.itm_img_wrap').toggleClass('col-xs-5 col-sm-3');
+
+			// $('.h_wrap').prepend(artcl_tmp);
+
+			$('.h_wrap').toggleClass('col-md-12');
+			$('.p_wrap').toggleClass('col-md-12');
+
+			// $('.p_wrap').append(retail_price);
+
+			$('.cw_wrp').toggleClass('col-md-6 col-sm-12  col-sm-12  pr-lg-right');
+			$('.cw_wrp').toggleClass('col-xs-12 col-sm-5');
+
+			var lim = '<div class="limit">от <span class="amount_lim">5 ед.</span><span class="hidd_mobile">минимальный заказ</span></div>';
+			var ost = '<div class="ost col-sm-12 pln ">115 ед. остаток на складе</div>';
+
+			$('.h_wrap').unwrap('.col-xs-7.col-sm-4');
+			$('.p_wrap').insertAfter($(".h_wrap"));
+
+			$('.counter_wrap').toggleClass('col-xs-6 col-sm-6 pln prn');
+			// $('.counter_wrap').wrap('<div class="inner_wrap"></div>');
+
+			$('.btn_buy_wrap_link').toggleClass('col-xs-6 col-sm-6 col-md-6 col-sm-12 pln prn  ');
+			// $('.btn_buy_wrap_link').attr('class','col-xs-6 col-sm-6 pln prn btn_buy_wrap btn_buy_wrap_link ');
+			
+			$('.btn_buy_wrap_link').appendTo('.item_wrap > .row');
+
+			$('.itm_artic_wrap').appendTo('.item_wrap > .top_info');
+			$('.itm_artic_wrap').wrap('<div class="col-md-6 col-xs-7"></div>');
+
+			$('.limit').toggleClass('ct_hide');
+			$('.ost').toggleClass('ct_hide');
+
+			i_type_trig = 1;
+			console.log(i_type_trig);
+
+		}
+
+		console.log(i_type_trig);
+		
 	});
 
 	$('#type_list').on('click', function () {
+
+		// var test = $(this);
+		// console.log("test =" + test);
+				
+		console.log(i_type_trig);
+		if( i_type_trig == 1){
 		$('.block_products').toggleClass('cat_row');
-		$('.block_products').removeClass('grid');
+		$('.block_products').toggleClass('grid');
 
 		$('.item_wrap').toggleClass('col-md-4 col-xs-6 col-sm-3');
 		$('.item_wrap').toggleClass('col-xs-12');
 		$('.item_wrap> div:first-child').toggleClass('top_info');
+
 		var artcl_tmp = $('.itm_artic_wrap');
 		var retail_price = '<div class="retail_price">Рекомендуемая розничная цена<div class="price">12000,99 <span class="currency">грн</span></div>';
 
 
 		$('.item_wrap > div:nth-child(1)').toggleClass('ct_hide');
-		$('.itm_img_wrap').removeClass('col-md-12');
-		$('.itm_img_wrap').attr('class', 'itm_img_wrap col-xs-5 col-sm-3');
-		$('.h_wrap').prepend(artcl_tmp);
-		$('.h_wrap').toggleClass('col-md-12');
-		$('.p_wrap').toggleClass('col-md-12');
-		$('.p_wrap').append(retail_price);
-		$('.cw_wrp').removeClass('col-md-6 col-sm-12  col-sm-12  pr-lg-right');
-		$('.cw_wrp').addClass('col-xs-12 col-sm-5');
+		$('.itm_img_wrap').toggleClass('col-md-12');
+		$('.itm_img_wrap').toggleClass('col-xs-5 col-sm-3');
 
 		var lim = '<div class="limit">от <span class="amount_lim">5 ед.</span><span class="hidd_mobile">минимальный заказ</span></div>';
 		var ost = '<div class="ost col-sm-12 pln ">115 ед. остаток на складе</div>';
+		
+		$('.h_wrap').toggleClass('col-md-12');
+		$('.p_wrap').toggleClass('col-md-12');
 
-		$('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-		// $('.p_wrap').after($('.h_wrap'));
-		$('.p_wrap').insertAfter($(".h_wrap"));
+	
+		$('.cw_wrp').toggleClass('col-md-6 col-sm-12  col-sm-12  pr-lg-right');
+		$('.cw_wrp').toggleClass('col-xs-12 col-sm-5');
+
+		
+
+		if(tree_moove == 0){
+			$('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
+			$('.p_wrap').insertAfter($(".h_wrap"));
+			$('.counter_wrap').wrap('<div class="inner_wrap"></div>');
+			$('.btn_buy_wrap_link').appendTo('.inner_wrap');
+			tree_moove = 1;
+		}else{
+			$('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
+			$('.p_wrap').insertAfter($(".h_wrap"));
+			var btn_tmp = $('.btn_buy_wrap');
+			// console.log('btn_tmp =' + btn_tmp);
+			$('.btn_buy_wrap').remove();
+		
+			$(btn_tmp).insertAfter($(".counter_wrap"));
+
+		}
+
+		if(tree_modif == 0){
+			$('.h_wrap').prepend(artcl_tmp);
+			$('.p_wrap').append(retail_price);
+			$('.inner_wrap').prepend(lim);
+			$('.inner_wrap').append(ost);
+			console.log(tree_modif);
+
+			tree_modif = 1;
+		}else{
+			$('.itm_artic_wrap').remove();
+			$('.retail_price').remove();
+
+			$('.h_wrap').prepend(artcl_tmp);
+			$('.p_wrap').append(retail_price);
+
+			$('.limit').toggleClass('ct_hide');
+			$('.ost').toggleClass('ct_hide');
+		}
+		
+		console.log(tree_modif);
+		
 
 		$('.counter_wrap').toggleClass('col-xs-6 col-sm-6 pln prn');
-		$('.counter_wrap').wrap('<div class="inner_wrap"></div>');
-		// $('.btn_buy_wrap_link').attr('class','col-md-6 col-sm-12 btn_buy_wrap btn_buy_wrap_link ');
-		$('.btn_buy_wrap_link').attr('class','col-xs-6 col-sm-6 pln prn btn_buy_wrap btn_buy_wrap_link ');
-		$('.btn_buy_wrap_link').appendTo('.inner_wrap');
-		$('.inner_wrap').prepend(lim);
-		$('.inner_wrap').append(ost);
+	
+
+		$('.btn_buy_wrap_link').toggleClass('col-xs-6 col-sm-6 col-md-6 col-sm-12 pln prn  ');
+		// $('.btn_buy_wrap_link').attr('class','col-xs-6 col-sm-6 pln prn btn_buy_wrap btn_buy_wrap_link ');
 		
 		
+		
+		i_type_trig = 0;
+			console.log(i_type_trig);
+		}
+		console.log(i_type_trig);
+
 	});
 
 	$('.sidebarMenuInner .main-item').on('click', function () {
