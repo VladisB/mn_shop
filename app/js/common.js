@@ -227,9 +227,13 @@ $(function() {
 
 	$('#type_list').on('click', function () {
 
-		// var test = $(this);
+		// var test = $('.item_wrap');
 		// console.log("test =" + test);
-				
+		// var title = test.this.find('h4').text();
+		// console.log("title =" + title);
+		// title = null;
+
+
 		console.log(i_type_trig);
 		if( i_type_trig == 1){
 		$('.block_products').toggleClass('cat_row');
@@ -278,6 +282,7 @@ $(function() {
 
 		if(tree_modif == 0){
 			$('.h_wrap').prepend(artcl_tmp);
+			console.log('Артикул добавлен');
 			$('.p_wrap').append(retail_price);
 			$('.inner_wrap').prepend(lim);
 			$('.inner_wrap').append(ost);
