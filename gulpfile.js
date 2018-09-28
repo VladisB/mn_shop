@@ -20,8 +20,8 @@ var gulp           = require('gulp'),
 				baseDir: 'app'
 			},
 			notify: false,
-			// tunnel: true,
-			// tunnel: "moline", //Demonstration page: http://moline.localtunnel.me
+			tunnel: true,
+			tunnel: "moline", //Demonstration page: http://moline.localtunnel.me
 		});
 	});
 
