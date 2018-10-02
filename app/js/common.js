@@ -207,105 +207,36 @@ $(function () {
 				var artcl_tmp = $(value).find('.itm_artic_wrap');
 
 				if (tree_moove == 1) {
-					console.log('TREEMOOV 1');
-
 					$(value).find('.h_wrap').unwrap('.col-xs-7.col-sm-4');
-
 					var p_wrap_tmp = $(value).find('.p_wrap');
 					$(value).find('.p_wrap').remove()
-
 					$(p_wrap_tmp).insertAfter($(value).find(".h_wrap"));
-
-					// $(value).find('.counter_wrap').unwrap('<div class="inner_wrap"></div>');
-
 					var btn_tmp = $(value).find('.btn_buy_wrap');
 					$(value).find('.btn_buy_wrap').remove();
-
 					$(btn_tmp).appendTo($(value).find(">.row"));
-
-					
-
-					console.log('tree_moove = ' + tree_moove);
-					// tree_moove = 1;
 				}
 				else {
-					console.log('TREEMOOV 1 ELSE');
-
 					$(value).find('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-
-					// var p_wrap_tmp = $(value).find('.p_wrap');
 					$(value).find('.p_wrap').remove()
-
-					// $(p_wrap_tmp).insertAfter($(".h_wrap"));
-					// $(value).find('.p_wrap').insertAfter($(".h_wrap"));
-					// var btn_tmp = $(value).find('.btn_buy_wrap');
-					// console.log('btn_tmp =' + btn_tmp);
 					$(value).find('.btn_buy_wrap').remove();
-
-					// $(btn_tmp).insertAfter($(value).find(".counter_wrap"));
-					console.log('else tree moove = ' + tree_moove);
-
 				}
-
 				if (tree_modif == 1) {
 					$(value).find('.itm_artic_wrap').remove();
-					console.log('ПОСЛЕ РЕМУВА');
-
-					$(artcl_tmp).appendTo($(value).find('> .top_info'));///
-
-					console.log('ПОСЛЕ APPENDA');
-
-					
-
-					// var ret_p_tmp = $(value).find('.h_wrap').prepend(artcl_tmp);
-					// $(value).find('.h_wrap').prepend(artcl_tmp);
-					// console.log('Артикул добавлен');
-
-					// $(value).find('.p_wrap').append(retail_price);
-					// $(value).find('.inner_wrap').prepend(lim);
-					// $(value).find('.inner_wrap').append(ost);
-					// // console.log(tree_modif);
-					// console.log('tree_modif = '+tree_modif);
-
-					// tree_modif = 0;
+					$(artcl_tmp).appendTo($(value).find('> .top_info'));
 				}
 				else {
-					console.log(' TREENODIF 1 else');
-
-					// $(value).find('.itm_artic_wrap').remove();
-					// $(value).find('.retail_price').remove();
-
-					// $(value).find('.h_wrap').prepend(artcl_tmp);
-					// $(value).find('.p_wrap').append(retail_price);
-
-					// $(value).find('.limit').toggleClass('ct_hide');
-					// $(value).find('.ost').toggleClass('ct_hide');
-
-					// console.log('else tree_modif = '+tree_modif);
 
 				}
-
-
-				console.log('i_type_trig inside loop =' + i_type_trig);
 				if (index === total_items - 1) {
-					console.log('LAST index = ' + index);
 					i_type_trig = 1;
 					tree_modif = 0;
 					tree_moove = 0;
-					console.log('ТРИМУВ = ' +tree_moove);
-
-
-					console.log('tree_moove after last items =' + tree_moove);
-					console.log('tree_modif after last items =' + tree_modif);
-					console.log('i_type_trig after last items =' + i_type_trig);
-
 				} else {
-					console.log('It is not last item');
-					console.log('Current item = ' + index);
+					// console.log('It is not last item');
+					// console.log('Current item = ' + index);
 				}
 			}
 
-			console.log('i_type_trig outside loop =' + i_type_trig);
 		});
 	});
 
@@ -342,6 +273,7 @@ $(function () {
 			console.log('index = ' + index + value);
 			if (i_type_trig == 1) {
 
+				var bage = $(value).find('.bage');
 				var artcl_tmp = $(value).find('.itm_artic_wrap');
 				var retail_price = '<div class="retail_price">Рекомендуемая розничная цена<div class="price">12000,99 <span class="currency">грн</span></div>';
 
@@ -350,17 +282,10 @@ $(function () {
 
 
 				if (tree_moove == 0) {
-					console.log('TREEMOOV 0');
-
 					$(value).find('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-
 					var p_wrap_tmp = $(value).find('.p_wrap');
 					$(value).find('.p_wrap').remove()
-
-					// $(p_wrap_tmp).insertAfter((".h_wrap"));
 					$(p_wrap_tmp).insertAfter($(value).find(".h_wrap"));
-
-					// $(value).find('.counter_wrap').wrap('<div class="inner_wrap"></div>');
 
 					if($(value).find('.inner_wrap').length > 0){
 						console.log('inner wrap EXIST++++++++++++++++++++');
@@ -369,211 +294,60 @@ $(function () {
 						$(value).find('.counter_wrap').wrap('<div class="inner_wrap"></div>');
 
 					}
-					// $(value).find('.btn_buy_wrap').remove();
+					
 					var btn_tmp = $(value).find('.btn_buy_wrap');
 					$(value).find('.btn_buy_wrap').remove();
-					console.log('РЕМУВ ИФ три мув 0');
-					console.log('ТРИМУВ = ' +tree_moove);
-
 					$(btn_tmp).insertAfter($(value).find(".counter_wrap"));
-
-					// $(value).find('.btn_buy_wrap_link').appendTo('.inner_wrap');
-					// console.log('КНОПКА');
-
-					console.log('tree_moove = ' + tree_moove);
-					// tree_moove = 1;
 				}
 				else {
-					// console.log('TREEMOOV 0 ELSE');
-
 					$(value).find('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-
-					// var p_wrap_tmp = $(value).find('.p_wrap');
 					$(value).find('.p_wrap').remove()
-
-					// $(p_wrap_tmp).insertAfter($(".h_wrap"));
-					// $(value).find('.p_wrap').insertAfter($(".h_wrap"));
-					// var btn_tmp = $(value).find('.btn_buy_wrap');
-					// console.log('btn_tmp =' + btn_tmp);
 					$(value).find('.btn_buy_wrap').remove();
-					console.log('РЕМУВ ЭЛС');
-					console.log('ТРИМУВ = ' +tree_moove);
-
-					
-
-					// $(btn_tmp).insertAfter($(value).find(".counter_wrap"));
-					console.log('else tree moove = ' + tree_moove);
-
 				}
 
 				if (tree_modif == 0) {
-					console.log(' TREENODIF 0 else');
-
+					// $(value).prepend(bage);
 					$(value).find('.h_wrap').prepend(artcl_tmp);
-					console.log('Артикул добавлен');
-
-					// $(value).find('.p_wrap').append(retail_price);
-					
-					// $(value).find('.inner_wrap').append(ost);
-				
-					console.log('tree_modif = ' + tree_modif);
-
-					// tree_modif = 1;
 
 					if($(value).find('.limit').length > 0){
-						console.log('limit СУЩЕСТВУЕТ---------------------');
-						// $(value).find('.inner_wrap').find('limit').toggleClass('ct_hide');
 						$('.limit').toggleClass('ct_hide');
-
-					}else{
-						console.log('LIMIT NOT FIND-----------------------');
+					}
+					else{
 						$(value).find('.inner_wrap').prepend(lim);
-						console.log('ДОБАВИЛИ ЛИМИТ NOT FIND-----------------------');
-
 					}
 					if($(value).find('.ost').length > 0){
-						console.log('lostimit СУЩЕСТВУЕТ---------------------');
-						// $(value).find('.inner_wrap').find('limit').toggleClass('ct_hide');
 						$('.ost').toggleClass('ct_hide');
-
-					}else{
-						console.log('ost NOT FIND-----------------------');
+					}
+					else{
 						$(value).find('.inner_wrap').append(ost);
-						console.log('ДОБАВИЛИ ost NOT FIND-----------------------');
-
 					}
 					if($(value).find('.retail_price').length > 0){
-						
-						console.log('retail_price СУЩЕСТВУЕТ---------------------');
-						// $(value).find('.inner_wrap').find('limit').toggleClass('ct_hide');
 						$(value).find('.inner_wrap').find('.retail_price').toggleClass('ct_hide');
-
 					}else{
-						console.log('retail_price NOT FIND-----------------------');
 						$(value).find('.p_wrap').append(retail_price);
-						console.log('ДОБАВИЛИ retail_price NOT FIND-----------------------');
-
 					}
 				}
 				else {
-					console.log(' TREENODIF 0 else');
-
-					// $(value).find('.itm_artic_wrap').remove();
-					// $(value).find('.retail_price').remove();
-
-					// $(value).find('.h_wrap').prepend(artcl_tmp);
-					// $(value).find('.p_wrap').append(retail_price);
-
-					// $(value).find('.limit').toggleClass('ct_hide');
 					$(value).find('.ost').toggleClass('ct_hide');
-
-					console.log('else tree_modif = ' + tree_modif);
-
 				}
-
-
-				console.log('i_type_trig inside loop =' + i_type_trig);
 				if (index === total_items - 1) {
-					console.log('LAST index = ' + index);
+					// console.log('LAST index = ' + index);
 					i_type_trig = 0;
-					console.log('i_type_trig after last items =' + i_type_trig);
+					// console.log('i_type_trig after last items =' + i_type_trig);
 					tree_modif = 1;
-					console.log('tree_modif after last items =' + tree_modif);
+					// console.log('tree_modif after last items =' + tree_modif);
 					tree_moove = 1;
-					console.log('ТРИМУВ в конце = ' +tree_moove);
+					// console.log('ТРИМУВ в конце = ' +tree_moove);
 
 
 				} else {
-					console.log('It is not last item');
-					console.log('Current item = ' + index);
+					// console.log('It is not last item');
+					// console.log('Current item = ' + index);
 				}
 			}
 
-			console.log('i_type_trig outside loop =' + i_type_trig);
+			// console.log('i_type_trig outside loop =' + i_type_trig);
 		});
-
-
-		// console.log(i_type_trig);
-		// if( i_type_trig == 1){
-		// $('.block_products').toggleClass('cat_row');
-		// $('.block_products').toggleClass('grid');
-
-		// $('.item_wrap').toggleClass('col-md-4 col-xs-6 col-sm-3');
-		// $('.item_wrap').toggleClass('col-xs-12');
-		// $('.item_wrap> div:first-child').toggleClass('top_info');
-
-		// var artcl_tmp = $('.itm_artic_wrap');
-		// var retail_price = '<div class="retail_price">Рекомендуемая розничная цена<div class="price">12000,99 <span class="currency">грн</span></div>';
-
-
-		// $('.item_wrap > div:nth-child(1)').toggleClass('ct_hide');
-		// $('.itm_img_wrap').toggleClass('col-md-12');
-		// $('.itm_img_wrap').toggleClass('col-xs-5 col-sm-3');
-
-		// var lim = '<div class="limit">от <span class="amount_lim">5 ед.</span><span class="hidd_mobile">минимальный заказ</span></div>';
-		// var ost = '<div class="ost col-sm-12 pln ">115 ед. остаток на складе</div>';
-
-		// $('.h_wrap').toggleClass('col-md-12');
-		// $('.p_wrap').toggleClass('col-md-12');
-
-
-		// $('.cw_wrp').toggleClass('col-md-6 col-sm-12  col-sm-12  pr-lg-right');
-		// $('.cw_wrp').toggleClass('col-xs-12 col-sm-5');
-
-
-
-		// if(tree_moove == 0){
-		// 	$('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-		// 	$('.p_wrap').insertAfter($(".h_wrap"));
-		// 	$('.counter_wrap').wrap('<div class="inner_wrap"></div>');
-		// 	$('.btn_buy_wrap_link').appendTo('.inner_wrap');
-		// 	tree_moove = 1;
-		// }else{
-		// 	$('.h_wrap').wrap('<div class="col-xs-7 col-sm-4"></div>');
-		// 	$('.p_wrap').insertAfter($(".h_wrap"));
-		// 	var btn_tmp = $('.btn_buy_wrap');
-		// 	// console.log('btn_tmp =' + btn_tmp);
-		// 	$('.btn_buy_wrap').remove();
-
-		// 	$(btn_tmp).insertAfter($(".counter_wrap"));
-
-		// }
-
-		// if(tree_modif == 0){
-		// 	$('.h_wrap').prepend(artcl_tmp);
-		// 	console.log('Артикул добавлен');
-		// 	$('.p_wrap').append(retail_price);
-		// 	$('.inner_wrap').prepend(lim);
-		// 	$('.inner_wrap').append(ost);
-		// 	console.log(tree_modif);
-
-		// 	tree_modif = 1;
-		// }else{
-		// 	$('.itm_artic_wrap').remove();
-		// 	$('.retail_price').remove();
-
-		// 	$('.h_wrap').prepend(artcl_tmp);
-		// 	$('.p_wrap').append(retail_price);
-
-		// 	$('.limit').toggleClass('ct_hide');
-		// 	$('.ost').toggleClass('ct_hide');
-		// }
-
-		// console.log(tree_modif);
-
-
-		// $('.counter_wrap').toggleClass('col-xs-6 col-sm-6 pln prn');
-
-
-		// $('.btn_buy_wrap_link').toggleClass('col-xs-6 col-sm-6 col-md-6 col-sm-12 pln prn  ');
-		// // $('.btn_buy_wrap_link').attr('class','col-xs-6 col-sm-6 pln prn btn_buy_wrap btn_buy_wrap_link ');
-
-
-
-		// i_type_trig = 0;
-		// 	console.log(i_type_trig);
-		// }
-		// console.log(i_type_trig);
 
 	});
 
