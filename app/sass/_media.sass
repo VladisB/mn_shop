@@ -211,6 +211,13 @@
 							margin-top: 24px
 					.retail_price
 						// display: none
+	/*Cart*/
+	.cart
+		.wrap_cart
+			.cart_list_wrap
+				.cart_item
+					.input-number
+						width: 62px
 
 
 		
@@ -505,7 +512,19 @@
 							margin-top: 0
 							// margin-bottom: 32px
 							// margin-top: 28px
-
+	/*Cart*/
+	.cart
+		.pn-sm
+			padding-right: 0
+			padding-left: 0
+		.wrap_cart
+			.cart_list_wrap
+				.cart_item
+					max-height: 91px
+					img
+						margin-left: 5px
+					.input-number
+						width: 55px
 
 
 /* Small Devices, Tablets */
@@ -903,6 +922,11 @@
 							margin-left: 0
 							width: 220px
 							height: 39px
+	/*Cart*/
+	.cart
+		.pn-sm
+			padding-right: 0
+			padding-left: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1274,7 +1298,32 @@
 							// height: 34px
 						.ord_text
 							display: none
-	
+	/*Cart*/
+	.cart
+		.pn-xs
+			padding-right: 0
+			padding-left: 0
+		.prn-xs
+			padding-right: 0
+		.wrap_cart
+			.cart_list_wrap
+				.cart_item
+					max-height: 144px
+					padding-bottom: 13px
+			.cart_btn_wrap
+				// .lets_buy
+				// 	margin-bottom: 10px
+				&>div
+					&>div:first-child
+						button
+							margin-bottom: 10px
+
+					.name_item
+						padding-left: 15px
+					.input-number
+						width: 70px
+				.delete
+					padding-top: 34px
 
 
 /* Custom, iPhone Retina */
@@ -1639,6 +1688,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	.lgup-pl-pr-n
+		padding-right: 0
+		padding-left: 0
 	.s_catalog
 		.item_wrap
 			padding-top: 30px

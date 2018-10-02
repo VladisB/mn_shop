@@ -1924,40 +1924,123 @@ input[type="range"]::-webkit-slider-thumb
 	left: 0
 	z-index: 999
 	background-color: rgba(0, 0, 0, .5)
-	display: none
+	// display: none
+	.pn
+		padding-left: 0
+		padding-right: 0
+	.h100
+		height: 100%
 	.wrap_cart
 		background-color: #fff
-		padding: 30px 20px
+		padding: 0 0 30px 0
+		.m-none
+			margin: 0
 		.header_cart
+			padding-top: 29px
+			padding-right: 30px
+			padding-left: 20px
 			font-size: 20px
 			text-transform: uppercase
 			font-weight: 600
 			font-family: 'Open Sans', sans-serif
-			padding-bottom: 18px
+			padding-bottom: 12px
 			svg
 				float: right
-		.cart_list_wrap	
+		.order_info
+			margin-right: 38px
+			padding-bottom: 25px
+			.line
+				border-bottom: 1px solid #424242
+				margin-bottom: 15px
+				width: 322px
+				float: right
+			.total
+				color: #9a9a9a
+				font-size: 16px
+				font-family: 'Open Sans', sans-serif
+				line-height: normal
+				letter-spacing: normal
+				span
+					color: #424242
+					font-weight: 600
+					font-size: 24px
+					margin-left: 10px
+			.minimum
+				font-family: 'Open Sans', sans-serif				
+				font-weight: 600
+				font-size: 16px
+				color: #424242
+		.cart_btn_wrap
+			padding-right: 15px
+			padding-left: 15px
+		.lets_buy, .make_order
+			padding-top: 8px
+			padding-bottom: 8px
+			font-size: 20px
+			width: 100%
+		.cart_list_wrap
+			margin-bottom: 15px
 			.cart_item
 				padding-top: 10px
 				padding-bottom: 10px
+				padding-right: 25px
+				// height: 75px
+				max-height: 75px
+				img
+					margin-top: 5px
+				.cw_inner
+					margin-top: 6px
+					text-align: center
+					position: relative
+					.limit
+						background-color: #ff523d
+						color: #fff
+						font-size: 12px
+						padding: 6px 13px
+						line-height: 1.05
+						position: absolute
+						top: 10px
+						left: 0
+						display: none
+				.delete
+					color: #ff523d
+					margin-top: 16px
+				.total_price_wrap
+					// display: flex
+					// justify-content: center
+					// align-items: center
+					.total_by_item
+						margin-top: 16px
+				.price_per_item
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					// line-height: 3.54
+					letter-spacing: normal
+					margin-bottom: -6px
+					margin-top: 9px
 				.input-number-decrement,.input-number-increment
 					line-height: 42px
 					height: 42px
+					background-color: #fff
 				.input-number
 					height: 42px
-					width: 60px
+					width: 64px
 				a.name_item
 					color: #424242
 					font-family: 'Source Sans Pro'
 					line-height: 1.1
+					display: inline-block
 					font-weight: 400
 					font-size: 16px
-					letter-spacing: normal
 				.articul
 					font-size: 12px
-					line-height: 1.47
+					line-height: 1.4
 			.cart_item
 				background-color: rgba(216, 216, 216, .15)
+				&:nth-child(even)
+					background-color: rgba(255, 255, 255, 1)
+
 
 
 @import "media" // Всегда в конце
