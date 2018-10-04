@@ -525,6 +525,69 @@
 						margin-left: 5px
 					.input-number
 						width: 55px
+	.cart
+		.wrap_cart
+			width: 95%
+		.item-test
+			padding: 10px 30px 10px 20px
+			// display: flex
+			// background-color: rgba(216, 216, 216, .15)
+			height: 91px
+			// justify-content: flex-start
+			// align-items: center
+			.wrap_img
+				// padding-right: 15px
+				width: 9%
+			.wrap_name
+				width: 45%
+				// padding-left: 15px
+				a.name_item
+					// color: #424242
+					// font-family: 'Source Sans Pro'
+					// line-height: 1.1
+					// display: inline-block
+					// font-weight: 400
+					// font-size: 16px
+			.wrap_counter
+				width: 18%
+				padding-left: 5px
+				.input-number-decrement,.input-number-increment
+					// line-height: 42px
+					// height: 42px
+					width: 25%
+					// background-color: #fff
+				.input-number
+					// height: 42px
+					width: 50%
+				.cw_inner
+					position: relative
+					.limit
+						background-color: #ff523d
+						color: #fff
+						font-size: 12px
+						padding: 6px 13px
+						line-height: 1.05
+						position: absolute
+						top: 10px
+						left: 0
+						display: none
+			.wrap_price_pi
+				width: 17%
+				padding-left: 15px
+				padding-right: 10px
+				display: none
+				.price_per_item
+					//
+			.wrap_total
+				// width: 15%
+				width: 28%
+				padding-left: 30px
+			.wrap_delete
+				width: 13%
+				padding-left: 33px
+				.delete
+					// color: #ff523d
+
 
 
 /* Small Devices, Tablets */
@@ -927,6 +990,90 @@
 		.pn-sm
 			padding-right: 0
 			padding-left: 0
+		.wrap_cart
+			.cart_btn_wrap
+					padding-right: 0
+					padding-left: 0
+					&>div
+						&>div:first-child
+							button
+								margin-bottom: 10px
+	/*Flex cart*/
+	.cart
+		.wrap_cart
+			width: 98%
+			.header_cart
+				padding-right: 20px
+				padding-left: 15px
+		.item-test
+			// padding: 10px 30px 10px 20px
+			padding: 10px 15px
+			// display: flex
+			// background-color: rgba(216, 216, 216, .15)
+			height: 144px
+			// justify-content: flex-start
+			// align-items: center
+			flex-wrap: wrap
+			.wrap_img
+				// padding-right: 15px
+				width: 14%
+			.wrap_name
+				width: 86%
+				// padding-left: 15px
+				a.name_item
+					// color: #424242
+					// font-family: 'Source Sans Pro'
+					// line-height: 1.1
+					// display: inline-block
+					// font-weight: 400
+					// font-size: 16px
+			.wrap_counter
+				width: 50%
+				padding-left: 0px
+				// padding-right: 20px
+				padding-right: 17%
+				.input-number-decrement,.input-number-increment
+					// line-height: 42px
+					// height: 42px
+					width: 25%
+					// background-color: #fff
+				.input-number
+					// height: 42px
+					width: 50%
+				.cw_inner
+					position: relative
+					.limit
+						background-color: #ff523d
+						color: #fff
+						font-size: 12px
+						padding: 6px 13px
+						line-height: 1.05
+						position: absolute
+						top: 10px
+						left: 0
+						display: none
+			.wrap_price_pi
+				width: 17%
+				padding-left: 15px
+				padding-right: 10px
+				display: none
+				.price_per_item
+					//
+			.wrap_total
+				// width: 15%
+				width: 50%
+				padding-left: 10px
+			.wrap_mob
+				width: 80%
+				// outline: 1px solid #f00
+				display: flex
+				flex-wrap: wrap
+			.wrap_delete
+				width: 20%
+				padding-left: 13px
+				.delete
+					color: #ff523d
+					cursor: pointer
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1306,13 +1453,20 @@
 		.prn-xs
 			padding-right: 0
 		.wrap_cart
+			.order_info
+				margin-right: 15px
+				.line
+					width: 80%
+				.total
+					span.cost
+						font-size: 21px
 			.cart_list_wrap
 				.cart_item
 					max-height: 144px
 					padding-bottom: 13px
 			.cart_btn_wrap
-				// .lets_buy
-				// 	margin-bottom: 10px
+				padding-right: 0
+				padding-left: 0
 				&>div
 					&>div:first-child
 						button
@@ -1324,6 +1478,81 @@
 						width: 70px
 				.delete
 					padding-top: 34px
+	/*Flex cart*/
+	.cart
+		.wrap_cart
+			.header_cart
+				padding-right: 20px
+				padding-left: 15px
+		.item-test
+			// padding: 10px 30px 10px 20px
+			padding: 10px 15px
+			// display: flex
+			// background-color: rgba(216, 216, 216, .15)
+			height: 144px
+			// justify-content: flex-start
+			// align-items: center
+			flex-wrap: wrap
+			.wrap_img
+				// padding-right: 15px
+				width: 20%
+			.wrap_name
+				width: 80%
+				// padding-left: 15px
+				a.name_item
+					// color: #424242
+					// font-family: 'Source Sans Pro'
+					// line-height: 1.1
+					// display: inline-block
+					// font-weight: 400
+					// font-size: 16px
+			.wrap_counter
+				width: 50%
+				padding-left: 0px
+				// padding-right: 20px
+				padding-right: 9%
+				.input-number-decrement,.input-number-increment
+					// line-height: 42px
+					// height: 42px
+					width: 25%
+					// background-color: #fff
+				.input-number
+					// height: 42px
+					width: 50%
+				.cw_inner
+					position: relative
+					.limit
+						background-color: #ff523d
+						color: #fff
+						font-size: 12px
+						padding: 6px 13px
+						line-height: 1.05
+						position: absolute
+						top: 10px
+						left: 0
+						display: none
+			.wrap_price_pi
+				width: 17%
+				padding-left: 15px
+				padding-right: 10px
+				display: none
+				.price_per_item
+					//
+			.wrap_total
+				// width: 15%
+				width: 50%
+				padding-left: 10px
+			.wrap_mob
+				width: 80%
+				// outline: 1px solid #f00
+				display: flex
+				flex-wrap: wrap
+			.wrap_delete
+				width: 20%
+				padding-left: 13px
+				.delete
+					color: #ff523d
+					cursor: pointer
 
 
 /* Custom, iPhone Retina */
@@ -1577,6 +1806,89 @@
 							height: 30px
 						.ord_text
 							display: none
+	.cart
+		.wrap_cart
+			.header_cart
+				padding-right: 20px
+				padding-left: 15px
+			.order_info
+				margin-left: 15px
+				.line
+					width: 100%
+				.total
+					span.cost
+						font-size: 21px
+					.t_word
+						display: none
+		.item-test
+			// padding: 10px 30px 10px 20px
+			padding: 10px 15px
+			// display: flex
+			// background-color: rgba(216, 216, 216, .15)
+			height: 144px
+			// justify-content: flex-start
+			// align-items: center
+			flex-wrap: wrap
+			.wrap_img
+				// padding-right: 15px
+				width: 20%
+			.wrap_name
+				width: 80%
+				// padding-left: 15px
+				a.name_item
+					// color: #424242
+					// font-family: 'Source Sans Pro'
+					// line-height: 1.1
+					// display: inline-block
+					// font-weight: 400
+					// font-size: 16px
+			.wrap_counter
+				width: 50%
+				padding-left: 0px
+				padding-right: 0px
+				.input-number-decrement,.input-number-increment
+					// line-height: 42px
+					// height: 42px
+					width: 25%
+					// background-color: #fff
+				.input-number
+					// height: 42px
+					width: 50%
+				.cw_inner
+					position: relative
+					.limit
+						background-color: #ff523d
+						color: #fff
+						font-size: 12px
+						padding: 6px 13px
+						line-height: 1.05
+						position: absolute
+						top: 10px
+						left: 0
+						display: none
+			.wrap_price_pi
+				width: 17%
+				padding-left: 15px
+				padding-right: 10px
+				display: none
+				.price_per_item
+					//
+			.wrap_total
+				// width: 15%
+				width: 50%
+				padding-left: 10px
+				span
+					display: none
+			.wrap_mob
+				width: 80%
+				// outline: 1px solid #f00
+				display: flex
+				flex-wrap: wrap
+			.wrap_delete
+				width: 20%
+				padding-left: 7px
+				.delete
+					color: #ff523d
 
 /*==========  Mobile First  ==========*/
 

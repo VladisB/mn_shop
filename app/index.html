@@ -177,14 +177,16 @@
 	<!-- <div class="focus_wrap"></div> -->
 	<div class="overlay"></div>
 	<div class="cart">
-		<div class="container pn-xs">
-			<div class="col-md-12 col-lg-10 col-lg-offset-1 lgup-pl-pr-n pln-md prn-md">
+		<!-- <div class="container pn-xs"> -->
+		<div class="">
+			<!-- <div class="col-md-12 col-lg-10 col-lg-offset-1 lgup-pl-pr-n pln-md prn-md"> -->
+			<div class="">
 				<div class="wrap_cart">
 					<div class="top_line">
 						<div class="header_cart">
 							<span>Козина</span>
 
-							<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg id="exit_cart" width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
 								<title>E151D202-BD2C-4DED-86CE-72581B92BFB1</title>
 								<desc>Created with sketchtool.</desc>
@@ -201,53 +203,52 @@
 					</div>
 
 					<div class="cart_list_wrap">
-						<div class="cart_item">
-							<div class="row m-none">
-								<div class="col-md-1 col-sm-2 col-xs-2 prn-xs">
-									<img src="http://via.placeholder.com/44x44" alt="">
+						
+						<div class="item-test">
+							<div class="wrap_mob">
+							<div class="wrap_img">
+								<img src="http://via.placeholder.com/44x44" alt="">
+							</div>
+							<div class="wrap_name">
+								<div class="inner_wrap_name">
+										<a href="#" class="name_item">Момент Универсальный Особопрочный… и запас под очень длинный заголовок</a>
+										<div class="articul hidden-xs">Арт.23456</div>
 								</div>
-								<div class="col-md-4  col-sm-5 col-xs-8 lgup-pl-pr-n pln-md prn-md">
-									<a href="#" class="name_item">Момент Универсальный Особопрочный… и запас под очень длинный заголовок</a>
-									<div class="articul hidden-xs">Арт.23456</div>
+							</div>
+							<div class="wrap_counter">
+								<div class="cw_inner">
+									<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
+									 class="input-number-increment">+</span>
+									 <div class="limit">это минимальное кол-во товара</div>
 								</div>
-								
-								<div class="col-md-1 col-sm-1 col-xs-2 text-center">
-										<div class="delete">Удалить</div>
-									</div>
-								
-								<div class="col-md-2 col-sm-2 col-xs-5 pn-sm">
-									<div class="cw_inner">
-										<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span
-										 class="input-number-increment">+</span>
-										 <div class="limit">это минимальное кол-во товара</div>
-									</div>
+							</div>
+							<div class="wrap_price_pi">
+								<div class="wrap_price_pi_inner_wrap">
+										<div class="price_per_item">
+												912 000,99 грн
+										</div>
+										<div class="legend">за еденицу</div>
 								</div>
-								<div class="col-md-2 hidden-sm hidden-xs">
-									<div class="price_per_item">
-										912 000,99 грн
-									</div>
-									<div class="legend">за еденицу</div>
-								</div>
-								<div class="col-md-2 col-sm-2 col-xs-5 text-center ">
+							</div>
+							<div class="wrap_total">
 									<div class="total_price_wrap">
-										<div class="total_by_item">999 912 000,99 грн</div>
+											<div class="total_by_item">999 912 000,99 <span>грн</span></div>
 									</div>
-								</div>
-								<!-- <div class="col-md-1 col-sm-1 col-xs-2 text-center">
-									<div class="delete">Удалить</div>
-								</div> -->
-							
-							
 							</div>
 						</div>
-												
+							<div class="wrap_delete">
+									<div class="delete">Удалить</div>
+							</div>
+
+						</div>				
+									
 					</div>
 					<div class="order_info text-right">
 						<div class="row m-none">
 								<div class="line"></div>		
 								<div class="clearfix"></div>
 								<div class="total">
-									Итого: <span>999 999 999 912 000,99 грн</span>
+									<span class="t_word">Итого:</span> <span class="cost">999 999 999 912 000,99 грн</span>
 								</div>
 								<div class="minimum">
 										Минимальный заказ от 500 грн
