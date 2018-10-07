@@ -507,15 +507,19 @@
 
 						<fieldset class="delivery">
 							<legend class="sub_section_name">Способ доставки</legend>
+							<div class="element_wrap">
 							
-							<div class="col-md-4 col-sm-6">
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">
 								<label for="self">
 									<input type="radio" value="self" name="delivery" id="self">
 									<div class="name">Самовывоз</div>
 									<div class="sub_info">по адресу ул. Черксская 13, г.Киев</div>
 								</label>
 							</div>
-							<div class="col-md-4 col-sm-6">
+
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">		
 								<label for="InTime">
 									<input type="radio" value="InTime" name="delivery" id="InTime">
 									<div class="name">Интайм, <a href="#">условия и тарифы</a></div>
@@ -523,7 +527,8 @@
 							</label>
 							</div>
 
-							<div class="col-md-4 col-sm-6">
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">							
 								<label for="express">
 									<input type="radio" value="express" name="delivery" id="express">
 									<div class="name">Курьерская доставка по Киеву</div>
@@ -531,7 +536,9 @@
 									
 								</label>
 							</div>
-							<div class="col-md-4 col-sm-6">
+
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">														
 								<label for="delivAuto">
 									<input type="radio" value="delivAuto" name="delivery" id="delivAuto"> 
 									<div class="name">Delivery Auto,  <a href="#">условия и тарифы</a></div>
@@ -539,25 +546,29 @@
 							</label>
 							</div>
 
-							<div class="col-md-4 col-sm-6">
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">							
 								<label for="new_post">
 									<input type="radio" value="new_post" name="delivery" id="new_post">
 									<div class="name">Новая почта</div>
 									<div class="sub_info"></div>
 								</label>
 							</div>
-							<div class="col-md-4 col-sm-6">
+							<!-- <div class="col-md-4 col-sm-6"> -->
+							<div class="element">							
 								<label for="other">
 									<input type="radio" value="other" name="delivery" id="other">
 									<div class="name">Другое</div>
 									<div class="sub_info"></div>
-							</label>
+								</label>
+							</div>
+							
 							</div>
 						</fieldset>
 
 						<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="input_wrap">
+							<div class="input_wrap select_wrap">
 								<label for="city">Город</label>
 								<!-- <input type="text" name="IF" id="IF"> -->
 								<div class="select city">
@@ -572,7 +583,7 @@
 						</div>
 
 						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="input_wrap">
+							<div class="input_wrap select_wrap">
 								<label for="city">Отделение</label>
 								<!-- <input type="text" name="IF" id="IF"> -->
 								<div class="select city">
@@ -595,7 +606,7 @@
 										</div>
 									</div>
 									
-									<div class="col-lg-4 col-md-4 col-sm-6">
+									<div class="col-lg-4 col-md-5 col-sm-6">
 										<button class="primary_btn submit_ord">Подтвердить оформление</button>
 										<!-- <input type="submit" value="Подтвердить оформление" class="primary_btn submit_ord"> -->
 									</div>

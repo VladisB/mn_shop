@@ -528,7 +528,7 @@
 						margin-left: 5px
 					.input-number
 						width: 55px
-	.cart
+	.cart, .cart_checkout
 		.wrap_cart
 			width: 95%
 		.item-test
@@ -1002,7 +1002,7 @@
 							button
 								margin-bottom: 10px
 	/*Flex cart*/
-	.cart
+	.cart, .cart_checkout
 		.wrap_cart
 			width: 98%
 			.header_cart
@@ -1079,8 +1079,15 @@
 					cursor: pointer
 .form_order
 	.form_wrap
+		.submit_ord
+			padding: 6px 30px
 		.bottom_line
 			text-align: center
+		.element_wrap
+			/**/
+			flex-wrap: wrap
+			.element
+				width: 50%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1561,13 +1568,45 @@
 					color: #ff523d
 					cursor: pointer
 	/*checkout*/
+	.cart_checkout
+		.pn-xs
+			padding-right: 0
+			padding-left: 0
 	.form_order
+		.input_wrap
+			width: 100%
 		.form_wrap
+			.element_wrap
+				flex-wrap: wrap
+				.element
+					width: 100%
 			form
 				padding: 20px 20px
 			.element_wrap
 				display: flex
 				flex-direction: column
+			.select_wrap
+				margin-right: 0
+				width: 100%
+				margin-bottom: 10px
+				.select
+					width: 100%
+			.bottom_line
+				margin-top: 45px
+				.wrap_link
+					margin-bottom: 30px
+			.delivery
+				margin-bottom: 30px
+	.cart_checkout
+		.wrap_cart
+			.order_info
+				.line
+					width: 100%
+				.total
+					span.cost
+						font-size: 20px
+					.t_word
+						display: none
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -1903,6 +1942,24 @@
 				padding-left: 7px
 				.delete
 					color: #ff523d
+	/*checkout*/
+	.form_order
+		.form_wrap
+			.delivery
+				.name
+					font-size: 16px
+				input[type=radio]+.name:before
+					margin-right: 9px
+	.cart_checkout
+		.wrap_cart
+			.order_info
+				.total
+					span.cost
+						font-size: 20px
+					.t_word
+						display: none
+
+
 
 /*==========  Mobile First  ==========*/
 
@@ -2002,6 +2059,12 @@
 @media only screen and (min-width : 992px)
 	// #sidebarMenu
 	// 	left: -30px
+	.form_order
+		.form_wrap
+			.element_wrap
+				display: flex
+				.element
+					width: 33.3%
 	.auth-block
 		a
 			i
