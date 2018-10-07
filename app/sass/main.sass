@@ -1935,13 +1935,6 @@ input[type="range"]::-webkit-slider-thumb
 		z-index: 999
 		// transition: all 300ms ease
 		display: block
-	#exit_cart
-		cursor: pointer
-	.pn
-		padding-left: 0
-		padding-right: 0
-	.h100
-		height: 100%
 	.wrap_cart
 		position: absolute
 		width: 967px
@@ -1952,6 +1945,24 @@ input[type="range"]::-webkit-slider-thumb
 		padding: 0 0 30px 0
 		transition: all .5s ease
 		display: none
+.cart, .cart_checkout
+	#exit_cart
+		cursor: pointer
+	.pn
+		padding-left: 0
+		padding-right: 0
+	.h100
+		height: 100%
+	.wrap_cart
+		// position: absolute
+		// width: 967px
+		// top: 50%
+		// left: 50%
+		// transform: translate(-50%, -50%)
+		background-color: #fff
+		padding: 0 0 30px 0
+		transition: all .5s ease
+		// display: none
 		.m-none
 			margin: 0
 		.header_cart
@@ -1999,76 +2010,18 @@ input[type="range"]::-webkit-slider-thumb
 			width: 100%
 		.cart_list_wrap
 			margin-bottom: 15px
-			.cart_item
-				padding-top: 10px
-				padding-bottom: 10px
-				padding-right: 25px
-				// height: 75px
-				max-height: 75px
-				display: none
-				img
-					margin-top: 5px
-				.cw_inner
-					margin-top: 6px
-					text-align: center
-					position: relative
-					.limit
-						background-color: #ff523d
-						color: #fff
-						font-size: 12px
-						padding: 6px 13px
-						line-height: 1.05
-						position: absolute
-						top: 10px
-						left: 0
-						display: none
-				.delete
-					color: #ff523d
-					margin-top: 16px
-				.total_price_wrap
-					// display: flex
-					// justify-content: center
-					// align-items: center
-					.total_by_item
-						margin-top: 16px
-				.price_per_item
-					font-weight: normal
-					font-style: normal
-					font-stretch: normal
-					// line-height: 3.54
-					letter-spacing: normal
-					margin-bottom: -6px
-					margin-top: 9px
-				.input-number-decrement,.input-number-increment
-					line-height: 42px
-					height: 42px
-					background-color: #fff
-				.input-number
-					height: 42px
-					width: 64px
-				a.name_item
-					color: #424242
-					font-family: 'Source Sans Pro'
-					line-height: 1.1
-					display: inline-block
-					font-weight: 400
-					font-size: 16px
-				.articul
-					font-size: 12px
-					line-height: 1.4
-			.cart_item
-				background-color: rgba(216, 216, 216, .15)
-				&:nth-child(even)
-					background-color: rgba(255, 255, 255, 1)
 /*Cart flex test*/
-.cart
+.cart, .cart_checkout
 	.item-test
 		padding: 10px 40px 10px 20px
 		display: flex
 		background-color: rgba(216, 216, 216, .15)
 		height: 75px
 		justify-content: flex-start
-		// align-items: center
+		&
+			background-color: rgba(216, 216, 216, .15)
+			&:nth-child(even)
+				background-color: rgba(255, 255, 255, 1)
 		.wrap_img
 			// padding-right: 15px
 			// outline: 1px solid #000
@@ -2154,6 +2107,154 @@ input[type="range"]::-webkit-slider-thumb
 			align-items: center
 			.delete
 				color: #ff523d
+/*checkout*/
+.cart_checkout
+	.wrap_cart
+		.header_cart
+			padding-bottom: 26px
+		.order_info
+			margin-right: 38px
+			padding-bottom: 25px
+			padding-left: 20px
+			.line
+				border-bottom: 1px solid #424242
+				margin-bottom: 15px
+				width: 322px
+				float: left
+.num_sect
+	background-color: $green
+	color: #fff
+	display: inline-block
+	width: 35px
+	height: 35px
+	text-align: center
+	border-radius: 50%
+	margin-right: 18px
+.form_order
+	.form_wrap
+		.element_wrap
+			display: flex
+		.bottom_line
+			/**/
+			.wrap_link
+				padding: 7px 10px
+				font-size: 18px
+		.submit_ord
+			padding: 6px 35px
+			font-family: 'Open Sans', sans-serif
+			font-size: 20px
+		.bottom_line
+			margin-top: 60px
+		.wrap_link
+			i
+				margin-right: 5px
+			.comment_ord
+				border-bottom: 1px dotted #000
+				font-size: 18px
+				letter-spacing: normal
+		.pay
+			margin-top: 44px
+			margin-bottom: 45px
+			label
+				margin-right: 15px
+		.delivery
+			label
+				display: block
+				.sub_info
+					font-size: 12px
+					font-weight: 400
+	fieldset
+		label
+			margin-bottom: 18px
+			.name
+				font-weight: 400
+				font-size: 18px
+				display: block
+				line-height: 1.44
+				margin-bottom: -10px
+				a
+					color: $green
+					text-decoration: underline
+				span
+					display: inline-block
+				
+			.sub_info
+				display: inline-block
+				margin-left: 28px
+				font-size: 12px
+	.form_wrap
+		form
+			padding: 45px 46px
+		fieldset
+			margin: 0
+			border: none
+			padding: 0
+	.header_order
+		padding: 29px 30px 26px 20px
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: 600
+		font-family: 'Open Sans', sans-serif
+	.sub_section
+		margin-bottom: 44px
+	.sub_section_name
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 400
+		color: #424242
+		margin-bottom: 19px
+	.input_wrap
+		display: inline-block
+		margin-right: 20px
+		// width: 330px
+		label
+			display: block
+			font-size: 14px
+			color: #8d8d8d
+			line-height: 1.86
+			font-weight: 400
+			margin-bottom: 0
+		input
+			height: 48px
+			width: 100%
+			// line-height: 48px
+			font-size: 20px
+			border: 1px solid #d8d8da
+			color: #424242
+			line-height: 2.48
+			padding-left: 16px
+			padding-right: 16px
+	.form_wrap
+		background-color: #fff
+
+input[type="radio"]
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+
+input[type="radio"]
+	+ .name
+		display: block
+		&:before
+			content: ''
+			display: inline-block
+			width: 1em
+			height: 1em
+			vertical-align: -0.25em
+			border-radius: 1em
+			border: 0.200em solid #fff
+			box-shadow: 0 0 0 0.1em #d8d8da
+			// margin-right: 0.75em
+			margin-right: 10px
+			transition: 0.5s ease all
+	&:checked + .name:before
+		background: $green
+		box-shadow: 0 0 0 0.1em $green
 
 
 

@@ -218,7 +218,10 @@
 				.cart_item
 					.input-number
 						width: 62px
-
+.form_order
+	.form_wrap
+		form
+			padding: 45px 25px
 
 		
 
@@ -1074,6 +1077,10 @@
 				.delete
 					color: #ff523d
 					cursor: pointer
+.form_order
+	.form_wrap
+		.bottom_line
+			text-align: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1553,7 +1560,14 @@
 				.delete
 					color: #ff523d
 					cursor: pointer
-
+	/*checkout*/
+	.form_order
+		.form_wrap
+			form
+				padding: 20px 20px
+			.element_wrap
+				display: flex
+				flex-direction: column
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -1806,7 +1820,7 @@
 							height: 30px
 						.ord_text
 							display: none
-	.cart
+	.cart, .cart_checkout
 		.wrap_cart
 			.header_cart
 				padding-right: 20px

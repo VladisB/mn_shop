@@ -155,19 +155,19 @@ $(function () {
 
 	$('.cart').on('click', function () {
 		$('.cart').fadeOut("slow");
-		$('.wrap_cart').fadeOut("slow");
+		$('.cart.wrap_cart').fadeOut("slow");
 
 		console.log('click -- ');
 	});
 	$('#exit_cart').on('click', function () {
 		$('.cart').fadeOut("slow");
-		$('.wrap_cart').fadeOut("slow");
+		$('.cart.wrap_cart').fadeOut("slow");
 		
 		console.log('click - ');
 	});
 	$('.lets_buy').on('click', function () {
 		$('.cart').fadeOut("slow");
-		$('.wrap_cart').fadeOut("slow");
+		$('.cart.wrap_cart').fadeOut("slow");
 		
 		console.log('click - ');
 	});
