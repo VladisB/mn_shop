@@ -1142,7 +1142,7 @@ footer
 		top: 20%
 		transition: .3s ease
 //Slider--link--
-.slider_link
+.slider_link, .slider_link_seo
 	text-transform: uppercase
 	color: $green
 	font-family: 'Open Sans', sans-serif
@@ -1395,40 +1395,53 @@ section
 		letter-spacing: 0.6px
 		line-height: normal
 	&.s_seo
-		padding: 30px 0 40px 0
-		.more, .less
+		padding: 30px 15px 40px 15px
+		.flx_cont_seo
+			display: flex
+			width: 100%
+			.flex_elem
+				.btn_block
+					display: flex
+					justify-content: flex-end
+			.text_block
+				width: 90%
+			.btn_block
+				width: 10%
+		.more_seo, .less_seo
 			margin-top: 18px
 			&::after
 				content: ''
 				margin-left: 20px
 				display: inline-block
-				height: 25px
-				width: 25px
-				top: 4px
+				height: 29px
+				width: 29px
+				top: 26px
 				color: #ffffff
 				background-color: #fff
 				border: 1px solid $green
 				border-radius: 50%
 				position: absolute
-		.more
+		.more_seo
+			cursor: pointer
 			&::before
 				font-family: 'Open Sans', sans-serif
 				font-size: 18px
 				font-weight: 600
-				top: 1px
-				right: -38px
+				top: 25px
+				right: -40px
 				content: '+'
 				position: absolute
 				color: $green
 				display: inline-block
 				z-index: 3
-		.less
+		.less_seo
+			cursor: pointer
 			&::before
 				font-family: 'Open Sans', sans-serif
 				font-size: 18px
 				font-weight: 600
-				top: 0px
-				left: 101px
+				top: 24px
+				left: 32px
 				content: '-'
 				position: absolute
 				color: $green
