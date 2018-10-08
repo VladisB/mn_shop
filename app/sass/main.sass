@@ -64,6 +64,9 @@ h3
 	background-color: $accent
 	color: #fff
 
+.curs
+	cursor: pointer
+
 .top_menu
 	z-index: 999
 	position: relative
@@ -365,6 +368,7 @@ body
 	// width: 840px
 	width: 630px
 	font-size: 0
+	z-index: 5
 	// outline: 1px solid #ccc
 	transition: ease .3s
 	// height: 200px
@@ -1392,9 +1396,49 @@ section
 		line-height: normal
 	&.s_seo
 		padding: 30px 0 40px 0
+		.more, .less
+			margin-top: 18px
+			&::after
+				content: ''
+				margin-left: 20px
+				display: inline-block
+				height: 25px
+				width: 25px
+				top: 4px
+				color: #ffffff
+				background-color: #fff
+				border: 1px solid $green
+				border-radius: 50%
+				position: absolute
+		.more
+			&::before
+				font-family: 'Open Sans', sans-serif
+				font-size: 18px
+				font-weight: 600
+				top: 1px
+				right: -38px
+				content: '+'
+				position: absolute
+				color: $green
+				display: inline-block
+				z-index: 3
+		.less
+			&::before
+				font-family: 'Open Sans', sans-serif
+				font-size: 18px
+				font-weight: 600
+				top: 0px
+				left: 101px
+				content: '-'
+				position: absolute
+				color: $green
+				display: inline-block
+				z-index: 3
+			
 		h2
 			margin-top: 0
 			margin-bottom: 5px
+			text-transform: none
 		p
 			font-size: 12px
 			font-family: 'Source Sans Pro'
