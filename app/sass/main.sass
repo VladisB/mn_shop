@@ -196,16 +196,20 @@ body
 	font-size: 14px
 	.logo
 		float: left
-		padding: 9px 0 7px
+		padding: 9px 0px 7px 10px
 		a
 			cursor: pointer
 		img
 			height: 34px
 	ul
-		margin: 0
+		margin-bottom: 0
+		padding-left: 0
 		li
 			list-style-type: none
 			float: left
+			&:first-child
+				a
+					padding: 16px 10px 16px 0
 			a
 				padding: 16px 10px
 				display: block
@@ -227,8 +231,21 @@ body
 		text-transform: uppercase
 		font-weight: 700
 		letter-spacing: 0.6px
-		// padding: 17px 26px
-		// margin-left: 25px
+.flex-wrap
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	height: 56px
+	padding-left: 30px !important
+	.mnu_button_wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		// position: relative
+		label
+			margin-bottom: 0
+		.catalog
+			margin-left: 23px
 
 //--Humburger--
 #sidebarMenu2
@@ -588,15 +605,15 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	justify-content: center
 	align-items: center
 	height: 56px
-	.mnu_button_wrap
-		display: flex
-		justify-content: center
-		align-items: center
-		// position: relative
-		label
-			margin-bottom: 0
-		.catalog
-			margin-left: 23px
+	// .mnu_button_wrap
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	// position: relative
+	// 	label
+	// 		margin-bottom: 0
+	// 	.catalog
+	// 		margin-left: 23px
 	.search-wrap
 		display: flex
 		justify-content: center
@@ -1019,8 +1036,13 @@ section
 .bage_green
 	background: linear-gradient(242deg, #b4ed43, #5acf3c)
 .advantages
-	padding: 41px 30px
+	// padding: 41px 30px
+	padding: 41px 0px
 	display: block
+	.pln
+		padding-left: 0
+	.prn
+		padding-right: 0
 	h3
 		font-size: 16px
 	.bottom_servise_wrap
@@ -1037,7 +1059,8 @@ section
 	.img_wrap
 		text-align: center
 		img
-			margin-top: 20px
+			// margin-top: 20px
+			margin-top: 5px
 	.text-wrap
 		margin-left: 15px
 
@@ -1396,6 +1419,8 @@ section
 		line-height: normal
 	&.s_seo
 		padding: 30px 15px 40px 15px
+		ul
+			font-size: 12px
 		.flx_cont_seo
 			display: flex
 			width: 100%
@@ -1582,32 +1607,49 @@ select::-ms-expand
 	padding: 0
 	display: inline-block
 	margin-top: 6px
+
+	display: flex
+	flex-wrap: wrap
 	li
 		list-style-type: none
 		display: inline-block
 		// height: 130px
-		padding: 20px 0 10px
+		padding: 15px 0 10px
 		// outline: 1px solid #000
 		background-color: #fff
 		// width: 210px
 		width: 190px
-		// margin: 1px
-		margin-top: 1px
+		height: 135px
+		margin: 1px
+		// margin-top: 1px
 		cursor: pointer
+
+		display: flex
+		justify-content: center
+		align-items: center
 		a
 			text-decoration: none
 			color: #424242
 			font-size: 14px
 			font-weight: 600
 		p
+			margin-top: 4px
+			// display: block
+			width: 100%
+			border: none
+			padding: 0 5px
+			line-height: 1
+			margin-bottom: 0
+			font-family: 'Open Sans', sans-serif			
+			font-size: 16px
 			display: block
-  		width: 100%
-  		border: none
-  		padding: 0 10px
-  		white-space: nowrap
-  		overflow: hidden
-  		-o-text-overflow: ellipsis
-  		text-overflow: ellipsis
+			display: -webkit-box
+			max-width: 190px
+			max-height: 32px
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden
+			text-overflow: ellipsis
 		.img_wrap
 			img
 				width: 88px
@@ -1628,8 +1670,8 @@ select::-ms-expand
 		margin-bottom: 5px
 	.sb_block_name
 		position: relative
-		transition: .3s ease
-		&:hover
+		// transition: .3s ease
+		&.open
 			&::after
 				transform: rotate(180deg)
 		&::after
@@ -1642,6 +1684,16 @@ select::-ms-expand
 			color: #d8d8da
 			font-size: 20px
 			transition: .3s ease
+		.sb_detail
+			max-height: 1200px
+			opacity: 1
+			overflow: hidden
+			transition: all 400ms ease-out
+			width: 100%
+			&.closed
+			  max-height: 0
+			  opacity: 0
+			  transition: all 400ms ease-out
 	.filter_btn
 		text-transform: uppercase
 		background-image: linear-gradient(to right, #ffc902, #ff9801)
@@ -1687,7 +1739,7 @@ select::-ms-expand
 /*Sidebar*/
 .sb_block
 	border: 1px solid #d8d8da
-	padding: 0px 20px
+	padding: 0px 20px 0px 20px
 	input[type="text"]
 		font-size: 20px
 		padding: 5px 10px
@@ -1706,26 +1758,24 @@ select::-ms-expand
 		font-size: 20px
 		color: #424242
 		line-height: 2.48
-/*range*/
-input[type="range"]
-	margin-top: 20px
-	margin-bottom: 15px
-	-webkit-appearance: none
-	width: 100%
-	height: 4px
-	background: #dddddf
-	background-position: center
-	background-repeat: no-repeat
-input[type="range"]::-webkit-slider-thumb
-	-webkit-appearance: none
-	width: 20px
-	height: 20px
-	border-radius: 100%
-	background: #fff
-	position: relative
-	border: 3px solid $green
-	z-index: 3
-	cursor: pointer
+/*range mark*/
+
+/*Custom ruler*/
+.rulet
+	.sb_block_name
+		cursor: pointer
+	.block_info
+		max-height: 1200px
+		opacity: 1
+		overflow: hidden
+		transition: .5s ease
+		width: 100%
+		padding-bottom: 25px
+		&.closed
+			max-height: 0
+			opacity: 0
+			padding-bottom: 0
+			// transition: 2s ease
 
 /*Custom checkbox*/
 .styled-checkbox
@@ -1898,6 +1948,8 @@ input[type="range"]::-webkit-slider-thumb
 	  transition: all 400ms ease-out
 .range_wrap
 	margin-top: 10px
+	padding: 10px 0px
+	border: none
 .filter_btn
 	cursor: pointer
 
@@ -2008,6 +2060,8 @@ input[type="range"]::-webkit-slider-thumb
 	.pn
 		padding-left: 0
 		padding-right: 0
+	.prn
+		padding-right: 0
 	.h100
 		height: 100%
 	.wrap_cart
@@ -2067,6 +2121,8 @@ input[type="range"]::-webkit-slider-thumb
 			width: 100%
 		.cart_list_wrap
 			margin-bottom: 15px
+			max-height: 300px
+			overflow: auto
 /*Cart flex test*/
 .cart_checkout
 	.wrap_cart
@@ -2167,11 +2223,13 @@ input[type="range"]::-webkit-slider-thumb
 			align-items: center
 			.delete
 				color: #ff523d
+				cursor: pointer
 /*checkout*/
 .cart_checkout
 	.wrap_cart
 		.header_cart
 			padding-bottom: 26px
+			padding-left: 0
 		.order_info
 			margin-right: 38px
 			padding-bottom: 25px
@@ -2220,6 +2278,15 @@ input[type="range"]::-webkit-slider-thumb
 		.pay
 			margin-top: 44px
 			margin-bottom: 45px
+			// outline: 1px solid #000
+			.element_wrap
+				// outline: 1px solid #000
+				.elment
+					// outline: 1px solid #000
+					// width: 40%
+					// &:first-child
+					// 	width: 20%
+					margin-right: 15px
 			label
 				margin-right: 15px
 		.delivery
@@ -2231,12 +2298,14 @@ input[type="range"]::-webkit-slider-thumb
 	fieldset
 		label
 			margin-bottom: 18px
+			cursor: pointer
 			.name
 				font-weight: 400
 				font-size: 18px
 				display: block
 				line-height: 1.44
-				margin-bottom: -10px
+				// margin-bottom: -10px
+				margin-bottom: -8px
 				a
 					color: $green
 					text-decoration: underline
@@ -2255,7 +2324,7 @@ input[type="range"]::-webkit-slider-thumb
 			border: none
 			padding: 0
 	.header_order
-		padding: 29px 30px 26px 20px
+		padding: 29px 30px 26px 0px
 		font-size: 20px
 		text-transform: uppercase
 		font-weight: 600
@@ -2272,6 +2341,7 @@ input[type="range"]::-webkit-slider-thumb
 		display: inline-block
 		margin-right: 20px
 		// width: 330px
+		width: 100%
 		label
 			display: block
 			font-size: 14px
@@ -2320,6 +2390,213 @@ input[type="radio"]
 	&:checked + .name:before
 		background: $green
 		box-shadow: 0 0 0 0.1em $green
+/*mein page fix menu*/
+#sidebarMenu_dock
+	.inner-list
+		left: 96%
+	.sidebarMenuInner
+		margin-bottom: 39px
+	li.main-item
+		a
+			&::after
+				top: -7px
+
+/*range*/
+.sb_price
+	// background: linear-gradient(45deg, #0f3443, #34e89e)
+	padding-bottom: 25px	
+
+
+.range_wrap
+	// input[type="range"]
+	// 	position: absolute
+	// .price-field
+	// 	position: relative
+	// 	width: 100%
+	// 	height: 36px
+	// 	box-sizing: border-box
+	// input[type="range"]
+		// margin-top: 20px
+		// margin-bottom: 15px
+		// -webkit-appearance: none
+		// width: 100%
+		// height: 4px
+		// background: #dddddf
+		// background-position: center
+		// background-repeat: no-repeat
+	input[type="range"]::-webkit-slider-thumb
+		-webkit-appearance: none
+		// width: 20px
+		// height: 20px
+		border-radius: 100%
+		background: #fff
+		// position: relative
+		border: 3px solid $green
+		z-index: 3
+		cursor: pointer
+	&:active, &:focus
+		outline: 0
+
+
+
+/* Style for active state input*/
+
+// .price-field input[type=range]
+// 	&:hover::-webkit-slider-thumb, &:active::-webkit-slider-thumb
+// 		box-shadow: 0 0 0 0.5px $green
+// 		transition-duration: 0.3s
+
+/**test range*/
+.input-range-container
+  position: relative
+  width: 100%
+  height: 20px
+
+.input-range-tracker
+  position: absolute
+  left: 0
+  top: 50%
+  width: 100%
+  height: 5px
+  margin-top: -2.5px
+  border-radius: 10px
+  background: LightGray
+  pointer-events: none
+
+.input-range-tracker-between
+  position: absolute
+  left: 0
+  top: 50%
+  width: 0
+  height: 5px
+  margin-top: -2.5px
+  border-radius: 10px
+  background: $green
+  pointer-events: none
+
+input
+	&[type=range]
+		appearance: none
+		position: absolute
+		display: block
+		width: 100%
+		background: transparent
+		&.display-upper
+			z-index: 1
+		&:not(*:root)
+			pointer-events: none
+		&::-webkit-slider-runnable-track
+			background: transparent
+		&::-webkit-slider-thumb, &::-webkit-media-slider-thumb
+			appearance: none
+			width: 20px
+			height: 20px
+			border: 0
+			border-radius: 50%
+			pointer-events: auto
+			background: #fff
+			border: 3px solid $green
+			cursor: pointer			
+	&[name=range-lower]
+		&::-webkit-slider-thumb, &::-webkit-media-slider-thumb
+			background: $green
+			//Left
+	&[name=range-upper]
+		&::-webkit-slider-thumb, &::-webkit-media-slider-thumb
+			background: $green
+			//Right
+	&[type=range]
+		&::-moz-range-track
+			background: transparent
+		&::-moz-range-thumb
+			appearance: none
+			width: 20px
+			height: 20px
+			border: 0
+			border-radius: 50%
+			pointer-events: auto
+	&[name=range-lower]::-moz-range-thumb
+		background: #fff
+		border: 3px solid $green
+		width: 20px
+		height: 20px
+		//Left
+	&[name=range-upper]::-moz-range-thumb
+		background: #fff
+		border: 3px solid $green
+		width: 20px
+		height: 20px
+		//Right
+	&[type=range]
+		&::-ms-track
+			background: transparent
+			border-color: transparent
+			color: transparent
+			z-index: 1
+		&::-ms-thumb
+			appearance: none
+			width: 20px
+			height: 20px
+			border: 0
+			border-radius: 50%
+	&[name=range-lower]::-ms-thumb
+		background: $green
+		//Left
+	&[name=range-upper]::-ms-thumb
+		background: $green
+		//Right
+/*Contacts*/
+.contacts
+	padding: 40px 0 25px
+	color: #424242
+	font-family: 'Open Sans', sans-serif
+	.map_wrap
+		background-color: #ccc
+		height: 457px
+		width: 100%
+	.contact-group-head
+		text-transform: uppercase
+		font-family: 'Open Sans', sans-serif
+		font-weight: 600
+		font-size: 19px
+		margin-bottom: 8px
+	p
+		font-size: 16px
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		font-family: 'Open Sans', sans-serif
+	ul
+		margin-left: 0
+		padding-left: 0
+		font-family: 'Open Sans', sans-serif
+		li
+			list-style: none
+			font-size: 16px
+			i
+				color: $green
+				margin-right: 9px
+				font-size: 12px
+			img
+				margin-right: 9px
+				width: 12px
+	ul
+		&.phones
+			li
+				&:last-child
+					margin-top: 20px
+	.contact-group
+		margin-bottom: 23px
+		.schedule
+			li
+				font-size: 14px
+		.list_name
+			text-transform: uppercase
+			margin-top: 25px
+			margin-bottom: 9px
+		&:last-child
+			margin-bottom: 0
 
 
 

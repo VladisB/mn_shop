@@ -4,6 +4,10 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.flex-wrap
+		.mnu_button_wrap
+			.catalog
+				margin-left: 10px
 	.pln-md
 		padding-left: 0
 	.prn-md
@@ -12,7 +16,7 @@
 		padding: 0 65px
 	.top_cat_list
 		li
-			width: 24%
+			// width: 24%
 	.pn-md
 		padding: 0
 	#sidebarMenu
@@ -233,6 +237,8 @@
 	// 	justify-content: flex-start
 	// 	align-items: center
 	// 	padding: 12.2px 0
+	.map_wrap
+		margin-top: 35px
 	.sb_price
 		.sb_block_name
 			&::after
@@ -608,8 +614,11 @@
 		// 		position: absolute
 		// 		top: 30px
 		// 		right: 30px
-			.sb_price
-				border-top: none
+			// .sb_price
+			// 	border-top: none
+	.flex-wrap
+		justify-content: center
+		padding-left: 0 !important
 	.prn__sm
 		padding-right: 0
 	.type_select h3
@@ -619,6 +628,8 @@
 			width: 100%
 			border: 1px solid #f0f0f0
 			padding: 0
+			height: auto
+			justify-content: flex-start
 			.type-item
 				display: flex
 				align-items: center
@@ -1077,17 +1088,38 @@
 				.delete
 					color: #ff523d
 					cursor: pointer
+	.form_order
+			.submit_ord
+				width: 100%
+			.form_wrap
+				.pay
+					.element_wrap
+						flex-wrap: wrap
+						.elment
+							width: 100%
+							&:first-child
+								width: 100%
+				.select_wrap
+					margin-right: 0
+					width: 100%
+					margin-bottom: 10px
+					.select
+						width: 100%
 .form_order
 	.form_wrap
 		.submit_ord
 			padding: 6px 30px
+		.wrap_link
+			margin-bottom: 20px
 		.bottom_line
-			text-align: center
+			// text-align: center
+			margin-top: 45px
 		.element_wrap
 			/**/
 			flex-wrap: wrap
 			.element
 				width: 50%
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -2231,4 +2263,10 @@
 	  max-height: 0
 	  opacity: 0
 	  transition: all 400ms ease-out
+ /*header fix*/
+	// .top_menu
+	// 	.logo
+	// 		float: left
+	// 		padding: 9px 0 7px 24px
+	 
 

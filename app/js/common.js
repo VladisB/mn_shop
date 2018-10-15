@@ -148,6 +148,10 @@ $(function () {
 		$(this).closest(".clump").find(".sb_header_slide").removeClass("hide_link");
 		$(this).closest(".clump").find(".sb_header_slide_inside").addClass("hide_link");
 	});
+	
+	$(".rulet").click(function () {
+		$(this).find('.block_info').toggleClass('closed');
+	});
 
 	$('#openSidebarMenu').on('click', function () {
 		$('.overlay').toggleClass('show');
@@ -408,37 +412,123 @@ $(function () {
 		// console.log('click back');
 	});
 
-	// $('.primary_btn').on('click', function () {
-	// 	$('.primary_btn.tg').toggleClass('go');
-	// 	console.log('click');
-	// 	// $('#openSidebarMenu').toggleClass('slide-mm');
-	// 	// console.log('click main');
-	// });
+// 	/*Inmut multirange*/
 
-	// $("#openSidebarMenu").click(function() {
+var lowerSlider = document.querySelector('#range-lower');
+var upperSlider = document.querySelector('#range-upper');
 
-	// 	$(".focus_wrap").is(":visible")?$(".focus_wrap").fadeOut(300):$(".focus_wrap").fadeIn(300);
-	// 		});
-	// $("#openSidebarMenu").click(function() {
-	// 	// $(this).toggleClass("on");
-	// 	// $(".focus_wrap").css("opacity", '1');
-	// 	$(".focus_wrap").toggleClass("on-focus");
-	// 	// $(this).parent().next().next().find(".main-mnu").slideToggle();
-	// 	// return false;
-	// });
-	// $('#openSidebarMenu').click(function(){
-	// 	console.log('click');
+document.querySelector('#two').value=upperSlider.value;
+document.querySelector('#one').value=lowerSlider.value;
 
-	// $("#focus_wrap").css("display", "block");
-	// if(	$("#focus_wrap").css("display", "block")){
-	// 	$("#focus_wrap").css("display", "none");
-	// }
-	// });
+var  lowerVal = parseInt(lowerSlider.value);
+var upperVal = parseInt(upperSlider.value);
 
-	// $("#sidebarMenu .sidebarMenuInner li").click(function(){
-	// 	// $("ul").slideToggle();
-	// 	// console.log("click");
-	// 	// $("ul ul").css("display", "none");
-	// });
+upperSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+
+    if (upperVal < lowerVal + 4) {
+        lowerSlider.value = upperVal - 4;
+        if (lowerVal == lowerSlider.min) {
+        upperSlider.value = 4;
+        }
+    }
+    document.querySelector('#two').value=this.value
+};
+
+lowerSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+    if (lowerVal > upperVal - 4) {
+        upperSlider.value = lowerVal + 4;
+        if (upperVal == upperSlider.max) {
+            lowerSlider.value = parseInt(upperSlider.max) - 4;
+        }
+    }
+    document.querySelector('#one').value=this.value
+};
+
+	// var lowerSlider = document.querySelector('#range-lower').value;
+	// var upperSlider = document.querySelector('#range-upper').value;
+	// document.querySelector('#one').value= lowerSlider;
+	// document.querySelector('#two').value= upperSlider;
+
+
+});
+'use strict';
+
+document.addEventListener('DOMContentLoaded', function () {
+	var container = document.querySelector('.input-range-container');
+	var rangeLower = document.querySelector('input[name="range-lower"]');
+	var rangeUpper = document.querySelector('input[name="range-upper"]');
+	var trackerBetween = document.querySelector('.input-range-tracker-between');
+	var minValue = 0;
+	var maxValue = Number(rangeUpper.getAttribute('max'));
+
+	var containerHoverOnPercent = 0;
+
+	var updateTrackerBetween = function updateTrackerBetween() {
+		var lowerValue = Number(rangeLower.value);
+		var upperValue = Number(rangeUpper.value);
+		trackerBetween.style.width = (upperValue - lowerValue) / maxValue * 100 + '%';
+		trackerBetween.style.left = lowerValue / maxValue * 100 + '%';
+	};
+	updateTrackerBetween();
+
+	var moveAppropriateThumbToUpper = function moveAppropriateThumbToUpper() {
+		var lowerValue = Number(rangeLower.value);
+		var upperValue = Number(rangeUpper.value);
+		var closeValue = maxValue / 10;
+
+		if (upperValue - lowerValue < closeValue && upperValue > maxValue * .9) {
+			rangeLower.classList.add('display-upper');
+			rangeUpper.classList.remove('display-upper');
+		} else if (upperValue - lowerValue < closeValue && lowerValue < maxValue * .1) {
+			rangeLower.classList.remove('display-upper');
+			rangeUpper.classList.add('display-upper');
+		} else {
+			var middleValue = lowerValue + (upperValue - lowerValue) / 2;
+			if (containerHoverOnPercent < middleValue / maxValue) {
+				rangeLower.classList.add('display-upper');
+				rangeUpper.classList.remove('display-upper');
+			} else {
+				rangeLower.classList.remove('display-upper');
+				rangeUpper.classList.add('display-upper');
+			}
+		}
+	};
+
+	['mouseenter', 'mousemove', 'touchstart', 'touchmove'].forEach(function (eventName) {
+		container.addEventListener(eventName, function (event) {
+			containerHoverOnPercent = event.offsetX / event.target.clientWidth;
+			moveAppropriateThumbToUpper();
+		}, false);
+	});
+
+	rangeLower.addEventListener('input', function (event) {
+		var lowerValue = Number(event.target.value);
+		var upperValue = Number(rangeUpper.value);
+		if (lowerValue < minValue) {
+			event.target.value = minValue;
+		} else if (lowerValue > upperValue) {
+			event.target.value = upperValue;
+		}
+
+		moveAppropriateThumbToUpper();
+		updateTrackerBetween();
+	}, false);
+
+	rangeUpper.addEventListener('input', function (event) {
+		var lowerValue = Number(rangeLower.value);
+		var upperValue = Number(event.target.value);
+		if (upperValue > maxValue) {
+			event.target.value = maxValue;
+		} else if (upperValue < lowerValue) {
+			event.target.value = lowerValue;
+		}
+
+		moveAppropriateThumbToUpper();
+		updateTrackerBetween();
+	}, false);
 
 });
