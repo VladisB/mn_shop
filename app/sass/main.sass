@@ -299,12 +299,17 @@ body
 				opacity: 1
 				.sub-item
 					opacity: 1
+					p
+						transition: .3s ease
+					&:hover
+						p
+							color: $green
 		text-align: left
 		color: #515151
 		list-style-type: none
 		transition: .3s ease
 		&:hover
-			background-color: rgba(206, 209, 219, 1)
+			// background-color: rgba(206, 209, 219, 1)
 		&.main-item
 			a
 				&::after
@@ -382,8 +387,9 @@ body
 	padding: 0px
 	background-color: #fff
 	display: none
+	width: 760px
 	// width: 840px
-	width: 630px
+	// width: 630px
 	font-size: 0
 	z-index: 5
 	// outline: 1px solid #ccc
@@ -410,7 +416,8 @@ body
 		padding-top: 20px
 		padding-bottom: 10px
 		margin: 0
-		width: 210px
+		// width: 210px
+		width: 190px
 		// height: 130px
 		.img_wrap
 			margin-bottom: 5px
@@ -1627,12 +1634,16 @@ select::-ms-expand
 		display: flex
 		justify-content: center
 		align-items: center
+		&:hover
+			p
+				color: $green
 		a
 			text-decoration: none
 			color: #424242
 			font-size: 14px
 			font-weight: 600
 		p
+			transition: .3s ease
 			margin-top: 4px
 			// display: block
 			width: 100%
@@ -2395,7 +2406,7 @@ input[type="radio"]
 	.inner-list
 		left: 96%
 	.sidebarMenuInner
-		margin-bottom: 39px
+		margin-bottom: 34px
 	li.main-item
 		a
 			&::after
