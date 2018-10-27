@@ -196,7 +196,9 @@ body
 	font-size: 14px
 	.logo
 		float: left
-		padding: 9px 0px 7px 10px
+		// padding: 9px 0px 7px 10px
+		// padding: 9px 0px 7px 7px
+		padding: 9px 0px 7px 27px
 		a
 			cursor: pointer
 		img
@@ -210,6 +212,9 @@ body
 			&:first-child
 				a
 					padding: 16px 10px 16px 0
+			&:last-child
+				a
+					padding-right: 0
 			a
 				padding: 16px 10px
 				display: block
@@ -231,12 +236,14 @@ body
 		text-transform: uppercase
 		font-weight: 700
 		letter-spacing: 0.6px
+		cursor: pointer
 .flex-wrap
 	display: flex
 	justify-content: flex-start
 	align-items: center
 	height: 56px
-	padding-left: 30px !important
+	// padding-left: 21px !important
+	padding-left: 42px !important
 	.mnu_button_wrap
 		display: flex
 		justify-content: center
@@ -388,6 +395,8 @@ body
 	background-color: #fff
 	display: none
 	width: 760px
+	// width: 779px
+	// width: 760px
 	// width: 840px
 	// width: 630px
 	font-size: 0
@@ -418,6 +427,7 @@ body
 		margin: 0
 		// width: 210px
 		width: 190px
+		// width: 194.75px
 		// height: 130px
 		.img_wrap
 			margin-bottom: 5px
@@ -438,7 +448,8 @@ body
 
 input
 	&[type="checkbox"]:checked ~ #sidebarMenu
-		transform: translateX(0)
+		// transform: translateX(0)
+		transform: translateX(11px)
 		opacity: 1
 	&[type=checkbox]
 		transition: all 0.3s
@@ -718,6 +729,10 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 
 
 //--s_product--
+.s_properties
+	.rec_head
+		h2
+			margin-bottom: 25px
 .s_product
 	color: #424242
 	font-family: 'Source Sans Pro'
@@ -753,6 +768,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 .input-number
 	width: 92px
 	padding: 0 12px
+	padding: 0
 	vertical-align: top
 	text-align: center
 	border-top: 1px solid #d1d1d1
@@ -762,6 +778,8 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	height: 48px
 	user-select: none
 	font-size: 28px
+
+	outline: none
 
 .input-number-decrement,
 .input-number-increment
@@ -838,6 +856,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 			justify-content: space-between
 			list-style-type: none
 			border-bottom: dashed  1px #b1b1b1
+			margin-bottom: 15px
 			span
 				margin-bottom: -2px
 				display: inline-block
@@ -896,6 +915,20 @@ section
 		letter-spacing: normal
 		font-weight: 400
 		margin-bottom: 30px
+
+		display: block
+		display: -webkit-box
+		max-width: 100%		
+		// max-height: 39px
+		height: 39px
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		overflow: hidden
+		text-overflow: ellipsis
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: none
 	.top_info
 		margin-bottom: 5px
 		min-height: 2px
@@ -996,7 +1029,7 @@ section
 		// margin-left: 5px
 	.input-number
 		// width: 56px
-		padding: 0 12px
+		// padding: 0 12px
 		vertical-align: top
 		text-align: center
 		border-top: 1px solid #d1d1d1
@@ -1666,13 +1699,14 @@ select::-ms-expand
 				width: 88px
 				height: 72px
 /*---------*/	
-.s_catalog
+.s_catalog,.b_plugin
 	.item_wrap
 		overflow: hidden
 		padding-top: 30px
 		.itm_img_wrap
 			margin-bottom: 0
 			max-height: 113px
+			margin-bottom: 10px
 	h1.cat_name
 		font-size: 18px
 		font-family: 'Open Sans', sans-serif
@@ -1744,6 +1778,9 @@ select::-ms-expand
 			cursor: pointer
 			path
 				transition: .3s ease
+			&.active
+				path
+					fill: $green
 			&:hover
 				path
 					fill: $green
@@ -2008,6 +2045,7 @@ select::-ms-expand
 				font-family: 'Source Sans Pro'
 				// font-weight: 400
 				font-size: 14px
+
 			.itm_artic_wrap
 				float: none
 				margin-bottom: 15px
@@ -2403,10 +2441,21 @@ input[type="radio"]
 		box-shadow: 0 0 0 0.1em $green
 /*mein page fix menu*/
 #sidebarMenu_dock
-	.inner-list
-		left: 96%
+	// outline: 1px solid red
+	background-color: #fff
 	.sidebarMenuInner
-		margin-bottom: 34px
+		max-height: 390px
+		overflow: hidden
+		li
+			// &:last-child
+			&:nth-child(8)
+				p
+					border-bottom: 1px solid transparent
+
+	.inner-list
+		// left: 96%
+	.sidebarMenuInner
+		margin-bottom: 39px
 	li.main-item
 		a
 			&::after
@@ -2608,9 +2657,41 @@ input
 			margin-bottom: 9px
 		&:last-child
 			margin-bottom: 0
-
-
-
+/*FAQ*/
+.faq_wrap
+	h2
+		margin-bottom: 45px
+		margin-top: 45px
+	.faq_list
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			margin-bottom: 35px
+		.faq_header
+			font-size: 20px
+			cursor: pointer
+			width: 100%
+			.faq_flx_inner_wrap
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			.faq_img
+				width: 26px
+				height: 26px
+				margin-right: 20px
+		.block_info
+			margin-top: 30px
+			font-size: 14px
+			font-weight: 400
+			&.closed
+				margin-top: 0
+/*fix*/
+.wrap_sbb
+	padding-left: 21px
+/*product page*/
+.main_img
+	cursor: pointer
 
 
 @import "media" // Всегда в конце

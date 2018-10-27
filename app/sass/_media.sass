@@ -35,8 +35,8 @@
     	width: 25%
 		.input-number
 			// width: 40%
-			// width: 50%
-			width: 42%
+			width: 50%
+			// width: 42%
 		.btn_buy
 			padding: 6px 26px
 	.s_product
@@ -71,7 +71,7 @@
 		.f_bottom
 			.f_info:last-child
 				margin-bottom: 0
-	.s_catalog
+	.s_catalog, .b_plugin
 		.item_wrap
 			padding-top: 14px
 			.btn_buy_wrap
@@ -80,18 +80,19 @@
 			h4
 				margin-bottom: 10px
 				font-size: 14px
-				height: 40px
+				height: 36px
 				line-height: 1.2
 			.price
 				margin-top: 7px
-				margin-bottom: 10px
+				// margin-bottom: 10px
+				margin-bottom: 13px
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
 					// color: #c6c6c6
 					margin-bottom: 10px
 					font-size: 14px
-					height: 40px
+					height: 39px
 					line-height: 1.2
 				.price
 					color: #b1b1b1
@@ -117,7 +118,7 @@
 						// margin-bottom: 20px
 						margin-top: 13px
 						margin-bottom: 21.2px //22
-	.s_catalog
+	.s_catalog, .b_plugin
 		.item_wrap
 			// padding-top: 14px
 			h4
@@ -272,13 +273,13 @@
 				top: 30px
 				right: 30px
 				cursor: pointer
-	.s_catalog
+	.s_catalog, .b_plugin
 		h1.cat_name
 			padding-left: 15px
 			margin-top: 20px
 	.pln-before992
 		padding-left: 0
-	.s_catalog
+	.s_catalog, .b_plugin
 		h1.cat_name
 			display: inline-block
 		.cat_info
@@ -394,19 +395,35 @@
 					width: 23%
 				.button_form
 					width: 20%
-	.s_catalog
+	.s_catalog, .b_plugin
 		.grid
 			.item_wrap
 				&.absent
 					.price
 						margin-bottom: 0
-						// margin-top: 7px
 						margin-top: 5.2px
+						// margin-top: 5.2px
 						.old_price
-							margin-bottom: 7.8px
+							margin-bottom: 9.6px
 				// &.under_the_oder
 
-	.s_catalog
+	.s_catalog, .b_plugin
+		.grid
+			.item_wrap
+				&.absent	
+					.message_wrap
+						padding-left: 20px
+						text-align: center
+						.message
+							line-height: 1
+							display: inline
+						img
+							width: 159px
+							height: 24px
+							margin-bottom: 20px
+							display: block
+					.price
+						margin-bottom: 9.6px
 		.item_wrap
 			padding-top: 14px
 			.btn_buy_wrap
@@ -417,40 +434,55 @@
 			h4
 				margin-bottom: 10px
 				font-size: 14px
-				height: 80px
+				// height: 80px
 				line-height: 1.2
 				margin-top: 10px
+
+				height: 70px
+				-webkit-line-clamp: 4
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
 			.price
 				margin-bottom: 0px
+				height: 52px
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
 				h4
 					// color: #c6c6c6
 					font-size: 14px
-					height: 80px
+					// height: 80px
 					line-height: 1.2
+
+					height: 70px
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
 				.price
 					color: #b1b1b1
 					margin-bottom: 13px
-			&.absent	
-				.message_wrap
-					padding-left: 20px
-					text-align: center
-					.message
-						line-height: 1
-						display: inline
-					img
-						width: 159px
-						height: 24px
-						margin-bottom: 20px
-						display: block
+			// &.absent	
+			// 	.message_wrap
+			// 		padding-left: 20px
+			// 		text-align: center
+			// 		.message
+			// 			line-height: 1
+			// 			display: inline
+			// 		img
+			// 			width: 159px
+			// 			height: 24px
+			// 			margin-bottom: 20px
+			// 			display: block
+			// 	.price
+			// 		margin-bottom: 9.6px
 			&.coming_soon
 				.message_wrap
 					img
 						width: 133px
 						height: 29px
 						// margin-bottom: 30px
-						margin-bottom: 44px
+						margin-bottom: 45.8px
 						// margin-top: 26px
 						margin-top: 35px
 			&.under_the_order
@@ -463,7 +495,7 @@
 						// margin-top: 28px
 						margin-top: 38px
 	
-	.s_catalog
+	.s_catalog, .b_plugin
 		.grid
 			.item_wrap
 				.btn_buy_wrap
@@ -850,7 +882,23 @@
 	// // 					height: 19px
 	// // 					// margin-bottom: 11px
 	// // 					margin-bottom: 15.11px
-	.s_catalog
+	.s_catalog, .b_plugin
+		.grid
+			.item_wrap
+				&.absent
+					.message_wrap
+						height: 90px
+						img
+							width: 159px
+							height: 24px
+							margin-bottom: 20px
+							// display: block
+					h4
+						height: 47.6px
+					.price
+						margin-bottom: 13.8px
+				
+
 		.item_wrap
 			padding-top: 14px
 			.btn_buy_wrap
@@ -861,9 +909,16 @@
 			h4
 				margin-bottom: 10px
 				font-size: 14px
-				height: 60px
+				// height: 60px
 				line-height: 1.2
 				margin-top: 10px
+
+				height: 60px
+				// max-width: 100%
+				-webkit-line-clamp: 4
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
 			.price
 				margin-bottom: 0px
 				margin-top: 0
@@ -872,7 +927,7 @@
 				h4
 					// color: #c6c6c6
 					font-size: 14px
-					height: 80px
+					// height: 80px
 					line-height: 1.2
 				.price
 					color: #b1b1b1
@@ -880,28 +935,32 @@
 				.message_wrap
 					padding-left: 20px
 					text-align: center
+					font-size: 17px
 					.message
 						line-height: 1
 						display: inline
 						height: 47px
-			&.absent
-				.message_wrap
-					height: 90px
-					img
-						width: 159px
-						height: 24px
-						margin-bottom: 20px
-						// display: block
+						font-size: 17px
+
+			// &.absent
+			// 	.message_wrap
+			// 		height: 90px
+			// 		img
+			// 			width: 159px
+			// 			height: 24px
+			// 			margin-bottom: 20px
+			// 			// display: block
+			// 	.price
+			// 		margin-bottom: 13.8px
 			&.coming_soon
 				padding-bottom: 40px
 				.message_wrap
 					// height: 137px
-
 					img
 						width: 133px
 						height: 29px
-						margin-bottom: 52px
-						margin-top: 10px
+						margin-bottom: 46.4px
+						margin-top: 11.2px
 						display: block
 			&.under_the_order
 				padding-bottom: 15px
@@ -1355,33 +1414,38 @@
 		padding-right: 0 !important
 	.pl-nl
 		padding-left: 0 !important
-	.s_catalog
+	.s_catalog, .b_plugin
 		.item_wrap
 			h4
-				height: 80px
+				// height: 80px
+
+				height: 50px
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
 			.price
 				// margin-top: 10px
-				margin-bottom: -7px
+				// margin-bottom: -7px
+				margin-bottom: 10px
 				.old_price
 					margin-bottom: 17px
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 30px
 				h4
-					height: 80px
+					// height: 80px
+
+					height: 50px
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
 				.price
 					margin-top: 10px
 					margin-bottom: 16px
-			&.absent	
-				.message_wrap
-					margin-top: 10px
-					padding-left: 15px
-					height: 82px
-					img
-						width: 139px
-						height: 24px
 			&.coming_soon	
 				.message_wrap
-					margin-top: 9px
+					margin-top: 9.6px
 					padding-left: 15px
 					height: 137px
 					img
@@ -1399,6 +1463,18 @@
 						margin-bottom: 50px
 						width: 145px
 						height: 36px
+		.grid
+			.item_wrap
+				&.absent	
+					.message_wrap
+						margin-top: 10px
+						padding-left: 15px
+						height: 82px
+						img
+							width: 139px
+							height: 24px
+					.price
+						margin-bottom: 0.8px
 	.s_catalog 
 		.cat_row
 			.item_wrap
@@ -1814,13 +1890,28 @@
 					border: none
 				.input-number
 					margin-bottom: 0
-	.s_catalog
+	.s_catalog, .b_plugin
+		.grid
+			.item_wrap
+				&.absent	
+					.message_wrap
+						margin-top: 0
+						img
+							width: 125px
+							height: 19px
+							// margin-bottom: 11px
+							margin-bottom: 17.11px
+					.price
+						margin-top: 19.2px
+						margin-bottom: 32.8px
+				
 		.item_wrap
 			padding-top: 21px
 			padding-bottom: 19px
 			.price
 				margin-top: 0
-				margin-bottom: -5px
+				// margin-bottom: -5px
+				
 				.old_price
 					margin-bottom: 9px
 			.btn_buy_wrap
@@ -1832,7 +1923,13 @@
 			h4
 				// line-height: 1.43
 				line-height: normal
-				height: 92px
+				// height: 92px
+
+				height: 78px
+				-webkit-line-clamp: 4
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
 			&.absent, &.coming_soon, &.under_the_order
 				padding-top: 21px
 				padding-bottom: 25px
@@ -1840,21 +1937,27 @@
 					line-height: 1.43
 					height: 100px
 					margin-top: 11px
+
+					height: 78px
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
 				.price
 					margin-top: 12px
 					// margin-bottom: 12.1px
 					margin-bottom: 14px
-			&.absent	
-				.message_wrap
-					margin-top: 0
-					img
-						width: 125px
-						height: 19px
-						// margin-bottom: 11px
-						margin-bottom: 15.11px
+			// &.absent	
+			// 	.message_wrap
+			// 		margin-top: 0
+			// 		img
+			// 			width: 125px
+			// 			height: 19px
+			// 			// margin-bottom: 11px
+			// 			margin-bottom: 15.11px
 			&.coming_soon
 				.message_wrap
-					margin-top: 0
+					margin-top: 17.6px
 					img
 						margin-top: 23.9px
 						width: 130px
@@ -1862,7 +1965,7 @@
 						margin-bottom: 37.11px
 			&.under_the_order
 				.message_wrap
-					margin-top: 0
+					margin-top: 18px
 					img
 						margin-top: 25.9px
 						width: 131px
@@ -2115,15 +2218,21 @@
 	.lgup-pl-pr-n
 		padding-right: 0
 		padding-left: 0
-	.s_catalog
+	.s_catalog, .b_plugin
 		.item_wrap
 			padding-top: 30px
 			h4
 				margin-bottom: 10px
 				margin-top: 10px
 				font-size: 14px
-				height: 40px
+				// height: 40px
 				line-height: 1.2
+
+				height: 36px
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
 			.price
 				margin-bottom: 14px
 			&.absent, &.coming_soon, &.under_the_order
@@ -2132,8 +2241,14 @@
 					// color: #c6c6c6
 					margin-bottom: 10px
 					font-size: 14px
-					height: 40px
+					// height: 40px
 					line-height: 1.2
+
+					height: 37px
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
 				.price
 					color: #b1b1b1
 					margin-bottom: 5.6px
@@ -2147,6 +2262,8 @@
 						width: 159px
 						height: 34px
 						margin-bottom: 6px
+				.price
+					margin-bottom: 6.6px
 			&.coming_soon
 				.message_wrap
 					img
