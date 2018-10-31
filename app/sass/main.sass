@@ -1902,7 +1902,8 @@ select::-ms-expand
 			text-transform: uppercase
 			padding: 7.4px 40px 11px 10px
 			z-index: 1
-			display: none
+			// display: none
+			display: inline-block
 			svg
 				position: absolute
 				top: 14px
@@ -1950,7 +1951,13 @@ select::-ms-expand
 		font-size: 24px
 		font-family: 'Source Sans Pro'
 		font-weight: 400
-	.с_pagination
+		a
+			color: #ffffff
+			text-decoration: none
+		&:hover
+			a
+				
+	.c_pagination
 		margin-top: 30px
 		margin-bottom: 5px
 		display: block
@@ -1964,12 +1971,20 @@ select::-ms-expand
 				display: inline-block
 				font-size: 24px
 				min-width: 48px
-				padding: 3px 0.5em
+				// padding: 3px 0.5em
 				border: 1px solid #f0f0f0
 				transition: .3s ease
+				&:last-child
+					//----
+				a
+					// padding: 3px 0.5em
+					display: block
+					text-decoration: none
 				&:hover
 					background-color: $accent
 					color: #fff
+					a
+						color: #fff
 				&.dots
 					border: none
 					&:hover
@@ -1978,6 +1993,9 @@ select::-ms-expand
 				&.active
 					background-color: $accent
 					color: #fff
+					span
+						padding: 3px 0.5em
+
 .sb_header_slide_inside
 	transition: .3s ease
 	&::after
@@ -2692,6 +2710,12 @@ input
 /*product page*/
 .main_img
 	cursor: pointer
+.pin
+	pointer-events: none !important
+.outwrap
+	cursor: pointer
+.test_green
+	color: $green
 
 
 @import "media" // Всегда в конце
