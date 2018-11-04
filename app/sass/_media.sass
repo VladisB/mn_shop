@@ -2167,6 +2167,8 @@
 	// #sidebarMenu
 	// 		&.slide-mm
 	// 			left: -24px
+	.header_slide_inside
+		pointer-events: none
 	.mobile_mess
 		display: none
 	.s_catalog
@@ -2265,8 +2267,15 @@
 				// margin-bottom: 14px
 				margin-bottom: 0
 				height: 52px
+				// .old_price
+				// 	margin-top: -5px
+				.pr_left
+					width: 49%
+					// display: inline-block
 				.old_price
-					margin-top: -5px
+					width: 50%
+					display: inline-block
+					text-align: right
 
 			&.absent, &.coming_soon, &.under_the_order
 				padding-bottom: 17px
@@ -2310,6 +2319,7 @@
 						margin-bottom: 29px
 						margin-top: 8px
 			&.under_the_order
+				padding-bottom: 30px
 				h4
 					margin-bottom: 16.8px
 				.message_wrap
@@ -2317,7 +2327,8 @@
 						width: 164px
 						// height: 34px
 						// margin-bottom: 15px
-						margin-bottom: 25px
+						// margin-bottom: 25px
+						margin-bottom: 12px
 						margin-top: 1px
 	.s_catalog
 		.cat_row

@@ -848,7 +848,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle >
 	padding-top: 15px
 	.s_header_wrap
 		text-align: center
-	ul
+	ul.list_prop
 		padding-left: 0
 		margin-bottom: 30px
 		li
@@ -1065,12 +1065,18 @@ section
 		font-size: 14px
 .s_recommend
 	padding-bottom: 30px
+.grid 
+	.item_wrap
+		.top_info
+			.pln
+				min-height: 24.4px	
 .bage
 	text-transform: uppercase
 	border-radius: 2px
 	display: inline-block
 	color: #fff
 	padding: 1px 14px
+	height: 24.4px
 .bage_blue
 	background: linear-gradient(to right, #00bfa5, #0096a8)
 .bage_green
@@ -1809,13 +1815,13 @@ select::-ms-expand
 /*range mark*/
 
 /*Custom ruler*/
-.rulet
+.rulet, .faq_rulet
 	.sb_block_name
 		cursor: pointer
 	.block_info
 		max-height: 1200px
 		opacity: 1
-		overflow: hidden
+		// overflow: hidden
 		transition: .5s ease
 		width: 100%
 		padding-bottom: 25px
@@ -1824,6 +1830,14 @@ select::-ms-expand
 			opacity: 0
 			padding-bottom: 0
 			// transition: 2s ease
+/*FAQ*/
+.faq_rulet
+	.close_faq_btn_wrap
+		color: $green
+		cursor: pointer
+		z-index: 100
+		i
+			margin-left: 5px
 
 /*Custom checkbox*/
 .styled-checkbox
@@ -1901,9 +1915,9 @@ select::-ms-expand
 			color: #ffffff
 			text-transform: uppercase
 			padding: 7.4px 40px 11px 10px
-			z-index: 1
-			// display: none
-			display: inline-block
+			z-index: 999
+			display: none
+			// display: inline-block
 			svg
 				position: absolute
 				top: 14px
@@ -1917,19 +1931,6 @@ select::-ms-expand
 				border-right: 24.5px solid #ff9801
 				width: 0
 				height: 0
-			// &::after
-			// 	content: '+'
-			// 	transform: rotate(135deg)
-			// 	line-height: 9px
-			// 	font-size: 25px
-			// 	position: absolute
-			// 	top: 10px
-			// 	right: 15px
-			// 	color: #ff9801
-			// 	background-color: #fff
-			// 	padding: 3px 7px
-			// 	-webkit-border-radius: 50%
-			// 	border-radius: 50%
 			p
 				border-bottom: 1px dashed #fff
 				margin: 0
@@ -2702,6 +2703,7 @@ input
 			margin-top: 30px
 			font-size: 14px
 			font-weight: 400
+			overflow: visible
 			&.closed
 				margin-top: 0
 /*fix*/
@@ -2716,6 +2718,52 @@ input
 	cursor: pointer
 .test_green
 	color: $green
+.faq_block
+	border: 1px solid $green
+.faq_list
+	font-size: 20px
+	.text_wrap
+		font-weight: 400
+	.close_faq_btn_wrap
+		color: $green
+		cursor: pointer
+		z-index: 100
+		margin-top: 10px
+		i
+			margin-left: 5px
+	dd
+		margin-top: 30px
+		font-size: 14px
+		font-weight: 400
+	dt
+		margin-bottom: 25px
 
+
+// dl
+  // background: #e3e3e3
+  // border: 1px solid rgba(0, 0, 0, 0.2)
+  // border-radius: 5px
+
+// dt, dd
+  // border-radius: 5px
+
+dt
+  // background: #08071c
+  // border-bottom: 1px solid #040412
+  // border-top: 1px solid #262395
+  // color: #137de9
+  cursor: pointer
+  // font-size: 1.5em
+  // font-weight: bold
+  // line-height: 2em
+  // text-shadow: -1px -1px 0px #1169c3
+  &:first-child
+    border-top: 0
+  &:last-of-type
+    border-bottom: 0
+
+dd
+  margin-left: 0
+  padding: 1em 0
 
 @import "media" // Всегда в конце
