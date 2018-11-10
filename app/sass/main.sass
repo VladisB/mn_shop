@@ -944,7 +944,10 @@ section
 			display: none
 	&.coming_soon
 		h4
-			color: #424242
+			// color: #424242
+			color: #b1b1b1
+			a
+				color: #b1b1b1
 		.price, .retail_price, .old_price
 			display: none
 			// padding-bottom: 25px
@@ -992,9 +995,13 @@ section
 			color: #c6c6c6
 			margin-bottom: 6px
 			// height: 40px
+			a
+				color: #c6c6c6				
 		.price
 			color: #b1b1b1
 			// margin-bottom: 3px
+			.old_price
+				display: none
 		.buy_mode
 			display: none
 		.message_wrap
@@ -1069,7 +1076,8 @@ section
 	.item_wrap
 		.top_info
 			.pln
-				min-height: 24.4px	
+				// min-height: 24.4px	
+				height: 24.4px	
 .bage
 	text-transform: uppercase
 	border-radius: 2px
@@ -2030,6 +2038,8 @@ select::-ms-expand
 			// min-height: 170px
 			height: 172px
 			line-height: normal
+			.price
+				height: auto
 			.message_wrap
 				img
 					display: block

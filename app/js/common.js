@@ -500,47 +500,47 @@ $(function () {
 
 	// 	/*Inmut multirange*/
 
-	var lowerSlider = document.querySelector('#range-lower');
-	var upperSlider = document.querySelector('#range-upper');
+// 	var lowerSlider = document.querySelector('#range-lower');
+// 	var upperSlider = document.querySelector('#range-upper');
 
-	document.querySelector('#two').value = upperSlider.value;
-	document.querySelector('#one').value = lowerSlider.value;
+// 	document.querySelector('#two').value = upperSlider.value;
+// 	document.querySelector('#one').value = lowerSlider.value;
 
-	var lowerVal = parseInt(lowerSlider.value);
-	var upperVal = parseInt(upperSlider.value);
+// 	var lowerVal = parseInt(lowerSlider.value);
+// 	var upperVal = parseInt(upperSlider.value);
 
-	upperSlider.oninput = function () {
-		lowerVal = parseInt(lowerSlider.value);
-		upperVal = parseInt(upperSlider.value);
+// 	upperSlider.oninput = function () {
+// 		lowerVal = parseInt(lowerSlider.value);
+// 		upperVal = parseInt(upperSlider.value);
 
-		if (upperVal < lowerVal + 4) {
-			lowerSlider.value = upperVal - 4;
-			if (lowerVal == lowerSlider.min) {
-				upperSlider.value = 4;
-			}
-		}
-		document.querySelector('#two').value = this.value
-	};
+// 		if (upperVal < lowerVal + 4) {
+// 			lowerSlider.value = upperVal - 4;
+// 			if (lowerVal == lowerSlider.min) {
+// 				upperSlider.value = 4;
+// 			}
+// 		}
+// 		document.querySelector('#two').value = this.value
+// 	};
 
-	lowerSlider.oninput = function () {
-		lowerVal = parseInt(lowerSlider.value);
-		upperVal = parseInt(upperSlider.value);
-		if (lowerVal > upperVal - 4) {
-			upperSlider.value = lowerVal + 4;
-			if (upperVal == upperSlider.max) {
-				lowerSlider.value = parseInt(upperSlider.max) - 4;
-			}
-		}
-		document.querySelector('#one').value = this.value
-	};
+// 	lowerSlider.oninput = function () {
+// 		lowerVal = parseInt(lowerSlider.value);
+// 		upperVal = parseInt(upperSlider.value);
+// 		if (lowerVal > upperVal - 4) {
+// 			upperSlider.value = lowerVal + 4;
+// 			if (upperVal == upperSlider.max) {
+// 				lowerSlider.value = parseInt(upperSlider.max) - 4;
+// 			}
+// 		}
+// 		document.querySelector('#one').value = this.value
+// 	};
 
-	// var lowerSlider = document.querySelector('#range-lower').value;
-	// var upperSlider = document.querySelector('#range-upper').value;
-	// document.querySelector('#one').value= lowerSlider;
-	// document.querySelector('#two').value= upperSlider;
+// 	// var lowerSlider = document.querySelector('#range-lower').value;
+// 	// var upperSlider = document.querySelector('#range-upper').value;
+// 	// document.querySelector('#one').value= lowerSlider;
+// 	// document.querySelector('#two').value= upperSlider;
 
 
-});
+// });
 
 
 // document.addEventListener('DOMContentLoaded', function () {
@@ -617,4 +617,4 @@ $(function () {
 // 		updateTrackerBetween();
 // 	}, false);
 
-// });
+});
