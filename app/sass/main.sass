@@ -105,7 +105,7 @@ h3
 	display: none
 	&.show
 		opacity: 1
-		z-index: 10
+		z-index: 11
 		transition: all 300ms ease
 		display: block
 	&.show1k
@@ -245,6 +245,9 @@ body
 	color: #ffffff
 	font-size: 16px
 	font-family: 'Open Sans', sans-serif
+	label.l_cat_wrap
+		font-size: 16px
+		font-weight: 700
 	.catalog
 		text-transform: uppercase
 		font-weight: 700
@@ -310,15 +313,29 @@ body
 	margin-bottom: 30px
 	// display: inline-block
 	li
+		.inner-list
+			// left: -402px
+			left: 0
+			z-index: -1
+		&.active
+			.inner-list
+				display: inline-block
+				opacity: 1
+				left: 359px
+				z-index: 10
+				.sub-item
+					opacity: 1
+
 		&:hover
 			// #focus_wrap
 			// 	opacity: 1
+			color: $green
 			.inner-list
 				// display: flex
 				display: inline-block
-				opacity: 1
+				// opacity: 1
 				.sub-item
-					opacity: 1
+					// opacity: 1
 					p
 						transition: .3s ease
 					&:hover
@@ -331,6 +348,7 @@ body
 		&:hover
 			// background-color: rgba(206, 209, 219, 1)
 		&.main-item
+			cursor: pointer
 			a
 				&:hover
 					color: $green
@@ -408,7 +426,7 @@ body
 	opacity: 0
 	padding: 0px
 	background-color: #fff
-	display: none
+	// display: none
 	width: 760px
 	// width: 779px
 	// width: 760px
@@ -417,9 +435,14 @@ body
 	font-size: 0
 	z-index: 5
 	// outline: 1px solid #ccc
-	transition: ease .3s
+	transition: ease .5s
 	// height: 200px
 	// display: none
+	&.display-on
+		display: inline-block
+		opacity: 1
+		.sub-item
+			opacity: 1
 	.sub-item
 		a
 			text-decoration: none
@@ -1652,7 +1675,7 @@ select
 	border: 1px solid #f0f0f0
 /* Custom Select */
 /* Selectize */
-#slct_otd-selectized
+.slct_otd-selectized
 	height: auto
 	border-color: $green
 	padding: 0 0 0 .5em
@@ -3077,6 +3100,9 @@ decimal
 	margin-top: 20px
 .green-text
 	color: #b1b1b1
+.forParent
+	padding: 20px
+	border: 1px solid $green
 
 
 
