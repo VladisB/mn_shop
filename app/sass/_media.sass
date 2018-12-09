@@ -11,6 +11,7 @@
 		.mnu_button_wrap
 			.catalog
 				margin-left: 10px
+				font-size: 15px
 	.pln-md
 		padding-left: 0
 	.prn-md
@@ -663,21 +664,51 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	// .slide_mobile_filters
-	// 	position: absolute
-	// 	left: 0
-	// 	top: 0
-	// 	background-color: #ffffff
-	// 	z-index: 9999
-		// .sidebar
-		// 	padding-top: 74px
-		// 	position: relative
-		// 	svg
-		// 		position: absolute
-		// 		top: 30px
-		// 		right: 30px
-			// .sb_price
-			// 	border-top: none
+	section.s_seo .less_seo_link_hide
+		display: block
+	.hide_seo_link
+		display: none
+	section.s_seo
+		.more_seo
+			.seo_btn_text
+				display: inline-block
+	section
+		&.s_seo
+			// padding: 30px 15px 40px 15px
+			ul
+				// font-size: 12px
+			.flx_cont_seo
+				display: flex
+				width: 100%
+				flex-wrap: wrap
+				.flex_elem
+					.btn_block
+						display: flex
+						justify-content: flex-end
+				.more_seo
+					height: 30px
+					width: 100%
+					text-align: center
+					&:after
+						top: 0
+						right: calc(100% / 2 - 110px / 2 - 45px)
+					&:before
+						top: 0
+						right: calc(100% / 2 - 110px / 2 - 36px)
+				.less_seo
+					height: 30px
+					width: 100%
+					text-align: center
+					&:after
+						top: 0
+						right: calc(100% / 2 - 110px / 2 - 45px)
+					&:before
+						top: -1px
+						right: calc(100% / 2 - 110px / 2 - 34px)
+				.text_block
+					width: 100%
+				.btn_block
+					width: 100%
 	.flex-wrap
 		justify-content: center
 		padding-left: 0 !important
@@ -1213,10 +1244,6 @@
 			flex-wrap: wrap
 			.element
 				width: 50%
-	// .mfp-arrow-left
-	// 	left: 0
-	// .mfp-arrow-right
-	// 	right: 0
 
 
 /* Extra Small Devices, Phones */
@@ -2194,9 +2221,10 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	#sidebarMenu
-		left: -15px
+		// left: -15px
 		&.slide-mm
-			left: calc(-100vw - 15px)
+			left: calc(-100vw)
+			// left: calc(-100vw - 15px)
 	// .mobile_mess
 	// 	display: none
 	// .sidebarMenuInner
@@ -2230,9 +2258,9 @@
 		.inner-list
 			.sub-item
 				&.back_btn_mnu
-					display: none
+					// display: none
 	#sidebarMenu
-		left: -25px
+		// left: -25px
 	.s_product
 		.input_number_wrap
 			.input-number-decrement, .input-number-increment
@@ -2269,6 +2297,8 @@
 @media only screen and (min-width : 992px)
 	// #sidebarMenu
 	// 	left: -30px
+	.advantages_cont_pn
+		padding: 0
 	.form_order
 		.form_wrap
 			.element_wrap
