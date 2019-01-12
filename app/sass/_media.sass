@@ -664,6 +664,38 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.sidebarMenuInner	
+		margin: 0
+		padding: 0
+		width: 359px
+		background-color: #fff
+		margin-bottom: 30px
+		// display: inline-block
+		li
+			.inner-list
+				// left: -402px
+				// left: 0
+				z-index: -1
+			.inner-list-wrap
+				position: absolute
+				display: none
+				left: 100%
+				top: 0
+				opacity: 0
+				padding: 0px
+				// background-color: #fff
+				width: 760px
+				font-size: 0
+				z-index: -1
+				transition: ease .5s
+				.back_btn_mnu
+					// display: flex
+				&.mobile-show
+					opacity: 1
+					display: block
+					z-index: 100
+					.sub-item
+						opacity: 1	
 	section.s_seo .less_seo_link_hide
 		display: block
 	.hide_seo_link
@@ -2236,9 +2268,69 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	// #sidebarMenu
-	// 		&.slide-mm
-	// 			left: -24px
+	// input[type=checkbox]:checked~#sidebarMenu
+	// 	transform: translateX(25px)
+  //   opacity: 1
+	.sidebarMenuInner
+		.inner-list
+			.back_btn_mnu
+				display: none
+	.sidebarMenuInner	
+		margin: 0
+		padding: 0
+		width: 359px
+		background-color: #fff
+		margin-bottom: 30px
+		// display: inline-block
+		li
+			.inner-list
+				// left: -402px
+				// left: 0
+				z-index: -1
+			// &.active
+			// 	.inner-list
+			// 		display: inline-block
+			// 		opacity: 1
+			// 		left: 359px
+			// 		z-index: 10
+			// 		.sub-item
+			// 			opacity: 1
+			.inner-list-wrap
+				position: absolute
+				display: none
+				left: 100%
+				top: 0
+				opacity: 0
+				padding: 0px
+				// background-color: #fff
+				width: 760px
+				font-size: 0
+				z-index: -1
+				transition: ease .5s
+				&.mobile-show
+					opacity: 1
+					.sub-item
+						opacity: 1
+			&:hover
+				// #focus_wrap
+				// 	opacity: 1
+				color: $green
+				.inner-list-wrap
+					opacity: 1
+					z-index: 10
+				.inner-list
+					// display: flex
+					display: inline-block
+					opacity: 1
+					// left: 359px
+					// z-index: 10
+					.sub-item
+						opacity: 1
+						p
+							transition: .3s ease
+						&:hover
+							p
+								color: $green
 	.header_slide_inside
 		pointer-events: none
 	.mobile_mess
@@ -2291,12 +2383,22 @@
 						margin-bottom: 10px
 					.price
 						display: none
+	.mob_p_static
+		position: relative
+	input[type="checkbox"]:checked ~ #sidebarMenu
+		transform: translateX(25px)
+		opacity: 1
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	// #sidebarMenu
 	// 	left: -30px
+	input[type="checkbox"]:checked ~ #sidebarMenu
+		transform: translateX(25px)
+		opacity: 1
+	.mob_p_static
+		position: relative
 	.advantages_cont_pn
 		padding: 0
 	.form_order
@@ -2317,6 +2419,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	input[type="checkbox"]:checked ~ #sidebarMenu
+		transform: translateX(11px)
+		opacity: 1
 	.lgup-pl-pr-n
 		padding-right: 0
 		padding-left: 0

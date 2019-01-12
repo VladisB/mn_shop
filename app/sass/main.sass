@@ -340,32 +340,33 @@ body
 			// background-color: #fff
 			width: 760px
 			font-size: 0
-			z-index: -1
+			// z-index: -1
 			transition: ease .5s
-			&.mobile-show
-				opacity: 1
-				.sub-item
-					opacity: 1
-		&:hover
-			// #focus_wrap
+			// &.mobile-show
 			// 	opacity: 1
-			color: $green
-			.inner-list-wrap
-				opacity: 1
-				z-index: 10
-			.inner-list
-				// display: flex
-				display: inline-block
-				opacity: 1
-				// left: 359px
-				// z-index: 10
-				.sub-item
-					opacity: 1
-					p
-						transition: .3s ease
-					&:hover
-						p
-							color: $green
+			// 	display: block
+			// 	.sub-item
+			// 		opacity: 1
+		// &:hover
+		// 	// #focus_wrap
+		// 	// 	opacity: 1
+		// 	color: $green
+		// 	.inner-list-wrap
+		// 		opacity: 1
+		// 		z-index: 10
+		// 	.inner-list
+		// 		// display: flex
+		// 		display: inline-block
+		// 		opacity: 1
+		// 		// left: 359px
+		// 		// z-index: 10
+		// 		.sub-item
+		// 			opacity: 1
+		// 			p
+		// 				transition: .3s ease
+		// 			&:hover
+		// 				p
+		// 					color: $green
 		text-align: left
 		color: #515151
 		list-style-type: none
@@ -388,6 +389,7 @@ body
 					right: -26px
 					top: -4px
 		&.back_btn_mnu
+			display: none
 			a
 				&::before
 					content: '\f104'
@@ -510,6 +512,7 @@ body
 input
 	&[type="checkbox"]:checked ~ #sidebarMenu
 		transform: translateX(0)
+		// transform: translateX(150px)
 		opacity: 1
 	&[type=checkbox]
 		transition: all 0.3s
@@ -2690,7 +2693,7 @@ input[type="radio"]
 				z-index: -5
 				transition: ease .5s
 			&:hover
-				// color: red
+				// color: red mark
 				color: $green
 				.inner-list-wrap
 					display: inline-block
